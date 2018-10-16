@@ -1,0 +1,879 @@
+{% load static from staticfiles %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>生活方式_世纪佳缘交友网</title>
+		<style type="text/css">
+			body{
+				margin: 0px;
+				padding: 0px;
+				
+			}
+			
+			ul{
+				list-style: none;
+				}
+				
+			#top_left a{
+				color: white;
+				text-decoration: none;
+			}
+			
+			#top_left a:hover{
+				color: pink;
+				}
+			
+			#top{
+				float: left;
+				height: 40px;
+				width: 100%;
+				background-color: rgb(64,64,64);
+				font-size: 14px;
+				border-bottom: 0px solid silver;
+				position: absolute;
+				margin: 0px;
+			}
+			
+			#top_left{
+				float: left;
+				margin-left: 150px;
+			}
+			
+			#top_left ul{
+				float: left;
+				height: 40px;
+			}
+			
+			#top_left li{
+				float: left;
+				color: white;
+				font-size: 11px;
+				font-family: "宋体";
+				margin-left: 30px;
+			}
+			
+			#top_right{
+				position: absolute;
+				float: left;
+				margin-top: 0px;
+				margin-left: 50%;
+			}
+			
+			#top_right ul{
+				float: left;
+			}
+			
+			#top_right li{
+				float: left;
+				margin-top: -6px;
+				color: white;
+				font-size: 11px;
+				font-family: "宋体";
+				margin-left: 30px;
+
+			}
+			#top_right li img{
+				float: left;
+				margin-top: 5px;
+
+			}
+			
+			#top_right a{
+				float: left;
+				margin-top: 12px;
+				margin-left: 3px;
+				color: white;
+				line-height: 5px;
+				text-decoration: none;
+			}
+			
+			#top_right a:hover{
+				color: pink;
+			}
+			
+			#middle_top{
+				position: absolute;
+				margin-top: 40px;
+				height: 130px;
+				width: 100%;
+				border-bottom: 1px solid rgb(193,193,193);
+			}
+			
+			
+			
+			#middle_top ul{
+				float: left;
+				margin-left: 160px;
+				
+			}
+			
+			#middle_top li{
+				margin-top: 5px;
+				font-size: 18px;
+				font-family: "威雅软黑";
+				float: left;
+				margin-left: 15px;
+				
+				
+			}
+			
+			#middle_top a{
+				color:rgb(00,00,00);
+				text-decoration: none;
+			}
+			
+			#middle_top a:hover{
+				color: rgb(255,83,107);
+				border-bottom: 2px solid rgb(255,83,107);
+			}
+			
+			
+			#middle_top_1 a{
+				margin-left: 200px;
+				text-decoration: none;
+			}
+			
+			#middle{
+				position: absolute;
+				margin-top: 170px;
+				width: 100%;
+				height: 700px;
+				border: 2px solid rgb(222,222,222);
+				
+			}
+			
+			#middle_header_1{
+				position: absolute;
+				height: 50px;
+				width: 100%;
+	/*			border: 2px solid rgb(222,222,222);*/
+			}
+			
+			#middle_header_1 ul{
+				margin-left: 170px;
+				float: left;
+			}
+			
+			#middle_header_1 li{
+				float: left;
+				margin-left: 5px;
+				font-size: 10px;
+			}
+			
+			#middle_header_1 p{
+				margin-top: 0px;
+			}
+			
+			#middle_header_1-1{
+				position: absolute;
+				margin-left: 215px;
+				margin-top: 50px;
+				height: 350px;
+				width: 170px;
+				border: 1px solid rgb(222,222,222);
+				border-radius: 5px;
+			}
+			
+			#middle_header_1-1 ul{
+				margin-left: 1px;
+			}
+			
+			#middle_header_1-1 li{
+				margin-top: 5px;
+				margin-left: -35px;
+			}
+			
+			#middle_header_1-1 input{
+				margin-left: -50px;
+				border-radius: 5px;
+				height: 35px;
+				width: 160px;
+				background-color:rgb(246,246,246);
+
+				font-size: 15px;
+				font-family: "微软雅黑";
+				font-weight: 900;
+			}
+			
+			#middle_header_1-1 a{
+				color: #000000;
+				font-size: 12px;
+				text-decoration: none;
+				margin-left: 50px;
+			}
+			
+			#middle_header_1-2{
+				position: absolute;
+				margin-top: 400px;
+				margin-left: 215px;
+				border: 1px solid rgb(222,222,222);
+				border-radius: 5px;
+				height: 300px;
+				width: 170px;
+				background-color: rgb(249,249,249);
+			}
+			
+			#middle_header_1-2 input{
+				margin-left: 18px;
+				border-radius: 5px;
+				margin-top: 11px;
+				height: 35px;
+				width: 120px;
+				color: white;
+				background-color:rgb(23,156,194);
+				font-size: 15px;
+				font-family: "微软雅黑";
+				font-weight: 900;
+				border: none;
+			}
+			
+			#middle_header_0_2{
+				position: absolute;
+				height: 650px;
+				width: 500px;
+				margin-top: 50px;
+				margin-left: 387px;
+				border: 1px solid rgb(222,222,222);
+				/*background-color: rgb(249,249,249);*/
+				border-radius: 5px;
+			}
+			
+			#middle_header_2{
+				position: absolute;
+				border: 1px solid rgb(222,222,222);
+				background-color: rgb(249,249,249);
+				border-radius: 5px;
+				margin-top: 0px;
+				margin-left: 0px;
+				height: 40px;
+				width: 500px;
+			}
+			
+			#middle_header_2 p{
+				color: rgb(220,65,131);
+				margin-left: 15px;
+				font-weight: 700 ;
+				margin-top: 9px;
+				font-size: 16px;
+				font-weight: 900;
+			}
+			
+			#middle_header_2-1{
+				position: absolute;
+				margin-top: 60px;
+				margin-left: 20px;
+				height: 30px;
+				width: 450px;
+				background-color: rgb(249,249,249);
+			}
+			
+		
+			
+			#middle_header_2-1 p{
+				margin-top: 10px;
+				margin-left: 10px;
+				font-size: 13px;
+				color: rgb(255,104,123);
+				font-family: "新宋体";
+			}
+			
+			#middle_header_2-2{
+				position: absolute;
+				margin-left:10px ;
+				margin-top:105px ;
+				height: 260px;
+				width:460px ;
+				/*border: 2px solid rgb(123,156,211);*/
+			}
+			
+			/*#middle_header_2-2 p{
+				font-family: "宋体";
+				font-size: 15px;
+				font-weight: 900;
+				margin-left: 20px;*/
+
+			
+			#middle_header_2-2-1{
+				margin-top: 0px;
+			}
+			
+			#middle_header_2-2-1 table{
+				width: 480px;
+				height: 450px;
+				/*border: 2px solid rgb(00,00,00);*/
+				font-size: 10px;
+				text-align: center;
+			}
+			
+			#middle_header_2-2-1 select{
+				font-size: 10px;
+				width: 200px;
+			}
+				
+			#middle_header_2-2-2{
+				
+			}
+			
+			#middle_header_2-3{
+				position: absolute;
+				margin-left: 10px;
+				margin-top: 530px;
+				height: 100px;
+				width: 460px;
+				/*border-top: 1px  solid rgb(222,222,222);*/			
+			}
+			
+			#middle_header_2-3 font{
+				color: rgb(160,160,160);
+			}
+			
+			#middle_header_2-3 ul{
+				height: 100px;
+			}
+			
+			#middle_header_2-3 li{
+				/*color: rgb(57,57,57);
+				font-size:10px ;
+				margin-left: -30px;
+				margin-top: 5px;*/
+				font-size: 10px;
+				margin-top: 5px;
+			}
+			
+			#middle_header_2-3 p{
+				font-size:10px ;
+				color: rgb(57,57,57);
+			}
+			
+			#middle_header_2-3 input{
+				margin-left: -30px;
+				/*border-radius: 5px;
+				height: 30px;
+				width: 100px;
+				color: white;
+				background-color:rgb(23,156,194);
+				font-size: 12px;
+				font-family: "微软雅黑";
+				font-weight: 300;
+				border: none;*/
+				
+			}
+			#middle_header_2-3-1{
+				margin-top: 50px;
+				margin-left: 10px;
+				width: 300px;
+				height: 30px;
+			}
+			
+			#middle_header_2-3-1 li{
+				float: left;
+				margin-left: 50px;
+			}
+			
+			#middle_header_2-3-2{
+				margin-top: -25px;
+			}
+			
+			#middle_header_2-3-2 input{
+				margin-left: 20px;
+				margin-top:0px ;
+			}
+			
+			#middle_header_2-3-1 input{
+				border-radius: 5px;
+				height: 35px;
+				width: 120px;
+				color: white;
+				background-color:rgb(23,156,194);
+				font-size: 15px;
+				font-family: "微软雅黑";
+				font-weight: 900;
+				border: none;
+			}
+			#middle_header_2-3-2 input{
+				border-radius: 5px;
+				height: 35px;
+				width: 120px;
+				color: rgb(122,122,122);
+				background-color:rgb(249,249,249);
+				font-size: 15px;
+				font-family: "微软雅黑";
+				font-weight: 900;
+				border:2px solid rgb(199,199,199);
+			}
+			
+			#middle_header_3{
+				position: absolute;
+				border: 1px solid rgb(222,222,222);
+				border-radius: 5px;
+				background-color:rgb(249,249,249);
+				margin-top: 50px;
+				margin-left: 889px;
+				width: 300px;
+				height: 650px;
+			}
+			#middle_header_3 p{
+				color: rgb(220,65,131);
+				margin-left: 15px;
+				font-weight: 700 ;
+				margin-top: 9px;
+				font-size: 16px;
+			}
+			
+			#middle_header_3-1{
+				position: absolute;
+				margin-top: 100px;
+				margin-left: 889px;
+				width: 300px;
+				height: 100px;
+				/*background-color: red;*/
+			}
+			
+			#middle_header_3-1 p{
+				font-size: 10px;
+				color: rgb(151,167,205);
+				margin-left: 15px;
+			}
+			
+			#middle_header_3-1 input{
+				margin-left: 30px;
+				background-color: rgb(255,178,0);
+				height: 36px;
+				width: 180px;
+				border-radius: 5px;
+				color: white
+			}
+			
+			#middle_header_3-2{
+				position: absolute;
+				margin-top:220px;
+				margin-left: 909px;
+				width: 260px;
+				height: 410px;
+				background-color:white;
+				border:1px solid rgb(240,240,240);
+			}
+			
+			#middle_header_3-2 h6{
+				margin-left: 10px;
+			}
+			
+			#middle_header_3-2 li{
+				font-size: 10px;
+				margin-top: 20px;
+				margin-left: -30px;
+				color: rgb(103,103,101);
+				
+			}
+			
+			#button{
+				position: absolute;
+				width: 100%;
+				margin-top: 655px;
+				height: 200px;
+				/*background-color: red;*/
+				
+			}
+			
+			#footer_2{
+				word-spacing: 15px;
+				font-size: 11px;
+				color: dimgrey;
+				position: absolute;
+				margin-left:20%;
+				margin-top: 60px;
+				text-align: center;
+				
+			}
+			#footer_2 a{
+				text-decoration: none;
+				font-size: 11px;
+				color: rgb(105,105,105);
+			}
+			#footer_2 a:hover{
+				color: rgb(255,83,107);
+				text-decoration: underline;
+			}
+			
+		</style>
+	</head>
+	<body>
+<form action="/youyuan/inuser6/" method="post">
+		<div id="top">
+			<div id="top_left">
+				<ul>
+					<li>Hi,包容</li>
+					<li><font style="background-color: yellow;
+						color: saddlebrown;">s1会员</font> 金豆 
+						<a href="#">50</a></li>
+					<li><font>佳缘ID</font> <a href="#">182326701</a></li>
+					<li><a href="#">退出</a></li>
+				</ul>				
+			</div>
+			<div id="top_right">
+				<ul>
+					<li><img src="{% static 'img/电话.png'%}" style="height: 18px;"/> <a href="#">红娘专线&nbsp;13621145171</a></li>
+					<li><img src="{% static 'img/星星.png'%}" style="height: 18px;" /> <a href="#">收藏本站</a></li>
+					<li><img src="{% static 'img/账户充值.png'%}" style="height: 18px; "/> <a href="/youyuan/vip/">充值</a></li>
+					<li><img src="{% static 'img/声音.png'%}" style="height: 18px;" /> <a href="#">提醒</a></li>
+				</ul>				
+			</div>			
+		</div>
+		<div id="middle_top">
+			<div id="middle_top_1">
+			<a href="#"><img src="{% static 'img/bai.jpeg' %}" /> </a>
+			</div>
+			<ul>
+				<li><a href="/youyuan/main/">首页</a></li>
+				<li><a href="#" style="color: rgb(255,84,106);">我的佳缘</a></li>
+				<li><a href="#">收件箱</a></li>
+				<li><a href="#">搜索</a></li>
+				<li><a href="#">俱乐部</a></li>
+				<li><a href="#">活动</a></li>
+				<li><a href="#">约会吧</a></li>
+				<li><a href="#">佳缘金融</a></li>
+				<li><a href="#">红娘一对一</a></li>
+				<li><a href="#">晒幸福</a></li>
+			</ul>
+		</div>
+		<div id="middle">
+			<div id="middle_header_1">
+				<ul>
+					<li><img src="{% static 'img/房子.png' %}" style="height: 18px;"/> </li>
+					<li><a href="">我的佳缘</a> </li>
+					<li><p>></p> </li>
+					<li><p>基本资料</p></li>
+				</ul>				
+			</div>
+			<div id="middle_header_1-1">
+				<ul>
+					<li><a href="/youyuan/ziliao/"><input type="button" value="基本资料" /></a> </li>
+					<li><a href="#"><input type="button" value="内心独白" /></a> </li>
+					<li><a href="#"><input type="button" value="我的照片" /></a> </li>
+					<li><a href="/youyuan/user5/"><input type="button" value="详细资料" /></a> </li>
+					<li><a href="/youyuan/user5/">经济实力</a> </li>
+					<li><a href="/youyuan/user6/" style="color: hotpink;" >生活方式</a> </li>
+					<li><a href="/youyuan/user7/">工作学习</a> </li>
+					<li><a href="/youyuan/user8/">外貌体型</a> </li>
+					<li><a href="/youyuan/user9/">婚姻观念</a> </li>
+					<li><a href="/youyuan/user10/">兴趣爱好</a> </li>
+				</ul>
+			</div>
+			<div id="middle_header_1-2">
+				<input type="button" value="返回我的佳缘" />
+			</div>
+			<div id="middle_header_0_2">
+			<div id="middle_header_2">
+				<p>
+					生活方式
+				</p>
+			</div>
+			<div id="middle_header_2-1">
+				<p>
+					资料越完善，同等条件我们将优先推荐您哦~
+				</p>
+			</div>
+			<div id="middle_header_2-2">
+				<div id="middle_header_2-2-1">
+				
+				<table>
+					
+					<tr>
+						<td style="font-weight: 900 ; ">嗜好习惯</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>吸烟：</td>
+						<td>
+							<select name="somke">
+								<option value="">--请选择--</option>
+								<option value="不吸，很反感吸烟">不吸，很反感吸烟</option>
+								<option value="不吸，但不反感">不吸，但不反感</option>
+								<option value="社交时偶尔吸">社交时偶尔吸</option>
+								<option value="每周吸几次">每周吸几次</option>
+								<option value="每天都吸">每天都吸</option>
+								<option value="有烟瘾">有烟瘾</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>饮酒：</td>
+						<td>
+							<select name="drink">
+								<option>--请选择--</option>
+								<option value="不喝">不喝</option>
+								<option value="社交需要时喝">社交需要时喝</option>
+								<option value="有兴致时喝">有兴致时喝</option>
+								<option value="每天离不开酒">每天离不开酒</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>锻炼习惯：</td>
+						<td>
+							<select name="exercise">
+								<option>--请选择--</option>
+								<option value="每天锻炼">每天锻炼</option>
+								<option value="每周至少一次">每周至少一次</option>
+								<option value="每月几次">每月几次</option>
+								<option value="没时间锻炼">没时间锻炼</option>
+								<option value="喜欢锻炼">集中时间锻炼</option>
+								<option value="不喜欢锻炼">不喜欢锻炼</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>饮食习惯：</td>
+						<td>
+							<select name="food">
+								<option>--请选择--</option>
+								<option value="无特殊习惯">无特殊习惯</option>
+								<option value="口味清淡">口味清淡</option>
+								<option value="无辣不欢">无辣不欢</option>
+								<option value="口味偏重">口味偏重</option>
+								<option value="无肉不欢">无肉不欢</option>
+								<option value="习惯吃素">习惯吃素</option>
+															
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>逛街购物：</td>
+						<td>
+							<select name="shopping">
+								<option>--请选择--</option>
+								<option value="从来不去">从来不去</option>
+								<option value="没办法才去">没办法才去</option>
+								<option value="偶尔逛逛">偶尔逛逛</option>
+								<option value="经常逛街">经常逛街</option>
+								<option value="非常爱逛街">非常爱逛街</option>
+								<option value="不逛就难受 ">不逛就难受</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>宗教信仰：</td>
+						<td>
+							<select name="religious">
+								<option>--请选择--</option>
+								<option value="无宗教信仰">无宗教信仰</option>
+								<option value="大乘佛教显宗">大乘佛教显宗</option>
+								<option value="大乘佛教密宗">大乘佛教密宗</option>
+								<option value="大乘佛教净宗">大乘佛教净宗</option>
+								<option value="小乘佛教">小乘佛教</option>
+								<option value="道教">道教</option>
+								<option value="儒教">儒教</option>
+								<option value="基督教天主教派">基督教天主教派</option>
+								<option value="基督教东正教派">基督教东正教派</option>
+								<option>基督教新教派</option>
+								<option>犹太教</option>
+								<option>伊斯兰教什叶派</option>
+								<option>伊斯兰教逊尼派</option>
+								<option>印度教</option>								
+								<option>神道教</option>
+								<option>萨满教</option>
+								<option>其它宗教信仰</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>作息时间：</td>
+						<td>
+							<select name="resttime">
+								<option>--请选择--</option>
+								<option value="早睡早起很规律">早睡早起很规律</option>
+								<option value="经常夜猫子">经常夜猫子</option>
+								<option value="总是早起鸟">总是早起鸟</option>
+								<option value="偶尔懒散一下">偶尔懒散一下</option>
+								<option value="没有规律">没有规律</option>
+								
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>交际圈子：</td>
+						<td>
+							<select name="network">
+								<option>--请选择--</option>
+								<option value="同学朋友都逐渐疏远了">同学朋友都逐渐疏远了</option>
+								<option value="平时通过互联网和电话联系">平时通过互联网和电话联系</option>
+								<option value="每年参加几次聚会">每年参加几次聚会</option>
+								<option value="偶尔主动约会朋友">偶尔主动约会朋友</option>
+								<option value="经常和朋友见面">经常和朋友见面</option>
+								<option value="朋友越来越多">朋友越来越多</option>
+								<option value="每天呼朋唤友">每天呼朋唤友</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>最大消费：</td>
+						<td>
+							<select name="maxspend">
+								<option>--请选择--</option>
+								<option value="享受美食">享受美食</option>
+								<option value="购置服装">购置服装</option>
+								<option value="购置包包">购置包包</option>
+								<option value="购置美鞋">购置美鞋</option>
+								<option value="美容护肤">美容护肤</option>
+								<option value="健身锻炼">健身锻炼</option>
+								<option value="休闲娱乐">休闲娱乐</option>
+								<option value="旅游度假">旅游度假</option>
+								<option>出行交通</option>
+								<option>电子产品</option>
+								<option>书本杂志</option>
+								<option>教育培训</option>
+								<option>社交交友</option>
+								<option>文化活动</option>
+								<option>电动游戏</option>
+								<option>其它</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td style="font-weight: 900 ; ">家务</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>家务水平等级：</td>
+						<td>
+							<select name="housework">
+								<option>--请选择--</option>
+								<option value="精通">精通</option>
+								<option value="会一些">会一些</option>
+								<option value="不会">不会</option>
+								
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>家务分配情况：</td>
+						<td>
+							<select name="work">
+								<option>--请选择--</option>
+								<option value="家务全部都我做">家务全部都我做</option>
+								<option value="夫妻平均分配">夫妻平均分配</option>
+								<option value="谁有时间谁做">谁有时间谁做</option>
+								<option value="夫妻各自承担自己是擅长的家务">夫妻各自承担自己是擅长的家务</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td style="font-weight: 900 ; ">宠物</td>
+						<td></td>
+					</tr>					
+					<tr>
+						<td>宠物喜欢程度：</td>
+						<td>
+							<select name="pet">
+								<option>--请选择--</option>
+								<option value="很喜欢">很喜欢</option>
+								<option value="还可以">还可以</option>
+								<option value="不喜欢">不喜欢</option>
+								<option value="很讨厌">很讨厌</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>关于宠物：</td>
+						<td>
+							<select name="an">
+								<option>--请选择--</option>
+								<option value="我没有养宠物，也不接受对方养">我没有养宠物，也不接受对方养</option>
+								<option value="暂时没有养宠物，如果你喜欢我们一起养">暂时没有养宠物，如果你喜欢我们一起养</option>
+								<option value="喜欢宠物，家里有养小狗">喜欢宠物，家里有养小狗</option>
+								<option value="喜欢宠物，家里有养猫咪">喜欢宠物，家里有养猫咪</option>
+								<option value="喜欢宠物，我养的宠物很特别，好奇的话，来问问我吧">喜欢宠物，我养的宠物很特别，好奇的话，来问问我吧</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+					</tr>
+				</table>
+				
+				</div>
+				<div id="middle_header_2-2-2">
+				</div>	
+			</div>
+			<div id="middle_header_2-3">			
+				<div id="middle_header_2-3-1">
+					<ul>
+						<li>
+
+						
+						<input type="submit" value="保存并退出"/>
+
+					</li>
+					</ul>
+				</div>
+				<div id="middle_header_2-3-2">
+					<input type="button" value="跳过此页" />
+					
+				</div>
+			</div>
+			</div>
+			<div id="middle_header_3">
+				<p>资料完整度：46分</p>
+			</div>
+			<div id="middle_header_3-1">
+				<p>
+					达到85分可得到优先推荐的资格哦~
+				</p>
+				<input type="button" value="去补充基本资料" onclick=""/>
+			</div>
+			<div id="middle_header_3-2"> 
+				<h6>
+					详细资料有什么用？
+				</h6>
+				<ul>
+				<li>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					为了让您的个人信息更加丰富饱满，您可以进一步从经济实力、生活方式、工作学习、外貌体型、婚姻观念、
+					兴趣爱好6个方面全方位的展示自己。或许雄厚的经济实力，类似的工作学习经历，养眼的外貌体型，
+					合拍的婚姻观念，相同的兴趣爱好，就是您和对方相识相知的契机。
+				</li>
+				<!--<li>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					头像照是您在世纪佳缘上最常被其他异性看到的头像照片，90%的会员在搜索时会选择有头像照的会员进行联系。
+					您的头像照会出现在：搜索结果里、信件正文里、异性的佳缘首页里、在线聊天频道里、礼物附言里等等，
+					是异性了解您、进而联系您最为关键的第一印象。
+				</li>-->
+				</ul>
+			</div>			
+			<div id="button">
+				<div id="footer_2">
+				<p id="footer_2_1">
+					<a href="#">联系客服</a>
+					<a href="#">关于我们</a>
+					<a href="#">联系我们</a>
+					<a href="#">无线业务</a>
+					<a href="#">注册条框</a>
+					<a href="#">区块链</a>
+					<a href="#">招聘信息</a>
+					<a href="#">交友信息</a>
+					<a href="#">隐私保护</a>
+					<a href="#">帮助中心</a>
+					<a href="#">安全中心</a>
+					<a href="#">营业执照</a>
+				</p>
+				<p id="footer_2_2">
+					<font>中文名：世纪佳缘</font>
+					<font>ICP证书：沪B2-20100074</font>
+					<font>增值电信业务经营许可证：沪B2-20070313</font>
+					<a href="#">ISO9001质量体系认证</a>
+				</p>
+				<p id="footer_2_3">
+					<font>2003-2018</font>
+					<font>版权所有</font>
+					<font>京公网安备110105002124号</font>
+					<font>沪ICP备09045640号-1</font>
+					<font>不良和违法信息举报专线：0316-5266032</font>
+				</p>
+			</div>
+				
+			</div>
+		</div></form>
+	</body>
+</html>

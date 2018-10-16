@@ -1,0 +1,1242 @@
+{% load static from staticfiles %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>婚姻观念_世纪佳缘交友网</title>
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<style type="text/css">
+			body{
+				margin: 0px;
+				padding: 0px;
+				
+			}
+			
+			ul{
+				list-style: none;
+				}
+				
+			#top_left a{
+				color: white;
+				text-decoration: none;
+			}
+			
+			#top_left a:hover{
+				color: pink;
+				}
+			
+			#top{
+				float: left;
+				height: 40px;
+				width: 100%;
+				background-color: rgb(64,64,64);
+				font-size: 14px;
+				border-bottom: 0px solid silver;
+				position: absolute;
+				margin: 0px;
+			}
+			
+			#top_left{
+				float: left;
+				margin-left: 150px;
+			}
+			
+			#top_left ul{
+				float: left;
+				height: 40px;
+			}
+			
+			#top_left li{
+				float: left;
+				color: white;
+				font-size: 11px;
+				font-family: "宋体";
+				margin-left: 30px;
+			}
+			
+			#top_right{
+				position: absolute;
+				float: left;
+				margin-top: 0px;
+				margin-left: 50%;
+			}
+			
+			#top_right ul{
+				float: left;
+			}
+			
+			#top_right li{
+				float: left;
+				margin-top: -6px;
+				color: white;
+				font-size: 11px;
+				font-family: "宋体";
+				margin-left: 30px;
+
+			}
+			#top_right li img{
+				float: left;
+				margin-top: 5px;
+
+			}
+			
+			#top_right a{
+				float: left;
+				margin-top: 12px;
+				margin-left: 3px;
+				color: white;
+				line-height: 5px;
+				text-decoration: none;
+			}
+			
+			#top_right a:hover{
+				color: pink;
+			}
+			
+			#middle_top{
+				position: absolute;
+				margin-top: 40px;
+				height: 130px;
+				width: 100%;
+				border-bottom: 1px solid rgb(193,193,193);
+			}
+			
+			
+			
+			#middle_top ul{
+				float: left;
+				margin-left: 160px;
+				
+			}
+			
+			#middle_top li{
+				margin-top: 5px;
+				font-size: 18px;
+				font-family: "威雅软黑";
+				float: left;
+				margin-left: 15px;
+				
+				
+			}
+			
+			#middle_top a{
+				color:rgb(00,00,00);
+				text-decoration: none;
+			}
+			
+			#middle_top a:hover{
+				color: rgb(255,83,107);
+				border-bottom: 2px solid rgb(255,83,107);
+			}
+			
+			
+			#middle_top_1 a{
+				margin-left: 200px;
+				text-decoration: none;
+			}
+			
+			#middle{
+				position: absolute;
+				margin-top: 170px;
+				width: 100%;
+				height: 800px;
+				border: 2px solid rgb(222,222,222);
+				
+			}
+			
+			#middle_header_1{
+				position: absolute;
+				height: 50px;
+				width: 100%;
+	/*			border: 2px solid rgb(222,222,222);*/
+			}
+			
+			#middle_header_1 ul{
+				margin-left: 170px;
+				float: left;
+			}
+			
+			#middle_header_1 li{
+				float: left;
+				margin-left: 5px;
+				font-size: 10px;
+			}
+			
+			#middle_header_1 p{
+				margin-top: 0px;
+			}
+			
+			#middle_header_1-1{
+				position: absolute;
+				margin-left: 215px;
+				margin-top: 50px;
+				height: 350px;
+				width: 170px;
+				border: 1px solid rgb(222,222,222);
+				border-radius: 5px;
+			}
+			
+			#middle_header_1-1 ul{
+				margin-left: 1px;
+			}
+			
+			#middle_header_1-1 li{
+				margin-top: 5px;
+				margin-left: -35px;
+			}
+			
+			#middle_header_1-1 input{
+				margin-left: -50px;
+				border-radius: 5px;
+				height: 35px;
+				width: 160px;
+				background-color:rgb(246,246,246);
+
+				font-size: 15px;
+				font-family: "微软雅黑";
+				font-weight: 900;
+			}
+			
+			#middle_header_1-1 a{
+				color: #000000;
+				font-size: 12px;
+				text-decoration: none;
+				margin-left: 50px;
+			}
+			
+			#middle_header_1-2{
+				position: absolute;
+				margin-top: 400px;
+				margin-left: 215px;
+				border: 1px solid rgb(222,222,222);
+				border-radius: 5px;
+				height: 400px;
+				width: 170px;
+				background-color: rgb(249,249,249);
+			}
+			
+			#middle_header_1-2 input{
+				margin-left: 18px;
+				border-radius: 5px;
+				margin-top: 11px;
+				height: 35px;
+				width: 120px;
+				color: white;
+				background-color:rgb(23,156,194);
+				font-size: 15px;
+				font-family: "微软雅黑";
+				font-weight: 900;
+				border: none;
+			}
+			
+			#middle_header_0_2{
+				position: absolute;
+				height: 750px;
+				width: 500px;
+				margin-top: 50px;
+				margin-left: 387px;
+				border: 1px solid rgb(222,222,222);
+				/*background-color: rgb(249,249,249);*/
+				border-radius: 5px;
+			}
+			
+			#middle_header_2{
+				position: absolute;
+				border: 1px solid rgb(222,222,222);
+				background-color: rgb(249,249,249);
+				border-radius: 5px;
+				margin-top: 0px;
+				margin-left: 0px;
+				height: 40px;
+				width: 500px;
+			}
+			
+			#middle_header_2 p{
+				color: rgb(220,65,131);
+				margin-left: 15px;
+
+				margin-top: 9px;
+				font-size: 16px;
+				font-weight: 900;
+			}
+			
+			#middle_header_2-1{
+				position: absolute;
+				margin-top: 60px;
+				margin-left: 20px;
+				height: 30px;
+				width: 450px;
+				background-color: rgb(249,249,249);
+			}
+			
+		
+			
+			#middle_header_2-1 p{
+				margin-top: 10px;
+				margin-left: 10px;
+				font-size: 13px;
+				color: rgb(255,104,123);
+				font-family: "新宋体";
+			}
+			
+			#middle_header_2-2{
+				position: absolute;
+				margin-left:10px ;
+				margin-top:105px ;
+				height: 260px;
+				width:460px ;
+				/*border: 2px solid rgb(123,156,211);*/
+			}
+			
+			/*#middle_header_2-2 p{
+				font-family: "宋体";
+				font-size: 15px;
+				font-weight: 900;
+				margin-left: 20px;*/
+
+			
+			#middle_header_2-2-1{
+				margin-top: 0px;
+			}
+			
+			#middle_header_2-2-1 table{
+				width: 480px;
+				height: 550px;
+				/*border: 2px solid rgb(00,00,00);*/
+				font-size: 10px;
+				/*text-align: center;*/
+			}
+			
+			#middle_header_2-2-1 select{
+				font-size: 10px;
+				width: 100px;
+			}
+				
+			#middle_header_2-2-2{
+				
+			}
+			
+			#middle_header_2-3{
+				position: absolute;
+				margin-left: 10px;
+				margin-top: 630px;
+				height: 100px;
+				width: 460px;
+				/*border-top: 1px  solid rgb(222,222,222);*/			
+			}
+			
+			#middle_header_2-3 font{
+				color: rgb(160,160,160);
+			}
+			
+			#middle_header_2-3 ul{
+				height: 100px;
+			}
+			
+			#middle_header_2-3 li{
+				/*color: rgb(57,57,57);
+				font-size:10px ;
+				margin-left: -30px;
+				margin-top: 5px;*/
+				font-size: 10px;
+				margin-top: 5px;
+			}
+			
+			#middle_header_2-3 p{
+				font-size:10px ;
+				color: rgb(57,57,57);
+			}
+			
+			#middle_header_2-3 input{
+				margin-left: -30px;
+				/*border-radius: 5px;
+				height: 30px;
+				width: 100px;
+				color: white;
+				background-color:rgb(23,156,194);
+				font-size: 12px;
+				font-family: "微软雅黑";
+				font-weight: 300;
+				border: none;*/
+				
+			}
+			#middle_header_2-3-1{
+				margin-top: 50px;
+				margin-left: 10px;
+				width: 300px;
+				height: 30px;
+			}
+			
+			#middle_header_2-3-1 li{
+				float: left;
+				margin-left: 50px;
+			}
+			
+			#middle_header_2-3-2{
+				margin-top: -25px;
+			}
+			
+			#middle_header_2-3-2 input{
+				margin-left: 20px;
+				margin-top:0px ;
+			}
+			
+			#middle_header_2-3-1 input{
+				border-radius: 5px;
+				height: 35px;
+				width: 120px;
+				color: white;
+				background-color:rgb(23,156,194);
+				font-size: 15px;
+				font-family: "微软雅黑";
+				font-weight: 900;
+				border: none;
+			}
+			#middle_header_2-3-2 input{
+				border-radius: 5px;
+				height: 35px;
+				width: 120px;
+				color: rgb(122,122,122);
+				background-color:rgb(249,249,249);
+				font-size: 15px;
+				font-family: "微软雅黑";
+				font-weight: 900;
+				border:2px solid rgb(199,199,199);
+			}
+			
+			#middle_header_3{
+				position: absolute;
+				border: 1px solid rgb(222,222,222);
+				border-radius: 5px;
+				background-color:rgb(249,249,249);
+				margin-top: 50px;
+				margin-left: 889px;
+				width: 300px;
+				height: 750px;
+			}
+			#middle_header_3 p{
+				color: rgb(220,65,131);
+				margin-left: 15px;
+				font-weight: 700 ;
+				margin-top: 9px;
+				font-size: 16px;
+			}
+			
+			#middle_header_3-1{
+				position: absolute;
+				margin-top: 100px;
+				margin-left: 889px;
+				width: 300px;
+				height: 100px;
+				/*background-color: red;*/
+			}
+			
+			#middle_header_3-1 p{
+				font-size: 10px;
+				color: rgb(151,167,205);
+				margin-left: 15px;
+			}
+			
+			#middle_header_3-1 input{
+				margin-left: 30px;
+				background-color: rgb(255,178,0);
+				height: 36px;
+				width: 180px;
+				border-radius: 5px;
+				color: white
+			}
+			
+			#middle_header_3-2{
+				position: absolute;
+				margin-top:220px;
+				margin-left: 909px;
+				width: 260px;
+				height: 410px;
+				background-color:white;
+				border:1px solid rgb(240,240,240);
+			}
+			
+			#middle_header_3-2 h6{
+				margin-left: 10px;
+			}
+			
+			#middle_header_3-2 li{
+				font-size: 10px;
+				margin-top: 20px;
+				margin-left: -30px;
+				color: rgb(103,103,101);
+				
+			}
+			
+			#button{
+				position: absolute;
+				width: 100%;
+				margin-top: 755px;
+				height: 200px;
+				/*background-color: red;*/
+				
+			}
+			
+			#footer_2{
+				word-spacing: 15px;
+				font-size: 11px;
+				color: dimgrey;
+				position: absolute;
+				margin-left:20%;
+				margin-top: 60px;
+				text-align: center;
+				
+			}
+			#footer_2 a{
+				text-decoration: none;
+				font-size: 11px;
+				color: rgb(105,105,105);
+			}
+			#footer_2 a:hover{
+				color: rgb(255,83,107);
+				text-decoration: underline;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<form action="/youyuan/inuser9/" method="post">
+		<div id="top">
+			<div id="top_left">
+				<ul>
+					<li>Hi,包容</li>
+					<li><font style="background-color: yellow;
+						color: saddlebrown;">s1会员</font> 金豆 
+						<a href="#">50</a></li>
+					<li><font>佳缘ID</font> <a href="#">182326701</a></li>
+					<li><a href="#">退出</a></li>
+				</ul>				
+			</div>
+			<div id="top_right">
+				<ul>
+					<li><img src="{% static 'img/电话.png' %}" style="height: 18px;"/> <a href="#">红娘专线&nbsp;13621145171</a></li>
+					<li><img src="{% static 'img/星星.png' %}" style="height: 18px;" /> <a href="#">收藏本站</a></li>
+					<li><img src="{% static 'img/账户充值.png' %}" style="height: 18px; "/>
+                        <a href="/youyuan/vip/">充值</a></li>
+					<li><img src="{% static 'img/声音.png' %}" style="height: 18px;" /> <a href="#">提醒</a></li>
+				</ul>				
+			</div>			
+		</div>
+		<div id="middle_top">
+			<div id="middle_top_1">
+			<a href="#"><img src="{% static 'img/房子.png' %}img/bai.jpeg" /> </a>
+			</div>
+			<ul>
+				<li><a href="/youyuan/main/">首页</a></li>
+				<li><a href="#" style="color: rgb(255,84,106);">我的佳缘</a></li>
+				<li><a href="#">收件箱</a></li>
+				<li><a href="#">搜索</a></li>
+				<li><a href="#">俱乐部</a></li>
+				<li><a href="#">活动</a></li>
+				<li><a href="#">约会吧</a></li>
+				<li><a href="#">佳缘金融</a></li>
+				<li><a href="#">红娘一对一</a></li>
+				<li><a href="#">晒幸福</a></li>
+			</ul>
+		</div>
+		<div id="middle">
+			<div id="middle_header_1">
+				<ul>
+					<li><img src="{% static 'img/房子.png' %}" style="height: 18px;"/> </li>
+					<li><a href="">我的佳缘</a> </li>
+					<li><p>></p> </li>
+					<li><p>基本资料</p></li>
+				</ul>				
+			</div>
+			<div id="middle_header_1-1">
+				<ul>
+					<li><a href="/youyuan/ziliao/"><input type="button" value="基本资料" /></a> </li>
+					<li><a href="/youyuan/dubai/"><input type="button" value="内心独白" /></a> </li>
+					<li><a href="#"><input type="button" value="我的照片" /></a> </li>
+					<li><a href="/youyuan/user5/"><input type="button" value="详细资料" /></a> </li>
+					<li><a href="/youyuan/user5/">经济实力</a> </li>
+					<li><a href="/youyuan/user6/">生活方式</a> </li>
+					<li><a href="/youyuan/user7/">工作学习</a> </li>
+					<li><a href="/youyuan/user8/">外貌体型</a> </li>
+					<li><a href="/youyuan/user9/" style="color: hotpink;" >婚姻观念</a> </li>
+					<li><a href="/youyuan/user10/">兴趣爱好</a> </li>
+				</ul>
+			</div>
+			<div id="middle_header_1-2">
+				<a href="/youyuan/main/"><input type="button" value="返回我的佳缘" /></a>
+			</div>
+			<div id="middle_header_0_2">
+			<div id="middle_header_2">
+				<p>
+					婚姻观念
+				</p>
+			</div>
+			<div id="middle_header_2-1">
+				<p>
+					资料越完善，同等条件我们将优先推荐您哦~
+				</p>
+			</div>
+			<div id="middle_header_2-2">
+				<div id="middle_header_2-2-1">
+				
+				<table>
+					<tr>
+						<td style="font-weight: 900;" width="25%">关于自己</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>籍贯：</td>
+						<td>
+							<div id="date">
+									<select name="province" id="province" class="input1">
+									<option value="请选择">请选择</option>
+								</select>
+								<select name="city" id="city" class="input1">
+									<option value="请选择">请选择</option>
+								</select>
+								<select name="town" id="town" class="input1">
+									<option value="请选择">请选择</option>
+								</select>
+								<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+								<script src="{% static 'js/area.js' %}"></script>
+								<script src="{% static 'js/select.js' %}"></script>
+								</div>	
+						</td>
+					</tr>
+					<tr>
+						<td>国籍：</td>
+						<td>
+							<select name="nationality" id="nationality" onChange="select_changed()" class="om_select195"  style="color:#666;">
+							    <option value="0">--请选择--</option>
+							    <option label="中国大陆" value="1" selected="selected">中国大陆</option>
+								<option label="中国台湾" value="56">中国台湾</option>
+								<option label="中国香港" value="190">中国香港</option>
+								<option label="中国澳门" value="143">中国澳门</option>
+								<option label="韩国" value="41">韩国</option>
+								<option label="朝鲜" value="39">朝鲜</option>
+								<option label="印度" value="149">印度</option>
+								<option label="印度尼西亚" value="50">印度尼西亚</option>
+								<option label="美国" value="3">美国</option>
+								<option label="加拿大" value="4">加拿大</option>
+								<option label="日本" value="128">日本</option>
+								<option label="俄罗斯" value="25">俄罗斯</option>
+								<option label="英国" value="7">英国</option>
+								<option label="德国" value="8">德国</option>
+								<option label="意大利" value="110">意大利</option>
+								<option label="法国" value="6">法国</option>
+								<option label="芬兰" value="166">芬兰</option>
+								<option label="瑞典" value="150">瑞典</option>
+								<option label="瑞士" value="151">瑞士</option>
+								<option label="南非" value="43">南非</option>
+								<option label="蒙古" value="175">蒙古</option>
+								<option label="越南" value="181">越南</option>
+								<option label="缅甸" value="162">缅甸</option>
+								<option label="泰国" value="139">泰国</option>
+								<option label="老挝" value="164">老挝</option>
+								<option label="菲律宾" value="171">菲律宾</option>
+								<option label="西班牙" value="176">西班牙</option>
+								<option label="葡萄牙" value="174">葡萄牙</option>
+								<option label="阿尔巴尼亚" value="186">阿尔巴尼亚</option>
+								<option label="阿尔及利亚" value="185">阿尔及利亚</option>
+								<option label="阿富汗" value="184">阿富汗</option>
+								<option label="阿根廷" value="188">阿根廷</option>
+								<option label="阿拉伯联合酋长国" value="189">阿拉伯联合酋长国</option>
+								<option label="阿拉伯叙利亚共和国" value="54">阿拉伯叙利亚共和国</option>
+								<option label="阿鲁巴" value="17">阿鲁巴</option>
+								<option label="阿曼" value="187">阿曼</option>
+								<option label="阿塞拜疆" value="183">阿塞拜疆</option>
+								<option label="埃及" value="73">埃及</option>
+								<option label="埃塞俄比亚" value="74">埃塞俄比亚</option>
+								<option label="爱尔兰" value="144">爱尔兰</option>
+								<option label="爱沙尼亚" value="145">爱沙尼亚</option>
+								<option label="安道尔" value="90">安道尔</option>
+								<option label="安哥拉" value="88">安哥拉</option>
+								<option label="安圭拉" value="22">安圭拉</option>
+								<option label="安提瓜和巴布达" value="89">安提瓜和巴布达</option>
+								<option label="奥地利" value="85">奥地利</option>
+								<option label="澳大利亚" value="5">澳大利亚</option>
+								<option label="巴巴多斯" value="33">巴巴多斯</option>
+								<option label="巴布亚新几内亚" value="99">巴布亚新几内亚</option>
+								<option label="巴哈马" value="97">巴哈马</option>
+								<option label="巴基斯坦" value="98">巴基斯坦</option>
+								<option label="巴勒斯坦" value="96">巴勒斯坦</option>
+								<option label="巴拉圭" value="100">巴拉圭</option>
+								<option label="巴林" value="101">巴林</option>
+								<option label="巴拿马" value="42">巴拿马</option>
+								<option label="巴西" value="103">巴西</option>
+								<option label="白俄罗斯" value="153">白俄罗斯</option>
+								<option label="百慕大" value="48">百慕大</option>
+								<option label="保加利亚" value="26">保加利亚</option>
+								<option label="北马里亚纳" value="66">北马里亚纳</option>
+								<option label="贝宁" value="178">贝宁</option>
+								<option label="比利时" value="132">比利时</option>
+								<option label="冰岛" value="67">冰岛</option>
+								<option label="波多黎各" value="84">波多黎各</option>
+								<option label="波兰" value="137">波兰</option>
+								<option label="波斯尼亚和黑塞哥维那" value="138">波斯尼亚和黑塞哥维那</option>
+								<option label="玻利维亚" value="148">玻利维亚</option>
+								<option label="伯利兹" value="24">伯利兹</option>
+								<option label="博茨瓦纳" value="44">博茨瓦纳</option>
+								<option label="不丹" value="9">不丹</option>
+								<option label="布基纳法索" value="105">布基纳法索</option>
+								<option label="布隆迪" value="106">布隆迪</option>
+								<option label="布维岛" value="83">布维岛</option>
+								<option label="赤道几内亚" value="180">赤道几内亚</option>
+								<option label="大阿拉伯利比亚民众国" value="34">大阿拉伯利比亚民众国</option>
+								<option label="丹麦" value="11">丹麦</option>
+								<option label="东帝汶" value="109">东帝汶</option>
+								<option label="多哥" value="82">多哥</option>
+								<option label="多米尼加共和国" value="102">多米尼加共和国</option>
+								<option label="多米尼克" value="104">多米尼克</option>
+								<option label="厄瓜多尔" value="52">厄瓜多尔</option>
+								<option label="厄立特里亚" value="53">厄立特里亚</option>
+								<option label="法罗群岛" value="111">法罗群岛</option>
+								<option label="梵蒂冈城国" value="117">梵蒂冈城国</option>
+								<option label="斐济" value="122">斐济</option>
+								<option label="佛得角" value="123">佛得角</option>
+								<option label="冈比亚" value="28">冈比亚</option>
+								<option label="刚果" value="32">刚果</option>
+								<option label="哥伦比亚" value="60">哥伦比亚</option>
+								<option label="哥斯达黎加" value="61">哥斯达黎加</option>
+								<option label="格林纳达" value="131">格林纳达</option>
+								<option label="格陵兰" value="69">格陵兰</option>
+								<option label="格鲁吉亚" value="182">格鲁吉亚</option>
+								<option label="古巴" value="55">古巴</option>
+								<option label="关岛" value="177">关岛</option>
+								<option label="圭亚那" value="71">圭亚那</option>
+								<option label="哈萨克斯坦" value="59">哈萨克斯坦</option>
+								<option label="海地" value="142">海地</option>
+								<option label="荷兰" value="169">荷兰</option>
+								<option label="荷属安的列斯" value="192">荷属安的列斯</option>
+								<option label="赫德和麦克唐纳群岛" value="195">赫德和麦克唐纳群岛</option>
+								<option label="洪都拉斯" value="141">洪都拉斯</option>
+								<option label="基里巴斯" value="75">基里巴斯</option>
+								<option label="吉布提" value="58">吉布提</option>
+								<option label="吉尔吉斯斯坦" value="57">吉尔吉斯斯坦</option>
+								<option label="几内亚" value="29">几内亚</option>
+								<option label="几内亚比绍" value="30">几内亚比绍</option>
+								<option label="加纳" value="36">加纳</option>
+								<option label="加蓬" value="37">加蓬</option>
+								<option label="柬埔寨" value="130">柬埔寨</option>
+								<option label="捷克共和国" value="115">捷克共和国</option>
+								<option label="津巴布韦" value="140">津巴布韦</option>
+								<option label="喀麦隆" value="62">喀麦隆</option>
+								<option label="卡塔尔" value="45">卡塔尔</option>
+								<option label="开曼群岛" value="199">开曼群岛</option>
+								<option label="科摩罗" value="155">科摩罗</option>
+								<option label="科特迪瓦" value="200">科特迪瓦</option>
+								<option label="科威特" value="154">科威特</option>
+								<option label="克罗地亚" value="27">克罗地亚</option>
+								<option label="肯尼亚" value="165">肯尼亚</option>
+								<option label="库克群岛" value="201">库克群岛</option>
+								<option label="拉脱维亚" value="113">拉脱维亚</option>
+								<option label="莱索托" value="202">莱索托</option>
+								<option label="黎巴嫩" value="198">黎巴嫩</option>
+								<option label="立陶宛" value="158">立陶宛</option>
+								<option label="利比里亚" value="35">利比里亚</option>
+								<option label="列支敦士登" value="31">列支敦士登</option>
+								<option label="卢森堡" value="47">卢森堡</option>
+								<option label="卢旺达" value="46">卢旺达</option>
+								<option label="罗马尼亚" value="163">罗马尼亚</option>
+								<option label="马达加斯加" value="196">马达加斯加</option>
+								<option label="马尔代夫" value="203">马尔代夫</option>
+								<option label="马耳他" value="204">马耳他</option>
+								<option label="马拉维" value="193">马拉维</option>
+								<option label="马来西亚" value="194">马来西亚</option>
+								<option label="马里" value="197">马里</option>
+								<option label="马绍尔群岛" value="205">马绍尔群岛</option>
+								<option label="毛里求斯" value="134">毛里求斯</option>
+								<option label="毛利塔尼亚" value="133">毛利塔尼亚</option>
+								<option label="蒙特塞拉特" value="206">蒙特塞拉特</option>
+								<option label="孟加拉国" value="87">孟加拉国</option>
+								<option label="秘鲁" value="156">秘鲁</option>
+								<option label="密克罗尼西亚联邦" value="91">密克罗尼西亚联邦</option>
+								<option label="摩尔多瓦" value="116">摩尔多瓦</option>
+								<option label="摩洛哥" value="118">摩洛哥</option>
+								<option label="摩纳哥" value="119">摩纳哥</option>
+								<option label="莫桑比克" value="170">莫桑比克</option>
+								<option label="墨西哥" value="81">墨西哥</option>
+								<option label="纳米比亚" value="161">纳米比亚</option>
+								<option label="南极洲" value="207">南极洲</option>
+								<option label="南斯拉夫" value="40">南斯拉夫</option>
+								<option label="瑙鲁" value="49">瑙鲁</option>
+								<option label="尼泊尔" value="95">尼泊尔</option>
+								<option label="尼加拉瓜" value="92">尼加拉瓜</option>
+								<option label="尼日尔" value="94">尼日尔</option>
+								<option label="尼日利亚" value="93">尼日利亚</option>
+								<option label="纽埃" value="208">纽埃</option>
+								<option label="挪威" value="114">挪威</option>
+								<option label="诺福克岛" value="209">诺福克岛</option>
+								<option label="帕劳群岛" value="108">帕劳群岛</option>
+								<option label="皮特凯恩" value="210">皮特凯恩</option>
+								<option label="前南斯拉夫马其顿共和国" value="191">前南斯拉夫马其顿共和国</option>
+								<option label="萨尔瓦多" value="172">萨尔瓦多</option>
+								<option label="萨摩亚" value="173">萨摩亚</option>
+								<option label="塞拉利昂" value="78">塞拉利昂</option>
+								<option label="塞内加尔" value="77">塞内加尔</option>
+								<option label="塞浦路斯" value="79">塞浦路斯</option>
+								<option label="塞舌尔" value="80">塞舌尔</option>
+								<option label="沙特阿拉伯" value="136">沙特阿拉伯</option>
+								<option label="圣诞岛" value="211">圣诞岛</option>
+								<option label="圣多美和普林西比" value="68">圣多美和普林西比</option>
+								<option label="圣赫勒拿" value="212">圣赫勒拿</option>
+								<option label="圣基茨和尼维斯" value="213">圣基茨和尼维斯</option>
+								<option label="圣卢西亚" value="214">圣卢西亚</option>
+								<option label="圣马力诺" value="70">圣马力诺</option>
+								<option label="斯里兰卡" value="126">斯里兰卡</option>
+								<option label="斯洛伐克共和国" value="124">斯洛伐克共和国</option>
+								<option label="斯洛文尼亚" value="125">斯洛文尼亚</option>
+								<option label="斯瓦尔巴岛和扬马延岛" value="215">斯瓦尔巴岛和扬马延岛</option>
+								<option label="斯威士兰" value="216">斯威士兰</option>
+								<option label="苏丹" value="167">苏丹</option>
+								<option label="苏里南" value="168">苏里南</option>
+								<option label="所罗门群岛" value="112">所罗门群岛</option>
+								<option label="索马里" value="159">索马里</option>
+								<option label="塔吉克斯坦" value="76">塔吉克斯坦</option>
+								<option label="坦桑尼亚" value="72">坦桑尼亚</option>
+								<option label="汤加" value="135">汤加</option>
+								<option label="特克斯和凯科斯群岛" value="217">特克斯和凯科斯群岛</option>
+								<option label="特立尼达和多巴哥" value="147">特立尼达和多巴哥</option>
+								<option label="突尼斯" value="157">突尼斯</option>
+								<option label="图瓦卢" value="63">图瓦卢</option>
+								<option label="土耳其" value="65">土耳其</option>
+								<option label="土库曼斯坦" value="64">土库曼斯坦</option>
+								<option label="托克劳" value="218">托克劳</option>
+								<option label="瓦努阿图" value="1152">瓦努阿图</option>
+								<option label="危地马拉" value="51">危地马拉</option>
+								<option label="委内瑞拉" value="86">委内瑞拉</option>
+								<option label="文莱" value="121">文莱</option>
+								<option label="乌干达" value="14">乌干达</option>
+								<option label="乌克兰" value="12">乌克兰</option>
+								<option label="乌拉圭" value="15">乌拉圭</option>
+								<option label="乌兹别克斯坦" value="13">乌兹别克斯坦</option>
+								<option label="西撒哈拉" value="120">西撒哈拉</option>
+								<option label="希腊" value="107">希腊</option>
+								<option label="新加坡" value="2">新加坡</option>
+								<option label="新西兰" value="127">新西兰</option>
+								<option label="匈牙利" value="38">匈牙利</option>
+								<option label="牙买加" value="146">牙买加</option>
+								<option label="亚美尼亚" value="19">亚美尼亚</option>
+								<option label="也门" value="18">也门</option>
+								<option label="伊拉克" value="21">伊拉克</option>
+								<option label="伊朗伊斯兰共和国" value="23">伊朗伊斯兰共和国</option>
+								<option label="以色列" value="20">以色列</option>
+								<option label="约旦" value="160">约旦</option>
+								<option label="赞比亚" value="179">赞比亚</option>
+								<option label="扎伊尔" value="219">扎伊尔</option>
+								<option label="乍得" value="16">乍得</option>
+								<option label="直布罗陀" value="220">直布罗陀</option>
+								<option label="智利" value="129">智利</option>
+								<option label="中非共和国 " value="10">中非共和国 </option>
+								<option label="圣文森特和格林纳丁斯" value="1153">圣文森特和格林纳丁斯</option>
+								<option label="法属波利尼西亚" value="1154">法属波利尼西亚</option>
+								<option label="毛里塔尼亚" value="1155">毛里塔尼亚</option>
+								<option label="新喀里多尼亚" value="1156">新喀里多尼亚</option>
+								<option label="曼岛" value="1157">曼岛</option>
+								<option label="科科斯群岛" value="1158">科科斯群岛</option>
+
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>个性特征：</td>
+						<td>
+							<select id="characters" name="personality" onChange="select_changed()" class="om_select195"  >
+								<option value="_" selected="selected">--请选择--</option>
+								<option label="非常内向" value="1">非常内向</option>
+								<option label="有点内向" value="2">有点内向</option>
+								<option label="内外向平衡" value="3">内外向平衡</option>
+								<option label="有点外向" value="4">有点外向</option>
+								<option label="非常外向" value="5">非常外向</option>
+							</select>
+
+						</td>
+					</tr>
+					<tr>
+						<td>幽默感：</td>
+						<td>
+							<select id="humor" name="humor" onChange="select_changed()" class="om_select195" >
+								<option value="0" selected="selected">--请选择--</option>
+								<option label="没有幽默感" value="1">没有幽默感</option>
+								<option label="有点幽默感" value="2">有点幽默感</option>
+								<option label="幽默风趣" value="3">幽默风趣</option>
+								<option label="经常带来欢笑" value="4">经常带来欢笑</option>
+
+							</select>
+
+						</td>
+					</tr>
+					<tr>
+						<td>脾气：</td>
+						<td>
+							<select id="temper" name="temper" onChange="select_changed()" class="om_select195" >
+								<option value="0" selected="selected">--请选择--</option>
+								<option label="脾气很好" value="1">脾气很好</option>
+								<option label="很少发脾气" value="2">很少发脾气</option>
+								<option label="偶尔会憋不住" value="3">偶尔会憋不住</option>
+								<option label="经常发脾气" value="4">经常发脾气</option>
+								<option label="火气一点就着" value="5">火气一点就着</option>
+
+							</select>
+
+						</td>
+					</tr>
+					<tr>
+						<td>对待感情：</td>
+						<td>
+							<select id="affection" name="emotional_attitude" onChange="select_changed()" class="om_select195" >
+								<option value="0" selected="selected">--请选择--</option>
+								<option label="人生得意须尽欢" value="1">人生得意须尽欢</option>
+								<option label="是否投入真情要看情况" value="2">是否投入真情要看情况</option>
+								<option label="一向认真对待感情" value="3">一向认真对待感情</option>
+								<option label="憎恨虚情假意 用情不专的人" value="4">憎恨虚情假意 用情不专的人</option>
+
+							</select>
+
+						</td>
+					</tr>
+					<tr>
+						<td>是否要小孩：</td>
+						<td>
+							<select onchange="select_changed()" name="child_want" id="child_want" class="om_select195" >
+								<option value="0">--请选择--</option>
+								<option label="想要孩子" value="1">想要孩子</option>
+								<option label="要不要都行" value="4">要不要都行</option>
+								<option label="不要孩子" value="2">不要孩子</option>
+								<option label="视情况而定" value="3">视情况而定</option>
+
+							</select>
+
+						</td>
+					</tr>
+					<tr><td>何时结婚：</td>
+						<td>
+							<select id="marry-time" name="marriage_time" onChange="select_changed()" class="om_select195" >
+								<option value="0" selected="selected">--请选择--</option>
+								<option label="接受闪婚" value="1">接受闪婚</option>
+								<option label="顺其自然" value="2">顺其自然</option>
+								<option label="一年内" value="3">一年内</option>
+								<option label="两年内" value="4">两年内</option>
+								<option label="三年以上" value="5">三年以上</option>
+
+							</select>
+
+						</td>
+					</tr>
+					<tr>
+						<td>是否接受异地恋：</td>
+						<td>
+							<select id="long-distance" name="ld_relationship" onChange="select_changed()" class="om_select195" >
+								<option value="0" selected="selected">--请选择--</option>
+								<option label="不能接受" value="1">不能接受</option>
+								<option label="能接受" value="2">能接受</option>
+								<option label="视情况而定" value="3">视情况而定</option>
+
+							</select>
+
+						</td>
+					</tr>
+					<tr>
+						<td>理想婚姻：</td>
+						<td>
+							<textarea id="ideal-marriage"   
+								name="ideal-marriage" onChange="select_changed();"
+								 onKeyup="changeNote();" onBlur="validateInfo('理想婚姻', 
+								 this.value, 'ideal-marriage');" maxlength=50 
+								 style="white-space:pre-wrap;" ></textarea> 
+								 <span id="will_write">剩余50字</span>
+						</td>
+					</tr>
+					<tr>
+						<td style="font-weight: 900;">关于家庭</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>愿与对方父母同住：</td>
+						<td>
+							<select onchange="select_changed()" name="parent_together" id="parent_together" class="om_select195" >
+								<option value="0" selected="selected" >--请选择--</option>
+								<option label="愿意" value="1">愿意</option>
+								<option label="不愿意" value="2">不愿意</option>
+								<option label="视情况而定" value="3">视情况而定</option>
+
+							</select>
+
+						</td>
+					</tr>
+					<tr>
+						<td>家中排行：</td>
+						<td>
+							<select onchange="select_changed(); checkSingle();" name="paihang" id="paihang" class="om_select195" >
+								<option value="0" selected="selected" >--请选择--</option>
+								<option label="独生子女" value="1">独生子女</option>
+									<option label="老大" value="2">老大</option>
+									<option label="老二" value="3">老二</option>
+									<option label="老三" value="4">老三</option>
+									<option label="老四" value="5">老四</option>
+									<option label="老五及更小" value="6">老五及更小</option>
+									<option label="老幺" value="7">老幺</option>
+
+							</select>
+
+						</td>
+					</tr>
+					<tr>
+						<td>兄弟姐妹：</td>
+						<td>
+							<ul class="brother-sister clearfix" >
+                    <li  ><input type="checkbox" id="elder-brother" name="elder-brother" value="1"  /><label for="elder-brother"> 哥哥</label>
+									<span class="hide">
+
+                                    <select name="have_o_brother" >
+                                    <option label="1" value="1">1</option>
+<option label="2" value="2">2</option>
+<option label="3" value="3">3</option>
+<option label="4" value="4">4</option>
+<option label="5" value="5">5</option>
+<option label="6" value="6">6</option>
+<option label="7" value="7">7</option>
+<option label="8" value="8">8</option>
+<option label="9" value="9">9</option>
+<option label="10" value="10">10</option>
+
+										</select> 个
+									</span>									
+								</li>
+								<li ><input type="checkbox" id="elder-sister" name="elder-sister" value="1"  /><label for="elder-sister">  姐姐</label>
+									<span class="hide">
+										<select name="have_o_sister">
+											<option label="1" value="1">1</option>
+<option label="2" value="2">2</option>
+<option label="3" value="3">3</option>
+<option label="4" value="4">4</option>
+<option label="5" value="5">5</option>
+<option label="6" value="6">6</option>
+<option label="7" value="7">7</option>
+<option label="8" value="8">8</option>
+<option label="9" value="9">9</option>
+<option label="10" value="10">10</option>
+
+										</select> 个
+									</span>
+								</li> 								
+								<li ><input type="checkbox" id="younger-brother" name="younger-brother" value="1"  /><label for="younger-brother"> 弟弟</label>
+									<span class="hide">
+										<select name="have_y_brother">
+											<option label="1" value="1">1</option>
+<option label="2" value="2">2</option>
+<option label="3" value="3">3</option>
+<option label="4" value="4">4</option>
+<option label="5" value="5">5</option>
+<option label="6" value="6">6</option>
+<option label="7" value="7">7</option>
+<option label="8" value="8">8</option>
+<option label="9" value="9">9</option>
+<option label="10" value="10">10</option>
+
+										</select> 个
+									</span>
+								</li>
+								<li ><input type="checkbox" id="younger-sister" name="younger-sister" value="1"  /><label for="younger-sister"> 妹妹</label>
+									<span class="hide">
+										<select name="have_y_sister">
+											<option label="1" value="1">1</option>
+<option label="2" value="2">2</option>
+<option label="3" value="3">3</option>
+<option label="4" value="4">4</option>
+<option label="5" value="5">5</option>
+<option label="6" value="6">6</option>
+<option label="7" value="7">7</option>
+<option label="8" value="8">8</option>
+<option label="9" value="9">9</option>
+<option label="10" value="10">10</option>
+
+										</select> 个
+									</span>
+								</li>
+							</ul>
+
+						</td>
+					</tr>
+					<tr>
+						<td>父母情况：</td>
+						<td>
+							<select onchange="select_changed()" name="parents" id="parent_together" class="om_select195" >
+								<option value="0" selected="selected" >--请选择--</option>
+								<option label="父母健在" value="1">父母健在</option>
+<option label="单亲家庭" value="2">单亲家庭</option>
+<option label="父亲健在" value="3">父亲健在</option>
+<option label="母亲健在" value="4">母亲健在</option>
+<option label="父母均离世" value="5">父母均离世</option>
+
+							</select>
+
+						</td>
+					</tr>
+					<tr>						
+						<td>父母工作：</td>
+						<td>
+							<label class="parent_work">父</label>
+							<select class="select1 "onchange="select_changed()" name="father_work" id="father_work" >
+								<option value="0" selected="selected" >--请选择--</option>
+								<option label="政府机关（已退休）" value="1">政府机关（已退休）</option>
+<option label="政府机关（未退休）" value="2">政府机关（未退休）</option>
+<option label="事业单位（已退休）" value="3">事业单位（已退休）</option>
+<option label="事业单位（未退休）" value="4">事业单位（未退休）</option>
+<option label="外企单位（已退休）" value="5">外企单位（已退休）</option>
+<option label="外企单位（未退休）" value="6">外企单位（未退休）</option>
+<option label="世界500强公司（已退休）" value="7">世界500强公司（已退休）</option>
+<option label="世界500强公司（未退休）" value="8">世界500强公司（未退休）</option>
+<option label="上市公司（已退休）" value="9">上市公司（已退休）</option>
+<option label="上市公司（未退休）" value="11">上市公司（未退休）</option>
+<option label="国有企业（已退休）" value="12">国有企业（已退休）</option>
+<option label="国有企业（未退休）" value="13">国有企业（未退休）</option>
+<option label="私营企业（已退休）" value="14">私营企业（已退休）</option>
+<option label="私营企业（未退休）" value="15">私营企业（未退休）</option>
+<option label="自有公司" value="16">自有公司</option>
+<option label="无工作" value="17">无工作</option>
+<option label="其他（已退休）" value="18">其他（已退休）</option>
+<option label="其他（未退休）" value="19">其他（未退休）</option>
+
+							</select>
+							<label class="parent_work">母</label>
+							<select class="select2"onchange="select_changed()" name="mother_work" id="mother_work" >
+								<option value="0" selected="selected" >--请选择--</option>
+								<option label="政府机关（已退休）" value="1">政府机关（已退休）</option>
+<option label="政府机关（未退休）" value="2">政府机关（未退休）</option>
+<option label="事业单位（已退休）" value="3">事业单位（已退休）</option>
+<option label="事业单位（未退休）" value="4">事业单位（未退休）</option>
+<option label="外企单位（已退休）" value="5">外企单位（已退休）</option>
+<option label="外企单位（未退休）" value="6">外企单位（未退休）</option>
+<option label="世界500强公司（已退休）" value="7">世界500强公司（已退休）</option>
+<option label="世界500强公司（未退休）" value="8">世界500强公司（未退休）</option>
+<option label="上市公司（已退休）" value="9">上市公司（已退休）</option>
+<option label="上市公司（未退休）" value="11">上市公司（未退休）</option>
+<option label="国有企业（已退休）" value="12">国有企业（已退休）</option>
+<option label="国有企业（未退休）" value="13">国有企业（未退休）</option>
+<option label="私营企业（已退休）" value="14">私营企业（已退休）</option>
+<option label="私营企业（未退休）" value="15">私营企业（未退休）</option>
+<option label="自有公司" value="16">自有公司</option>
+<option label="无工作" value="17">无工作</option>
+<option label="其他（已退休）" value="18">其他（已退休）</option>
+<option label="其他（未退休）" value="19">其他（未退休）</option>
+
+							</select>
+
+						</td>
+					</tr>
+					<tr>
+						<td>父母经济情况：</td>
+						<td>
+							<select onchange="select_changed()" name="parents_economic" id="parent_economic" class="om_select195" >
+								<option value="0" selected="selected" >--请选择--</option>
+								<option label="均有退休金" value="1">均有退休金</option>
+<option label="均无退休金" value="2">均无退休金</option>
+<option label="只有父亲有退休金" value="3">只有父亲有退休金</option>
+<option label="只有母亲有退休金" value="4">只有母亲有退休金</option>
+
+							</select>
+
+						</td>
+					</tr>
+					<tr>
+						<td>父母医保情况：</td>
+						<td>
+                    <select onchange="select_changed()" name="parents_health_care"
+							 id="parent_economic">
+								<option value="0" selected="selected" >--请选择--</option>
+								<option label="均有医疗保险" value="1">均有医疗保险</option>
+								<option label="均无医疗保险" value="2">均无医疗保险</option>
+								<option label="只有父亲有医疗保险" value="3">只有父亲有医疗保险</option>
+								<option label="只有母亲有医疗保险" value="4">只有母亲有医疗保险</option>
+							</select>
+
+						</td>
+						
+					</tr>
+				</table>
+				
+				</div>
+				<div id="middle_header_2-2-2">
+				</div>	
+			</div>
+			<div id="middle_header_2-3">			
+				<div id="middle_header_2-3-1">
+					<ul>
+						<li>
+
+						
+						<input type="submit" value="保存并退出"/>
+
+					</li>
+					</ul>
+				</div>
+				<div id="middle_header_2-3-2">
+					<input type="button" value="跳过此页" />
+					
+				</div>
+			</div>
+			</div>
+			<div id="middle_header_3">
+				<p>资料完整度：46分</p>
+			</div>
+			<div id="middle_header_3-1">
+				<p>
+					达到85分可得到优先推荐的资格哦~
+				</p>
+				<input type="button" value="去补充基本资料" onclick=""/>
+			</div>
+			<div id="middle_header_3-2"> 
+				<h6>
+					详细资料有什么用？
+				</h6>
+				<ul>
+				<li>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					为了让您的个人信息更加丰富饱满，您可以进一步从经济实力、生活方式、工作学习、外貌体型、婚姻观念、
+					兴趣爱好6个方面全方位的展示自己。或许雄厚的经济实力，类似的工作学习经历，养眼的外貌体型，
+					合拍的婚姻观念，相同的兴趣爱好，就是您和对方相识相知的契机。
+				</li>
+				<!--<li>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					头像照是您在世纪佳缘上最常被其他异性看到的头像照片，90%的会员在搜索时会选择有头像照的会员进行联系。
+					您的头像照会出现在：搜索结果里、信件正文里、异性的佳缘首页里、在线聊天频道里、礼物附言里等等，
+					是异性了解您、进而联系您最为关键的第一印象。
+				</li>-->
+				</ul>
+			</div>			
+			<div id="button">
+				<div id="footer_2">
+				<p id="footer_2_1">
+					<a href="#">联系客服</a>
+					<a href="#">关于我们</a>
+					<a href="#">联系我们</a>
+					<a href="#">无线业务</a>
+					<a href="#">注册条框</a>
+					<a href="#">区块链</a>
+					<a href="#">招聘信息</a>
+					<a href="#">交友信息</a>
+					<a href="#">隐私保护</a>
+					<a href="#">帮助中心</a>
+					<a href="#">安全中心</a>
+					<a href="#">营业执照</a>
+				</p>
+				<p id="footer_2_2">
+					<font>中文名：世纪佳缘</font>
+					<font>ICP证书：沪B2-20100074</font>
+					<font>增值电信业务经营许可证：沪B2-20070313</font>
+					<a href="#">ISO9001质量体系认证</a>
+				</p>
+				<p id="footer_2_3">
+					<font>2003-2018</font>
+					<font>版权所有</font>
+					<font>京公网安备110105002124号</font>
+					<font>沪ICP备09045640号-1</font>
+					<font>不良和违法信息举报专线：0316-5266032</font>
+				</p>
+			</div>
+				
+			</div>
+		</div></form>
+	</body>
+</html>

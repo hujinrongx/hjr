@@ -1,0 +1,242 @@
+{% load static from staticfiles %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<style type="text/css">
+		body{
+			margin: 0px;
+		}
+		/*头部样式样式*/
+		#header{
+			height: 80px;
+			width: 100%;
+			position: fixed;
+			/*background-color: goldenrod;*/
+			margin: 0px;
+		}
+		#header_left{
+			position: absolute;
+			float: left;
+			margin-top: 5px;
+			margin-left: 150px;
+			width: 220px;
+		}
+		#header_right{
+			margin-top: 5px;
+			position: absolute;
+			float: left;
+			margin-left: 370px;
+			width: 220px;
+		}
+		
+		/*中间部分样式*/
+		#body{
+			margin-top: 80px;
+			height: 530px;
+			width: 100%;
+			position: absolute;
+			background-color: #f4f4f4;
+
+			}
+		#body_login{     /*登录框样式*/
+			position: absolute;
+			margin-top: 50px;
+			margin-left: 250px;
+			height: 400px;
+			width: 400px;
+			background-color: #fff;
+			border: 1px solid #e5e5e5;
+			
+		}
+		#bbody_login_1{    /*登陆框头部样式*/
+			position: absolute;
+			margin: 0px;
+			height: 60px;
+			width: 100%;
+			background-color: #fafafa;
+			border-bottom: 1px solid #e5e5e5;
+
+		}
+		#bbody_login_1 p{
+			margin-top: 17px;
+			margin-left: 20px;
+			font-size: 24px;
+			/*letter-spacing: 3px;*/
+			color: black;
+			font-family: "宋体";
+		}
+		#bbody_login_2{   /*登陆框主体样式*/
+			
+			/*margin-left: 5%;*/
+			position: absolute;
+			width: 90%;
+			height: 240px;
+			margin-top: 80px;
+			text-align: center;
+			font-family: "宋体";
+			border-bottom: 1px solid lightgrey;
+		}
+		ul{
+			list-style-type: none;
+			line-height: 60px;
+			font-size: 16px;
+			
+		}
+		.input{
+			height: 30px;
+			width: 200px;
+			border-radius: 5px;
+			border: 1px solid lightgray;
+			
+			
+		}
+		#button{
+			height: 30px;
+			width: 100px;
+			border-radius: 5px;
+			background-color: rgb(255,83,107);
+			color: white;
+			letter-spacing: 20px;
+			text-align: center;
+			border: none;
+			
+		}
+		#button:hover{
+			background-color: rgb(255,26,60);
+		}
+		#checkremember{
+
+			font-size: 12px;
+			color: grey;
+			line-height: 30px;
+		}
+		
+		a{
+			color:  dimgrey;
+			font-size: 14px;
+		}
+		#bbody_login_3 a:hover{
+			color: blueviolet;
+		}
+		#bbody_login_3{  /*登陆框底部样式*/
+			position: absolute;
+			margin-top: 30px;
+			margin-left: 10%;
+			width: 80%;
+		}
+		
+		/*底部样式*/
+		#footer{
+			margin-top: 610px;
+			width: 100%;
+			height: 150px;
+			position: absolute;
+			/*background-color: rosybrown;*/
+			/*text-align: right;*/
+			
+		}
+		#footer_1{
+			margin-left: 75%;
+			margin-top: 20px;
+		}
+		#footer_1 a{
+			color:  dimgrey;
+			font-size: 18px;
+			font-family: "仿宋";
+			font-weight: 800;
+			text-decoration: none;
+		}
+		#footer_1 a:hover{
+			text-decoration: underline;
+		}
+		#footer_2{
+			word-spacing: 15px;
+			font-size: 11px;
+			color: dimgrey;
+			position: absolute;
+			margin-left:20%;
+			margin-top: 10px;
+			text-align: center;
+			
+		}
+		#footer_2 a{
+			text-decoration: none;
+			font-size: 11px;
+		}
+		#footer_2 a:hover{
+			color: rgb(255,83,107);
+			text-decoration: underline;
+		}
+	</style>
+	<body>
+		<div id="header">
+			<div id="header_left">
+				<img src="{% static 'img/jylogo.jpeg'  %}" />
+			</div>
+			<div id="header_right">
+				<img src="{% static 'img/jylogotxt.png' %}"/>
+			</div>
+		</div>
+		<div id="body">
+			<div id="body_login">
+				<div id="bbody_login_1">
+					<p>会员登录</p>
+				</div>
+				<div id="bbody_login_2">
+					<form action="/youyuan/login/" method="post">
+						<ul>
+							<li>登录账号:<input class="input" type="text" name="usertell" placeholder="请输入手机号" value=""></li>
+							<li > <font style="letter-spacing: 28px;">密</font>码:<input class="input" type="password" name="password" placeholder="请输入密码" value=""></li>
+							<li id="checkremember" > <input type="checkbox" name="remember"  /> 记住密码</li>
+							<li style="line-height: 50px;"><input id="button" type="submit" value="登录"/></li>
+						
+						</ul>
+						
+					</form>
+					<p id="bbody_login_3"> <a href="/youyuan/zhucee">还不是会员？立即注册</a> </p>
+					
+				</div>
+				
+			</div>
+		</div>
+		<div id="footer">
+			<div id="footer_1">
+				<p>
+					<a href="#">我已成功征友，我要 <font style="color: rgb(255,83,107);">晒幸福</font>&gt; </a>
+				</p>
+			</div>
+			<div id="footer_2">
+				<p id="footer_2_1">
+					<a href="#">联系客服</a>
+					<a href="#">关于我们</a>
+					<a href="#">联系我们</a>
+					<a href="#">无线业务</a>
+					<a href="#">注册条框</a>
+					<a href="#">区块链</a>
+					<a href="#">招聘信息</a>
+					<a href="#">交友信息</a>
+					<a href="#">隐私保护</a>
+					<a href="#">帮助中心</a>
+					<a href="#">安全中心</a>
+					<a href="#">营业执照</a>
+				</p>
+				<p id="footer_2_2">
+					<font>中文名：世纪佳缘</font>
+					<font>ICP证书：沪B2-20100074</font>
+					<font>增值电信业务经营许可证：沪B2-20070313</font>
+					<a href="#">ISO9001质量体系认证</a>
+				</p>
+				<p id="footer_2_3">
+					<font>2003-2018</font>
+					<font>版权所有</font>
+					<font>京公网安备110105002124号</font>
+					<font>沪ICP备09045640号-1</font>
+					<font>不良和违法信息举报专线：0316-5266032</font>
+				</p>
+			</div>
+		</div>
+	</body>
+</html>

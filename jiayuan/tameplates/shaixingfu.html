@@ -1,0 +1,1112 @@
+{% load static from staticfiles %}
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>16种基于Bootstrap的css3图片hover效果</title>
+	<link rel="stylesheet" type="text/css" href="http://www.jq22.com/jquery/bootstrap-3.3.4.css">
+	<link rel="stylesheet" type="text/css" href="http://www.jq22.com/jquery/font-awesome.4.6.0.css">
+	<!-- CCS for the effects-->
+	<link href="{% static 'css/effects.css' %}" rel="stylesheet">
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+	<style type="text/css">
+		body{
+				margin: 0px;
+				padding: 0px;
+				background-color: rgb(247,247,247);
+			}
+			ul{
+				list-style: none;
+			}
+			a{
+				text-decoration: none;
+				color: grey;
+			}
+			a:hover{
+				color: dodgerblue;
+			}
+			#header{
+				height: 180px;
+				width: 100%;
+				/*background-color: darkorchid;*/
+				border-bottom: 2px solid silver;
+				position: absolute;
+				margin: 0px;
+			}
+			#header_1{
+				height: 30px;
+				width: 100%;
+				margin: 0px;
+				background-color: rgb(247,247,247);
+				font-size: 14px;
+				color: gray;
+			}
+			#header_1_left{
+				/*float: left;*/
+				margin-top: 5px;
+				margin-left: 30px;
+				
+				
+			}
+			#header_1_left ul{
+				width: 500px;
+				float: left;
+			}
+			#header_1_left li {
+				float: left;
+				margin-left: 30px;
+			}
+			#header_1_right{
+				margin-top: 5px;
+				margin-left: 60%;
+				
+			}
+			#header_1_right ul{
+				width: 500px;
+				
+				float: left;
+				
+			}
+			#header_1_right li {
+				float: left;
+				margin-left: 20px;
+			}
+			
+			
+			/*头部第二条*/
+			#header_2{
+				height: 80px;
+				width: 100%;
+				position: absolute;
+				background-color: white;
+			}
+			#header_2_left{
+				float: left;
+				position: absolute;
+				margin-left: 100px;
+				
+			}
+			#p1{
+				float: left;
+				margin-top: 4px;
+			}
+			#p2{
+				float: left;
+				margin-top: 30px;
+				background-color:rgb(247,247,247);
+				border-radius: 15px;
+				margin-left: 15px;
+				width: 80px;
+				height: 26px;
+				color: gray;
+				text-align: center;
+			}
+			#header_2_right{
+				float: left;
+				margin-left: 80%;
+				width: 150px;
+				height: 200px;
+				
+			}
+			#p3{
+				height: 30px;
+				width: 180px;
+				margin-top: 30px;
+				border: 1px solid #e5e5e5;
+				border-radius: 15px;
+				word-spacing: 20px;
+				color: gray;
+				font-size: 12px;
+			}
+			#p4{
+				
+				float: left;
+				margin-top: 20px;
+				position: absolute;
+				display: none;
+				z-index: 999;
+				height: 100px;
+				width: 100px;
+				text-align: center;
+				background-color: white;
+			}
+			
+			#p5{
+				
+				margin-top: 20px;
+				float: left;
+				margin-left: 80px;
+				position: absolute;
+				display: none;
+				z-index: 999;
+				height: 100px;
+				width: 100px;
+				text-align: center;
+				background-color: white;
+			}
+			#app:hover #p4{
+				display:block;
+			}
+			#weixin:hover #p5{
+				display: block;
+			}
+			#p4 img{
+				height: 80px;
+				
+			}
+			#p5 img{
+				height: 80px;
+			}
+			#p3 font{
+				margin-top: 10px;
+			}
+			/*导航栏样式*/
+			#header_3{
+				
+				margin-top: 80px;
+				font-size: 20px;
+				height: 60px;
+				width: 100%;
+				background-color: white;
+				position: absolute;
+				
+			}
+			#header_3 ul{
+				width: 1000px;
+				margin-top: 10px;
+				margin-left: 120px;
+				
+			}
+			#header_3 li{
+				float: left;
+				margin-left: 30px;
+				
+			}
+			#header_3 a{
+				color: black;
+				font-size: 20px;
+			}
+			#header_3 a:hover{
+				color: rgb(255,83,107);
+				text-decoration: none;
+			}
+			#header_3 li:hover  {
+				border-bottom: 2px solid rgb(255,83,107);
+			}
+			
+			
+			/*底部样式*/
+			#footer{
+				margin-top: 820px;
+				width: 100%;
+				height: 150px;
+				position: absolute;
+				/*background-color: rosybrown;*/
+				/*text-align: right;*/
+				
+			}
+			/*#footer_1{
+				margin-left: 75%;
+				margin-top: 20px;
+			}
+			#footer_1 a{
+				color:  dimgrey;
+				font-size: 18px;
+				font-family: "仿宋";
+				font-weight: 800px;
+				text-decoration: none;
+			}
+			#footer_1 a:hover{
+				text-decoration: underline;
+			}*/
+			#footer_2{
+				word-spacing: 15px;
+				font-size: 11px;
+				color: dimgrey;
+				position: absolute;
+				margin-left:20%;
+				margin-top: 10px;
+				text-align: center;
+				
+			}
+			#footer_2 a{
+				text-decoration: none;
+				font-size: 11px;
+			}
+			#footer_2 a:hover{
+				color: rgb(255,83,107);
+				text-decoration: underline;
+			}
+			
+	</style>
+</head>
+<body>
+	<div id="header">
+			<div id="header_1">
+				<div id="header_1_left">
+					<ul>
+					<li>Hi,星晴</li> <!--此处星晴为引用用户名值-->
+					<li> <font style="background-color: yellow;color: saddlebrown;">s1会员</font> 金豆 <font style="color: darkorange;">50</font> </li>
+					<li> <font>佳缘ID</font> <a href="#">182326701</a> <a href="#">退出</a></li> <!--id号引用数值 -->
+					
+					</ul>
+				</div>
+				
+				<div id="header_1_right">
+					<ul>
+						<li> <a href="#"> <font> <img style="height: 20px;" src="{% static 'img/star.png' %}"/> 收藏本站</font></a> </li>
+						<li><a href="#"><font> <img style="height: 20px;" src="{% static 'img/chongzhi.png' %}"/> 充值</font></a></li>
+						<li><a href="#"><font> <img style="height: 20px;" src="{% static 'img/chongzhi.png' %}"/>提醒</font></a></li>
+						<li>红娘专线&nbsp;027-51302093</li>
+					</ul>
+				</div>
+			</div>
+			<div id="header_2">
+				<div id="header_2_left">
+					<p id="p1"><img src="{% static 'img/jylogo.jpeg' %}"/></p>
+					<p id="p2">武汉市</p> <!--数据库取值-->
+				</div>
+				<div id="header_2_right">
+					<div id="p3">
+						<font id="app" style="margin-left: 20px;">
+							<font><img src="{% static 'img/phone.png' %}" style="height: 25px;"/>APP</font>
+							<div id="p4">
+								<img src="{% static 'img/app.png'%}"/>
+								<p>APP下载</p>
+							</div>
+						</font>
+						
+						<font id="weixin">
+							<font><img src="{% static 'img/weixin.png'%}"style="height: 25px;"/>微信</font>
+							<div id="p5">
+								<img  src="{% static 'img/wx.png'%}"/>
+								<p>官方公众号</p>
+							</div>
+						</font>
+						
+					</div>
+
+				</div>
+			</div>
+			<div id="header_3">
+				<ul>
+					<li > <a  href="/youyuan/main/">首页</a></li>
+					<li > <a href="/youyuan/ziliao/" >我的佳缘</a></li>
+					<li > <a >留言板</a></li>
+					<li> <a href="#">搜索</a></li>
+					<li> <a href="/youyuan/s">今日推荐</a></li>
+					<li> <a href="#">情感</a></li>
+					<li> <a href="#">活动</a></li>
+					<li> <a href="#">约会吧</a></li>
+					<li> <a href="#">钻石会员</a></li>
+					<li style="border-bottom: 2px solid rgb(255,83,107);"> <a style="color: rgb(255,83,107);" href="#" href="#">晒幸福</a></li>
+					
+				</ul>
+			</div>
+		</div>
+	
+	
+	
+	<div id="body" style="margin-top: 180px;position: absolute;margin-left: 6%;width: 88%;background-color: white;height: 800px;">
+	
+	<div id="body2"style="margin-top:30px ;position: absolute;margin-left: 0.7%;">
+		
+	
+		<div class="jq22-container">
+	
+			<!-- Page Content -->
+			<div class="container">
+	
+			    <div class="row">
+			        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+			            <div class="hover ehover1">
+			                <img class="img-responsive" src="{% static 'img/love.jpg'%}" alt="">
+			                <div class="overlay">
+			                    <h2>乐天&保密</h2>
+			                    <button class="info" data-toggle="modal" data-target="#modal1">查看故事
+			                    </button>
+			                </div>
+			            </div>
+			        </div>
+	
+	
+			        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+			            <div class="hover ehover2">
+			                <img class="img-responsive" src="{% static 'img/love1.jpg'%}" alt="" style="height: 100%;width: 100%;">
+			                <div class="overlay">
+			                    <h2>一滴水&保密</h2>
+			                    <button class="info" data-toggle="modal" data-target="#modal2">查看故事
+			                    </button>
+			                </div>
+			            </div>
+			        </div>
+	
+			        <div class="clearfix visible-sm-block"></div>
+	
+			        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+			            <div class="hover ehover3">
+			                <img class="img-responsive" src="{% static 'img/love2.jpg'%}" alt="">
+			                <div class="overlay">
+			                    <h2>丽&保密</h2>
+			                    <button class="info" data-toggle="modal" data-target="#modal3">查看故事
+			                    </button>
+			                </div>
+			            </div>
+			        </div>
+	
+			        <div class="clearfix visible-md-block"></div>
+	
+			        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+			            <div class="hover ehover4">
+			                <img class="img-responsive" src="{% static 'img/love3.jpg'%}" alt="">
+			                <div class="overlay">
+			                    <h2>乔&保密</h2>
+			                    <button class="info" data-toggle="modal" data-target="#modal4">查看故事
+			                    </button>
+			                </div>
+			            </div>
+			        </div>
+	
+			        <div class="clearfix visible-sm-block"></div>
+	
+	
+			        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+			            <div class="hover ehover42">
+			                <img class="img-responsive" src="{% static 'img/love4.jpg'%}" alt="">
+			                <div class="overlay">
+			                    <h2>理想嘉年华&保密</h2>
+			                    <button class="info" data-toggle="modal" data-target="#modal4v2">查看故事
+			                    </button>
+			                </div>
+			            </div>
+			        </div>
+	
+	
+			        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+			            <div class="hover ehover1v2">
+			                <img class="img-responsive" src="{% static 'img/love5.jpg'%}" alt="">
+			                <div class="overlay">
+			                    <h2>西路&保密</h2>
+			                    <button class="info" data-toggle="modal" data-target="#modal1v2">查看故事
+			                    </button>
+			                </div>
+			            </div>
+			        </div>
+	
+			        <div class="clearfix visible-md-block"></div>
+	
+			        <div class="clearfix visible-sm-block"></div>
+	
+			        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+			            <div class="hover ehover5">
+			                <img class="img-responsive" src="{% static 'img/love6.jpg'%}" alt="">
+			                <div class="overlay">
+			                    <h2>洋小妮&保密</h2>
+			                    <button class="info" data-toggle="modal" data-target="#modal5">查看故事
+			                    </button>
+			                </div>
+			            </div>
+			        </div>
+	
+	
+			       
+	
+			        <div class="clearfix visible-sm-block"></div>
+	
+			        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+			            <div class="hover ehover9">
+			                <img class="img-responsive" src="{% static 'img/love8.jpg'%}" alt="">
+			                <div class="overlay">
+			                    <h2>果儿糖糖&保密</h2>
+			                    <button class="info" data-toggle="modal" data-target="#modal9">查看故事
+			                    </button>
+			                </div>
+			            </div>
+			        </div>
+	
+			       
+	
+			        <div class="clearfix visible-md-block"></div>
+	
+			        <div class="clearfix visible-sm-block"></div>
+	
+			        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+			            <div class="hover ehover11">
+			                <img class="img-responsive" src="{% static 'img/love10.jpg'%}" alt="">
+			                <div class="overlay">
+			                    <h2>海歌&保密</h2>
+			                    <button class="info nullbutton" data-toggle="modal" data-target="#modal11">查看故事
+			                    </button>
+			                </div>
+			            </div>
+			        </div>
+	
+			        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+			            <div class="hover ehover12">
+			                <img class="img-responsive" src="{% static 'img/love11.jpg'%}" alt="">
+			                <div class="overlay">
+			                    <h2>做我自己&保密</h2>
+			                    <button class="info nullbutton" data-toggle="modal" data-target="#modal12">查看故事
+			                    </button>
+			                </div>
+			            </div>
+			        </div>
+	
+			        <div class="clearfix visible-sm-block"></div>
+	
+			        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+			            <div class="hover ehover13">
+			                <img class="img-responsive" src="{% static 'img/love12.jpg'%}" alt="">
+			                <div class="overlay">
+			                    <h2>may&保密</h2>
+			                    <button class="info nullbutton" data-toggle="modal" data-target="#modal13">查看故事
+			                    </button>
+			                </div>
+			            </div>
+			        </div>
+	
+			        <div class="clearfix visible-md-block"></div>
+	
+			        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+			            <div class="hover ehover14">
+			                <img class="img-responsive" src="{% static 'img/love9.jpg'%}" alt="">
+			                <div class="overlay">
+			                    <h2>莲蓉月饼&保密</h2>
+			                    <button class="info nullbutton" data-toggle="modal" data-target="#modal14">查看故事
+			                    </button>
+			                </div>
+			            </div>
+			        </div>
+			    </div>
+	
+			</div>
+			</div>
+		
+		</div>
+		
+	</div>
+	</div>
+	<!-- modals; the pop up boxes that contain the code for the effects -->
+<div id="modal1" class="modal fade">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h2 class="modal-title" style="color: rgb(255,83,107);" >我们的幸福故事</h2>
+            </div>
+            <div class="modal-body" style="text-align: center;" >
+				<h3 style="color: rgb(255,83,107);">迟来的缘分</h3>
+				<pre  style="white-space:normal;background-color: white; width:860px;font-size: 16px;color: grey; border: none;">
+　我和张先生于2015年7月30日结识于世纪佳缘，是他给我发的信，他的资料显示他当兵12年，因此耽误了婚姻，我从小对军人就有特殊的好感，于是忍不住打开了他的资料。他是大龄未婚，我是离异。<br />
+
+　　由于大家工作都很忙，没有时间经常上佳缘，于是我们很快交换了qq号，接下来就顺理成章的见了面。第一次见面，我们穿着都很随意，但是他给我的第一印象并不是特别理想，主要是年龄大了些，在心里还给他起名叫老好人，回去以后我就打算pass掉了。或许张先生对我感觉还不错，回去之后他开始不间断的给我qq发问候，有时一天一次，有时两三天一次，我基本没有回复过，但是面对一个彬彬有礼，并且爱慕你的人，礼貌和虚荣心都让我把他在通讯录里保留了下来。<br />
+
+　　后来我又见了两个家人介绍的对象，都没有缘分。时间一晃过去了半年，到了2015年的年末，这期间张先生的问候没有停止过。这天天气特别冷，下了班我就窝回了住处，从天亮慢慢到天黑，百无聊赖，一阵孤独感挥之不去。离异后的我度过了人生中最难过的三年，性格也抑闷不少，从开始两年的抗拒找对象，慢慢也开始了希望有个依靠和温暖，人毕竟是感情动物。正在此刻，手机响了，是一条信息，没错，正是张先生，一句话，最近还好吗？没有任何理由的，我的眼泪不知道怎么就夺眶而出，似乎知道有一个人还在惦念着自己时种种委屈和孤独都再也掩饰不住。半年的坚持问候，在潜意识里已经让我对张先生慢慢积累了好感和些许感动。我稳定了下情绪，还好，你呢？边回复边有点自责平时都没有搭理过张先生。刚刚回复过去，张先生的电话立马打来了，你在哪呢？最近怎么样？吃饭了吗？一连串的问候让我感觉像个老朋友一样亲切。接下来，我就想，给这个老好人一次机会，我们试试吧，然后我们开始约会。直到现在我还会觉得，如果不是那天我心情如此沮丧孤独，如果不是张先生的问候恰巧来到，或许我的通讯录里只是多了一条我没理会的信息，我们不会有开始，缘分就是如此机缘巧合。<br />
+
+　　从一开始约会，我就一发不可收拾的发现着张先生的优点，这与他12年的军旅生涯不无关系，自律，整洁，坚韧，细心。与他相处让人感觉特别舒服，他总是能照顾到我很多不起眼的细节。我们开始频繁约会，吃饭，看电影，散步，聊天。有一次他买了两张爱情电影票，在座位上他笨拙的向我贴近，小心的向下扯我的衣服，想让我的头偎在他的肩膀，我莞尔一笑，轻轻靠了上去，他的肩膀像是僵住一样，整个电影期间不曾挪动，仿佛怕一动我就离开了，让人感觉可爱又好笑。熟悉了以后他邀请我去他的住处小坐，冬天的傍晚，一开门一阵暖意袭来，虽然紧闭门窗但是家里没有任何异味，屋子里干净整洁，我的感觉非常好。我换了拖鞋往里走，他没有跟上来，回头一看，他正把我的棉鞋和鞋垫都放在暖气片上面，看到我回头，对我说这样你走的时候穿上脚会暖和，我的心里瞬间绽放了一个大大的微笑。但是真正让我决定跟着他的，还是他对我的孩子。我离婚后，一个三岁的儿子跟随爸爸生活，周末和假期会跟我，我们属于离婚后关系比较开明的，孩子一直没有受到离婚重大的影响。在孩子跟我的时候，张先生表现了对孩子无比的喜爱，给他买玩具，跟他做游戏，短短半年，儿子竟然跟他比跟我还要亲，每次来了都要闹着找张叔叔，张先生比我儿子父亲还要年长几岁，但是儿子偏要叫叔叔。张先生因为工作会偶尔出差，每次到了不同的地方，都会记得给儿子带回来当地的美食，有时候仅仅是一包点心，孩子也会欢快的雀跃，孩子的笑在脸上，我的笑，在心里。那段时间我为了多挣点钱，白天工作之余，又找了一份兼职的晚餐收银工作，每天要忙到十一点，他不放心我这么晚自己回去，就每天等到我下班送我回家，这一送就是小半年，儿子来了，晚上都是他给我带着，我回家的时候孩子基本就睡着了。2016年夏天的一天，他照样先带想睡的儿子回去，等我下了班回家后，看到他给儿子洗了澡，儿子已经睡熟，而他正用手给儿子洗满是汗水的衣服，一个男人，给一个不是自己的孩子，用手在洗衣服。就那一刻，我的心里除了感动还是感动，交往以来的点点滴滴都涌上心头。对我好，还要对我的孩子好，这大概是离异后所有女人共同的追求，那一刻，我就决定，这辈子就他了。<br />
+
+　　接下来就开始见家人，他家里没有意见，但我家里是反对的，主要原因是他比我大了12岁，但是此刻张先生已经走到我的心里来了，他能给我的安全感和幸福感战胜了这12岁的年龄差。面对家人的异议，我们没有激烈的抗争，而是缓慢的让家人了解彼此，并诉说自己的想法，而我们俩，一直没有间断过交往。他买了一套小面积的房子用来结婚，刚好交房，装修是一件费时费力费心的事情，我们设计每处角落的结构样式并打印图纸，商量用什么材料并一家店一家店去选购，然后找到施工的师傅，地板，床，屋顶，衣柜，柜门，门窗，书桌，家具，花架，酒柜，房子里的每一样，从样式到颜色到尺寸，都渗透着我们俩共同的心血。直到现在住进来了，看着一个个我精心布置的小摆件，我都很庆幸我们相识的时机刚刚好，没有错过我亲手来打造自己的家。
+
+　　半年的感情铺垫，家里人也不再反对了，经过了解，他们也比较喜欢张先生踏实稳重的性子，除了年龄，把我交给他他们都很放心。终于，在2016年的11月，我们订婚了，并把婚期定在了12月。两边的家人都在老家，而我们的婚礼要在我们工作的城市，这一个月的时间，我们俩又开始亲手准备婚礼的每个细节，布置新房，拍婚纱照，选购结婚用品，真正的累并快乐着。2016年12月25日，也就是圣诞节那天，我们终于结婚了，在婚礼上他向所有的亲朋承诺，会一辈子相亲相爱，孝顺双方爹娘。<br />
+
+　　到我写这篇文章的时候，我们已经结婚8个月了，刚开始的几个月也因为种种习惯上的磨合而产生矛盾，到今天已经互相熟知并理解，基本没有矛盾了。而且我们已经开始备孕了，准备要一个18年属狗的小宝宝，未来的一切，在我心里都充满着希望和美好，这源于我们日渐深厚的情感和信任。<br />
+
+　　我之所以啰啰嗦嗦说了这么多，首先是因为我非常感谢世纪佳缘，把这么好的张先生带到我身边，否则不在一个乡镇的我们根本没有机会相识。其次，我想通过自己的经历，给还行进在佳缘寻找另一半的朋友一点建议，我们不能把很多框架设置在寻找爱情的道路上，因为你不知道最适合你的人，他恰好有哪些欠缺。给自己和他人机会，不走近些，你永远没办法看清楚他适不适合你。在交付情感之前，先观察品行，对老人和孩子很好的人，一般对妻子不会坏到哪里去。其次就是要坚持，感觉对方不错，就要多坚持一下，就像没有张先生半年的短信问候，我也只是他的路人甲。<br />
+
+　　最后，我祝愿佳缘上的朋友都能够收获自己的幸福，也祝愿佳缘这个平台越来越好。</pre>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="modal2" class="modal fade">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h2 class="modal-title" style="color: rgb(255,83,107);" >我们的幸福故事</h2>
+            </div>
+            <div class="modal-body"style="text-align: center;">
+              <h3 style="color: rgb(255,83,107);">foreve</h3>
+				<pre  style="white-space:normal;background-color: white; width:860px;font-size: 16px;color: grey; border: none;text-align: left;">　
+					20160328，我在世纪佳缘认识了他。在网上聊的时候，我感觉一般，没什么特别的。第一次见面就吃吃饭，聊聊天，没什么特别的，不过，接触一段时间以后，觉得还不错。他是我上辈子的小冤家，今生讨债来了，哈哈......<br />
+
+　　说起来不好意思，我们见了3次面，就确定了恋爱关系。哈哈，生活中免不了分歧或争执，如果因为价值观不同而争执，那我们会坐下来好好地沟通，让彼此知道自己的想法。至于家人，他们觉得我俩很合适，很开心我们能够在一起，都很祝福我们。<br />
+
+　　我们已经于2017年6月1日结婚了！<br />
+
+　　我们按习俗、礼节来办了一个传统的婚礼。婚后我们平等分工，共同承担家庭生活的一切。关于孩子的问题，虽然我们都很喜欢，但是我想过几年再考虑这个问题。<br />
+
+　　我们在世纪佳缘相知相恋，在这里，当着千万会员朋友的面儿，我要向他许下一个爱情的承诺：爱情是以物质为基础的奢侈精神享受<br />
+
+　　总结我的恋爱过程，可以概括成一句心得：稳扎稳打，爱情路是漫长的，考验是必须的！<br />
+
+　　感谢世纪佳缘给了我们这个缘分的平台，感谢小龙女为我们提供这么好的机会。希望更多的单身朋友能够在这里找到自己的另一半。</pre>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="modal3" class="modal fade">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h2 class="modal-title" style="color: rgb(255,83,107);" >我们的幸福故事</h2>
+            </div>
+            <div class="modal-body"style="text-align: center;">
+              <h3 style="color: rgb(255,83,107);">也许这就叫缘分</h3>
+				<pre  style="white-space:normal;background-color: white; width:860px;font-size: 16px;color: grey; border: none;text-align: left;">　
+					　2012年6月7日注册了世纪佳缘，6月9日在佳缘上意外地看到了他的照片，被他腼腆的笑容深深的吸引了，应该算是一见钟情。当时抑制不住内心的激动，傻傻的发了一封信“有点小清秀还有点内敛，很不错，加油”，到现在也不知道自己当时怎么想出来的这句话。 <br />
+
+　　发出信去之后心里一直很忐忑，担心因为我的佳缘没有上传照片，他看到信也不会理我。等了一天之后，他终于回信了，估计当他看到信的时候也有点无语，就回了句“ 额。加油。共同努力”（这句话成了我们现在共同奋斗的目标）<br />
+
+　　我们开始断断续续的在佳缘上发信联系。6月13日从我下班开始我们就在佳缘上一直聊天，因为年龄和想法相似，没有人问对方工作、收入、长相、家庭、车房这些沉重的问题，聊得非常轻松，后来干脆加了QQ继续聊，晚上不知不觉聊到了快一点，没有人觉得困。之后每天下班都是一阵狂聊，然后时间感觉不到的就过十二点了。<br />
+
+　　聊了几天，我们很自然的约定了6月19日一起参加啤酒节，我在潍坊没有什么朋友，就自己一个人去了，他的朋友比较多，也怕第一次见面尴尬，就带了三个男性朋友一起来了，想想我的胆子真的有点大，一个女生就敢自己这么去了。后来才知道，他当时只是觉得很聊得来，见面做个朋友也很不错，因为我的佳缘上没放照片，他也觉得但凡没放照片的，估计就是长相不太好的。<br />
+
+　　当时我们约定在啤酒节现场见面，他们先到的，我晚了一小会，在等我的过程中，不断出现女生，他朋友总会问，是这个吗，虽然他也没见过我，但是他总能回答对应该不是这女生。直到我出现，他碰巧一回头，我俩相视一笑，很自然的他就认出了我，我也认出了他，一切都感觉那么顺其自然，像是已经认识很久了。他来之前还只想做朋友的，结果回家以后就对朋友说，就是她了。呵呵、我们就这样子开始了！<br />
+
+　　现在已经要一年整了，我很早的就见了他的爸妈，他们都很喜欢我。开始我的爸妈还比较反对，不过经过我的不懈努力，他们终于还是妥协了，今年他也顺利的见过了我的爸妈，而且我的爸妈已经开始催婚了，呵呵<br />
+
+　　交往了一年却还像刚刚交往时那么甜蜜，一年里满满的全是幸福。他的朋友们都很好奇，新鲜期不都才三个月吗，你们怎么一年了还这么粘，感情有增无减的。也许这就是缘分吧，很奇妙的缘分。找一个爱你，你也爱的人真的很难，我们都会好好珍惜这段感情，珍惜彼此的！</pre>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="modal4" class="modal fade">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+               <h2 class="modal-title" style="color: rgb(255,83,107);" >我们的幸福故事</h2>
+            </div>
+            <div class="modal-body"style="text-align: center;">
+              <h3 style="color: rgb(255,83,107);">期盼的爱</h3>
+				<pre  style="white-space:normal;background-color: white; width:860px;font-size: 16px;color: grey; border: none;text-align: left;">　
+					　从相识到相知、从相对到相恋，要用一颗平静而柔软的心去面对所有的困难。遇到困难不要害怕，要勇于面对，两人相互商量克服困难；遇到困难要信任对方，要彼此包容对方，相互体谅对方，要换位思考问题，这样的爱情才能稳固长久！</pre>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="modal4v2" class="modal fade">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h2 class="modal-title" style="color: rgb(255,83,107);" >我们的幸福故事</h2>
+            </div>
+            <div class="modal-body"style="text-align: center;">
+              <h3 style="color: rgb(255,83,107);">也许这就叫缘分</h3>
+				<pre  style="white-space:normal;background-color: white; width:860px;font-size: 16px;color: grey; border: none;text-align: left;">　
+					　2012年6月7日注册了世纪佳缘，6月9日在佳缘上意外地看到了他的照片，被他腼腆的笑容深深的吸引了，应该算是一见钟情。当时抑制不住内心的激动，傻傻的发了一封信“有点小清秀还有点内敛，很不错，加油”，到现在也不知道自己当时怎么想出来的这句话。 <br />
+
+　　发出信去之后心里一直很忐忑，担心因为我的佳缘没有上传照片，他看到信也不会理我。等了一天之后，他终于回信了，估计当他看到信的时候也有点无语，就回了句“ 额。加油。共同努力”（这句话成了我们现在共同奋斗的目标）<br />
+
+　　我们开始断断续续的在佳缘上发信联系。6月13日从我下班开始我们就在佳缘上一直聊天，因为年龄和想法相似，没有人问对方工作、收入、长相、家庭、车房这些沉重的问题，聊得非常轻松，后来干脆加了QQ继续聊，晚上不知不觉聊到了快一点，没有人觉得困。之后每天下班都是一阵狂聊，然后时间感觉不到的就过十二点了。<br />
+
+　　聊了几天，我们很自然的约定了6月19日一起参加啤酒节，我在潍坊没有什么朋友，就自己一个人去了，他的朋友比较多，也怕第一次见面尴尬，就带了三个男性朋友一起来了，想想我的胆子真的有点大，一个女生就敢自己这么去了。后来才知道，他当时只是觉得很聊得来，见面做个朋友也很不错，因为我的佳缘上没放照片，他也觉得但凡没放照片的，估计就是长相不太好的。<br />
+
+　　当时我们约定在啤酒节现场见面，他们先到的，我晚了一小会，在等我的过程中，不断出现女生，他朋友总会问，是这个吗，虽然他也没见过我，但是他总能回答对应该不是这女生。直到我出现，他碰巧一回头，我俩相视一笑，很自然的他就认出了我，我也认出了他，一切都感觉那么顺其自然，像是已经认识很久了。他来之前还只想做朋友的，结果回家以后就对朋友说，就是她了。呵呵、我们就这样子开始了！<br />
+
+　　现在已经要一年整了，我很早的就见了他的爸妈，他们都很喜欢我。开始我的爸妈还比较反对，不过经过我的不懈努力，他们终于还是妥协了，今年他也顺利的见过了我的爸妈，而且我的爸妈已经开始催婚了，呵呵<br />
+
+　　交往了一年却还像刚刚交往时那么甜蜜，一年里满满的全是幸福。他的朋友们都很好奇，新鲜期不都才三个月吗，你们怎么一年了还这么粘，感情有增无减的。也许这就是缘分吧，很奇妙的缘分。找一个爱你，你也爱的人真的很难，我们都会好好珍惜这段感情，珍惜彼此的！</pre>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="modal1v2" class="modal fade">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h2 class="modal-title" style="color: rgb(255,83,107);" >我们的幸福故事</h2>
+            </div>
+            <div class="modal-body"style="text-align: center;">
+              <h3 style="color: rgb(255,83,107);">也许这就叫缘分</h3>
+				<pre  style="white-space:normal;background-color: white; width:860px;font-size: 16px;color: grey; border: none;text-align: left;">　
+					　2012年6月7日注册了世纪佳缘，6月9日在佳缘上意外地看到了他的照片，被他腼腆的笑容深深的吸引了，应该算是一见钟情。当时抑制不住内心的激动，傻傻的发了一封信“有点小清秀还有点内敛，很不错，加油”，到现在也不知道自己当时怎么想出来的这句话。 <br />
+
+　　发出信去之后心里一直很忐忑，担心因为我的佳缘没有上传照片，他看到信也不会理我。等了一天之后，他终于回信了，估计当他看到信的时候也有点无语，就回了句“ 额。加油。共同努力”（这句话成了我们现在共同奋斗的目标）<br />
+
+　　我们开始断断续续的在佳缘上发信联系。6月13日从我下班开始我们就在佳缘上一直聊天，因为年龄和想法相似，没有人问对方工作、收入、长相、家庭、车房这些沉重的问题，聊得非常轻松，后来干脆加了QQ继续聊，晚上不知不觉聊到了快一点，没有人觉得困。之后每天下班都是一阵狂聊，然后时间感觉不到的就过十二点了。<br />
+
+　　聊了几天，我们很自然的约定了6月19日一起参加啤酒节，我在潍坊没有什么朋友，就自己一个人去了，他的朋友比较多，也怕第一次见面尴尬，就带了三个男性朋友一起来了，想想我的胆子真的有点大，一个女生就敢自己这么去了。后来才知道，他当时只是觉得很聊得来，见面做个朋友也很不错，因为我的佳缘上没放照片，他也觉得但凡没放照片的，估计就是长相不太好的。<br />
+
+　　当时我们约定在啤酒节现场见面，他们先到的，我晚了一小会，在等我的过程中，不断出现女生，他朋友总会问，是这个吗，虽然他也没见过我，但是他总能回答对应该不是这女生。直到我出现，他碰巧一回头，我俩相视一笑，很自然的他就认出了我，我也认出了他，一切都感觉那么顺其自然，像是已经认识很久了。他来之前还只想做朋友的，结果回家以后就对朋友说，就是她了。呵呵、我们就这样子开始了！<br />
+
+　　现在已经要一年整了，我很早的就见了他的爸妈，他们都很喜欢我。开始我的爸妈还比较反对，不过经过我的不懈努力，他们终于还是妥协了，今年他也顺利的见过了我的爸妈，而且我的爸妈已经开始催婚了，呵呵<br />
+
+　　交往了一年却还像刚刚交往时那么甜蜜，一年里满满的全是幸福。他的朋友们都很好奇，新鲜期不都才三个月吗，你们怎么一年了还这么粘，感情有增无减的。也许这就是缘分吧，很奇妙的缘分。找一个爱你，你也爱的人真的很难，我们都会好好珍惜这段感情，珍惜彼此的！</pre>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div id="modal5" class="modal fade">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+               <h2 class="modal-title" style="color: rgb(255,83,107);" >我们的幸福故事</h2>
+            </div>
+            <div class="modal-body"style="text-align: center;">
+              <h3 style="color: rgb(255,83,107);">我们结婚了</h3>
+				<pre  style="white-space:normal;background-color: white; width:860px;font-size: 16px;color: grey; border: none;text-align: left;">　
+					　2　2014年5月23日，我在世纪佳缘认识了他。在网上我们就聊的挺好的，有约见面的想法。第一次见面的感觉很好，可以用一见如故和相见恨晚来形容。他的出现，我一直觉得是上天对我的恩赐与眷顾。<br />
+
+　　说起来不好意思，我们见了6次面，就确定了恋爱关系。恋爱的时候，虽然一直波折不断 但是他总会默默的在身后支持我就是他做过最浪漫的事儿了！哈哈，生活中免不了分歧或争执，如果因为价值观不同而争执，那我们会坐下来好好地沟通，让彼此知道自己的想法。至于家人，他们觉得我俩很合适，很开心我们能够在一起，都很祝福我们。<br />
+
+　　我们已经于2017年1月2日结婚了！<br />
+
+　　我们的婚礼高贵华丽，十分隆重。结婚后我们互相体谅，有能力有时间的一方多承担一部分家务。在孩子的问题上，我俩都迫不及待的想要一个孩子。<br />
+
+　　我们在世纪佳缘相知相恋，在这里，当着千万会员朋友的面儿，我要向他许下一个爱情的承诺：携手走完一生<br />
+
+　　总结我的恋爱过程，可以概括成一句心得：执着追求，抓住你就不放手，让我放弃你，下辈子吧！<br />
+
+　　感谢世纪佳缘给了我们这个缘分的平台，感谢小龙女为我们提供这么好的机会。希望更多的单身朋友能够在这里找到自己的另一半。</pre>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="modal6" class="modal fade">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+               <h2 class="modal-title" style="color: rgb(255,83,107);" >我们的幸福故事</h2>
+            </div>
+            <div class="modal-body"style="text-align: center;">
+              <h3 style="color: rgb(255,83,107);">地的爱恋</h3>
+				<pre  style="white-space:normal;background-color: white; width:860px;font-size: 16px;color: grey; border: none;text-align: left;">　
+					　
+　　我们结合双方实际情况，不循规蹈矩简单务实的操办婚礼，十分有纪念意义。结婚后我们互相体谅，有能力有时间的一方多承担一部分家务。在孩子的问题上，我俩都迫不及待的想要一个孩子。<br />
+
+　　我们在世纪佳缘相知相恋，在这里，当着千万会员朋友的面儿，我要向他许下一个爱情的承诺：非常感谢世纪佳缘。我们相识时我一无所有没有车，房子未装修。她一点都不嫌弃我。为了她我两个月后买了车，一个月就跑长途，一年25000公里的记录，这路程是我们爱的记录。我想对她说以前我能做到，以后我更能，男人就责任。<br />
+
+　　总结我的恋爱过程，可以概括成一句心得：矜持等待缘分，缘定今生，相信属于我的爱一定会来！<br />
+
+　　感谢世纪佳缘给了我们这个缘分的平台，感谢小龙女为我们提供这么好的机会。希望更多的单身朋友能够在这里找到自己的另一半。永远都会记得世纪佳缘的恩，我也向很多同事推荐了世纪佳缘，祝愿世纪佳缘越来越好。</pre>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="modal7" class="modal fade">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h2 class="modal-title" style="color: rgb(255,83,107);" >我们的幸福故事</h2>
+            </div>
+            <div class="modal-body"style="text-align: center;">
+              <h3 style="color: rgb(255,83,107);">痛并快乐着</h3>
+				<pre  style="white-space:normal;background-color: white; width:860px;font-size: 16px;color: grey; border: none;text-align: left;">　
+					　2013.9，我在世纪佳缘认识了他。在网上聊的时候，我感觉一般，没什么特别的。第一次见面就吃吃饭，聊聊天，没什么特别的，不过，接触一段时间以后，觉得还不错。他是我上辈子的小冤家，今生讨债来了，哈哈......<br />
+
+　　说起来不好意思，我们见了10次面，就确定了恋爱关系。恋爱的时候，过别样的生活。就是他做过最浪漫的事儿了！哈哈，生活中免不了分歧和争执，如果因为家人和朋友争吵，那我们会选择平静，相互体谅一下，那争执也就不了了之了。家人一直反对我们在一起，但是我们是相爱的，谁也拆不散我们。<br />
+
+　　我们已经于2014年5月20日结婚了！<br />
+
+　　我们结合双方实际情况，不循规蹈矩简单务实的操办婚礼，十分有纪念意义。婚后他承担了主要的家务，这让我感觉特别幸福，更爱他爱这个家了。我们不打算要孩子，已经下定决心做丁克族了。<br />
+
+　　我们在世纪佳缘相知相恋，在这里，当着千万会员朋友的面儿，我要向他许下一个爱情的承诺：我们做对神仙眷侣<br />
+
+　　总结我的恋爱过程，可以概括成一句心得：稳扎稳打，爱情路是漫长的，考验是必须的！<br />
+
+　　感谢世纪佳缘给了我们这个缘分的平台，感谢小龙女为我们提供这么好的机会。希望更多的单身朋友能够在这里找到自己的另一半。</pre>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div id="modal8" class="modal fade">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h2 class="modal-title" style="color: rgb(255,83,107);" >我们的幸福故事</h2>
+            </div>
+            <div class="modal-body"style="text-align: center;">
+              <h3 style="color: rgb(255,83,107);">鱿鱼遇到炭火</h3>
+				<pre  style="white-space:normal;background-color: white; width:860px;font-size: 16px;color: grey; border: none;text-align: left;">　
+					　那天我心血来潮**的消息，他第一时间回复。听说他在写论文没灵感，于是到世纪佳缘寻找灵感。加了QQ之后聊天蛮愉快的，再回到佳缘看他头像，瘦瘦高高的符合我期望。聊了约一周我们见面了，我闺蜜忐忑的跟我等着，见到他的那一眼有种“买家秀”的感觉，胖胖高高像座山。后来约他去猫吧玩猫咪，他也表现出很爱猫的样子，就是感觉笨笨的。骑着电驴送我回家的时候还把我脚撞小柱子了。大约聊了一个月，每周末都出来见面，情人节那天我牵起他的手（是的，我胆比他肥），让他嘟囔了一句怎么让我给主动了。后来在等公车的时候他为了缓解紧张使劲搓着我的手跟我表白，说我爱你。我直接噗笑出声了，才认识一个月你跟我说爱？然后我跟他说表白不是这样的，应该说我喜欢你才对，他才恍然大悟。那年我22岁，他25岁。交往了一年多，我们就领证步入了婚姻殿堂，然后有了宝宝。感谢世纪佳缘这个平台，让我们两个毫不相干的陌生人走到了一起。我也推荐我单身的朋友们用这个交友平台，祝愿他们也能找到另一半！</pre>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="modal9" class="modal fade">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h2 class="modal-title" style="color: rgb(255,83,107);" >我们的幸福故事</h2>
+            </div>
+            <div class="modal-body"style="text-align: center;">
+              <h3 style="color: rgb(255,83,107);">我们结婚了</h3>
+				<pre  style="white-space:normal;background-color: white; width:860px;font-size: 16px;color: grey; border: none;text-align: left;">　
+					　　2015.9，我在世纪佳缘认识了他。在网上我们就聊的挺好的，有约见面的想法。我们第一次见面的时候吧，一点不陌生，挺聊得来的。他的出现，我一直觉得是上天对我的恩赐与眷顾。<br />
+
+　　说起来不好意思，我们见了3次面，就确定了恋爱关系。恋爱的时候，在我妈妈生病期间和过世期间给予我精神和物质上的莫大支持就是他做过最浪漫的事儿了！哈哈，日常生活中免不了分歧或争执，我们也常会因为一些鸡毛蒜皮的小事而争执，但很快就过去了。家人现在还不知道我们的事情，我们打算等感情更成熟些，在告诉家人我们恋爱了，让家人分享我们的幸福。<br />
+
+　　我们已经于2015年12月18日结婚了！<br />
+
+　　我们结合双方实际情况，不循规蹈矩简单务实的操办婚礼，十分有纪念意义。婚后我们平等分工，共同承担家庭生活的一切。我和他已经有一个可爱的小宝宝了，这个小生命让我们更加珍惜彼此。<br />
+
+　　我们在世纪佳缘相知相恋，在这里，当着千万会员朋友的面儿，我要向他许下一个爱情的承诺：执之之手与子偕老<br />
+
+　　总结我的恋爱过程，可以概括成一句心得：执着追求，抓住你就不放手，让我放弃你，下辈子吧！<br />
+
+　　感谢世纪佳缘给了我们这个缘分的平台，感谢小龙女为我们提供这么好的机会。希望更多的单身朋友能够在这里找到自己的另一半。</pre>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="modal10" class="modal fade">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h2 class="modal-title" style="color: rgb(255,83,107);" >我们的幸福故事</h2>
+            </div>
+            <div class="modal-body"style="text-align: center;">
+              <h3 style="color: rgb(255,83,107);">我和她的“闪婚”</h3>
+				<pre  style="white-space:normal;background-color: white; width:860px;font-size: 16px;color: grey; border: none;text-align: left;">　
+					　　2015年11月，我在世纪佳缘认识了他。在网上我们就聊的挺好的，有约见面的想法。想起我们第一次见面的场景，一辈子也忘不了。她的出现，我一直觉得是上天对我的恩赐与眷顾。<br />
+
+　　说起来不好意思，我们见了1次面，就确定了恋爱关系。恋爱的时候，一起看电影，一起做饭，养狗狗，出去踏青，玩电玩，吃好吃的就是他做过最浪漫的事儿了！哈哈，生活中免不了分歧和争执，有的时候，因为工作影响情绪了，对方就会多忍耐一些，对体谅一些，这样就吵不起来了，呵呵。至于家人，他们觉得我俩很合适，很开心我们能够在一起，都很祝福我们。<br />
+
+　　我们已经于2017年5月1日结婚了！<br />
+
+　　我们结合双方实际情况，不循规蹈矩简单务实的操办婚礼，十分有纪念意义。结婚后我们互相体谅，有能力有时间的一方多承担一部分家务。我和她已经有一个可爱的小宝宝了，这个小生命让我们更加珍惜彼此。<br />
+
+　　我们在世纪佳缘相知相恋，在这里，当着千万会员朋友的面儿，我要向他许下一个爱情的承诺：白首相守，永不分离<br />
+
+　　总结我的恋爱过程，可以概括成一句心得：兵贵神速，主动出击，绝对不给对手留情！<br />
+
+　　感谢世纪佳缘给了我们这个缘分的平台，感谢小龙女为我们提供这么好的机会。希望更多的单身朋友能够在这里找到自己的另一半。</pre>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div id="modal11" class="modal fade">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h2 class="modal-title" style="color: rgb(255,83,107);" >我们的幸福故事</h2>
+            </div>
+            <div class="modal-body"style="text-align: center;">
+              <h3 style="color: rgb(255,83,107);">他离婚有娃又怎样？我们现在一家三口很幸福</h3>
+				<pre  style="white-space:normal;background-color: white; width:860px;font-size: 16px;color: grey; border: none;text-align: left;">　
+					　2我，年过30，优质剩女一枚；他，离婚有娃，自营业主。<br />
+
+　　2015年2月，他在佳缘上找到我说，村里这么小，华人这么少，而我们竟然没见过，那就通过这个平台互相了解一下吧。还提醒我说他的资料是6年前的信息（未婚），现在情况有变但没更新，如果我介意，他也表示理解。我觉得这人还挺实在的，不妨接触一下。<br />
+
+　　微信互动，线下见面，俩人越聊越带劲儿，彼此充分表达了人生观，价值观和婚恋观。<br />
+
+　　他说，你是个好女孩子，至少没有嫌弃我离婚有孩子，我很感动。而且没想到你年纪不大，对婚姻的理解和感悟还挺深。<br />
+
+　　我说，我也只是纸上谈兵而已，你已经历过一次挫折，不要对我太乐观。而且，最现实的问题是，后妈难当。即使我爱屋及乌真心待你的孩子，你是否又能一碗水端平，处理好我和孩子的关系？我是一个感性的人，钱财、婚史、学历、薪资，我真的是不介意。我唯一钻牛角尖的地方 我们是因为爱情，理解和信任而在一起。<br /> 
+
+　　他说，若在一起，必当倾心相待，你也会感受的到。只是我脾气不好，以后尽量改。<br />
+
+　　我说，我比较爱“作”，你也要有心理准备。<br />
+
+　　他说，看来我们都属于骨子里面不安分的，那就试试在一起合不合拍吧。<br />
+
+　　于是，一拍即合，神速发展。<br />
+
+　　2015年3月12日，我们确定了关系。约会的地方也从餐厅改成了他家，他会下厨亲手给我做大餐。<br />
+
+　　在一起两周的时候见了双方家长。<br />
+
+　　第28天的时候，他向我求婚。<br />
+
+　　我说，你不嫌弃我不会做饭，不擅长家务吗？<br />
+
+　　他说，反正我都会，可以教你。教不会也没关系，就我自己做呗。<br />
+
+　　我问他，既然你会做家务，会做饭，会带孩子，也能挣钱，又步入过围城被残害过，那为什么还想结婚，你图啥？<br />
+
+　　他回答，图有一个人为我知冷暖；图有一个人爱我的孩子 爱我们的孩子；图有一个爱着的人 可以相伴到老，夕阳西下，在海边骑着马，踏着浪。<br />
+
+　　2016年2月6号，我们在澳大利亚首都，在亲朋好友百八十人的见证下 步入了婚姻的殿堂，为我们的佳缘爱情画上了圆满的句号。
+				</pre>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="modal12" class="modal fade">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h2 class="modal-title" style="color: rgb(255,83,107);" >我们的幸福故事</h2>
+            </div>
+            <div class="modal-body"style="text-align: center;">
+              <h3 style="color: rgb(255,83,107);">感谢佳缘送我美好良缘</h3>
+				<pre  style="white-space:normal;background-color: white; width:860px;font-size: 16px;color: grey; border: none;text-align: left;">　
+					　好久之前就想给佳缘写感谢信，婚事一忙完就赶快来写了，谢谢我们的“月老”帮我们牵了红线，我们的故事从2014年9月11起，通过佳缘我看到了他的来信，这个他现在已经是我老公了，经过2年的相恋相处，我们今年10月16日步入了婚姻的殿堂，开启了我们平凡而温馨的生活，特别感谢佳缘给我们搭建了结识的平台，原本只是抱着试试看的心态，没想到真的找到自己的另一半，现在已经和身边单身的朋友都在推荐，希望能帮大家多一个途径找到爱人。</pre>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="modal13" class="modal fade">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h2 class="modal-title" style="color: rgb(255,83,107);" >我们的幸福故事</h2>
+            </div>
+            <div class="modal-body"style="text-align: center;">
+              <h3 style="color: rgb(255,83,107);">和兔先森的那些事</h3>
+				<pre  style="white-space:normal;background-color: white; width:860px;font-size: 16px;color: grey; border: none;text-align: left;">　
+					　　　没遇见兔先森之前，我是指天发誓绝对不找比自己小一天的，我一直以为姐弟恋应该是姐姐照顾弟弟的那种，我这么懒，才不要去当老妈子...傲娇脸<br />
+
+　　我和兔先森是在世纪佳缘认识的，当初和老妈俩凑电脑前挑选她未来女婿的时候，不约而同的戳到他的头像，颜控这一点我果然随我妈…他的资料是属猪，水瓶座，匹配度百分百啊，立马开始撒网，哦，不，开始写信联络，因为地域的原因只能做盆友，被他喊了快两年的小妹儿，其中经历了他的低谷期，创业期，我作为他的军师也遥控指点了一点迷津…这两年我也没闲着，谈恋爱，分手，又谈恋爱，再次分手。包括感情上的困惑也跟他倾诉了不少，直到后来的某一天，我又单身了，他说我买高铁票来看你，见个面，合适的话，我们好好谈一场恋爱。我一脸懵逼，翻来覆去想了一晚上，弱弱的问他你不在乎我之前谈了那些个么？他笑了，我在乎的是现在的你和以后的你。<br />
+
+　　临见面前突然想着不能遇见个骗子啊，交换身份证，一看差点没吐血，比我小了一岁多，问他资料上是怎么回事，他说那是他弟乱填的，不是故意骗我的，我没问过他也没想过这个问题，擦，票订好了，网恋也恋了快四个月，放弃似乎也对不起他的这份心。<br />
+
+　　就这样，2016年4月20日，我们见面了，他在人群中冲我一笑的瞬间，当时脑海中只冒出一句词：谦谦君子，温润如玉。这必须是我的菜啊啊啊！！！原谅我是个肤浅的颜控...<br />
+
+　　我们度过了愉快的四天时间，见了我爸妈（因为他们担心网友不靠谱，送兔先森上车时，爸妈已经预约下次来玩的时间了…）不得不说网恋奔现又异地恋是需要彼此的信任和理解，兔先生再忙也会每天发早安和晚安信息，晚上打电话聊天，会时不时的寄水果特产给爸妈，我呢，攒够了假期也去了他的城市看海，见了家长，相处也很和谐，一切顺理成章的结婚了，婚后我辞了职来到他这儿。<br />
+
+　　从相识相恋到结婚，偶尔也闹过别扭，当然是我在作，有段时间恐婚，半夜会莫名其妙哭，他总是抱着我，一下下轻拍着我的背，等我哭完了又笑我是个爱哭包，每天早上醒来第一件事就是亲吻彼此，睡觉前也是，和兔先森在一起后，我才知道遇见对的人才会懂得什么是爱，我们能Get到对方的笑点，能毫不顾及形象的打闹，也能正儿八经的谈论工作上的问题，他变得更加成熟，我也能控制自己的脆弱，我们会越来越像另一个自己。</pre>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div id="modal14" class="modal fade">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h2 class="modal-title">Hover effect 14</h2>
+            </div>
+            <div class="modal-body">
+                <h3>HTML</h3>
+                <p> Note: if not using bootstrap and you wish to use the hover simply remove the classes on the first div "col-lg-3 col-md-4 col-sm-6 col-xs-12" and give this div a chosen size eg width: 300px</p>
+				<pre>
+&lt;div class="col-lg-3 col-md-4 col-sm-6 col-xs-12"&gt;
+    &lt;div class="hovereffect"&gt;
+        &lt;img class="img-responsive" src="http://placehold.it/350x250" alt=""&gt;
+            &lt;div class="overlay"&gt;
+                &lt;h2&gt;Effect 14&lt;/h2&gt;
+				&lt;p&gt;
+					&lt;a href="#"&gt;LINK HERE&lt;/a&gt;
+				&lt;/p&gt;
+            &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+                <h3>CSS</h3>
+				<pre>
+.hovereffect {
+  width: 100%;
+  height: 100%;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  cursor: default;
+}
+
+.hovereffect .overlay {
+  position: absolute;
+  overflow: hidden;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  width: 55%;
+  height: 81%;
+  left: 22%;
+  top: 10%;
+  border-radius: 80%;
+  border: 2px solid #FFF;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: translate3d(50%,50%,0);
+  transform: translate3d(50%,50%,0);
+}
+
+.hovereffect:hover .overlay {
+  background-color: rgba(0,0,0,0.3);
+}
+
+.hovereffect img {
+  display: block;
+  position: relative;
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
+}
+
+.hovereffect:hover img {
+  filter: url('data:image/svg+xml;charset=utf-8,&lt;svg xmlns="http://www.w3.org/2000/svg"&gt;&lt;filter id="filter"&gt;&lt;feComponentTransfer color-interpolation-filters="sRGB"&gt;&lt;feFuncR type="linear" slope="1.4" /&gt;&lt;feFuncG type="linear" slope="1.4" /&gt;&lt;feFuncB type="linear" slope="1.4" /&gt;&lt;/feComponentTransfer&gt;&lt;/filter&gt;&lt;/svg&gt;#filter');
+  filter: brightness(1.4);
+  -webkit-filter: brightness(1.4);
+}
+
+.hovereffect h2 {
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  font-size: 17px;
+  padding: 10px;
+  background-color: transparent;
+  color: #FFF;
+  padding: 1em 0;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: translate3d(-150%,-400%,0);
+  transform: translate3d(-150%,-400%,0);
+}
+
+.hovereffect a, .hovereffect p {
+  color: #FFF;
+  padding: 1em 0;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: translate3d(-150%,-400%,0);
+  transform: translate3d(-150%,-400%,0);
+}
+
+.hovereffect:hover a, .hovereffect:hover p, .hovereffect:hover h2, .hovereffect:hover .overlay {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}</pre>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div id="footer">
+			<!--<div id="footer_1">
+				<p>
+					<a href="#">我已成功征友，我要 <font style="color: rgb(255,83,107);">晒幸福</font>&gt; </a>
+				</p>
+			</div>-->
+			<div id="footer_2">
+				<p id="footer_2_1">
+					<a href="#">联系客服</a>
+					<a href="#">关于我们</a>
+					<a href="#">联系我们</a>
+					<a href="#">无线业务</a>
+					<a href="#">注册条框</a>
+					<a href="#">区块链</a>
+					<a href="#">招聘信息</a>
+					<a href="#">交友信息</a>
+					<a href="#">隐私保护</a>
+					<a href="#">帮助中心</a>
+					<a href="#">安全中心</a>
+					<a href="#">营业执照</a>
+				</p>
+				<p id="footer_2_2">
+					<font>中文名：世纪佳缘</font>
+					<font>ICP证书：沪B2-20100074</font>
+					<font>增值电信业务经营许可证：沪B2-20070313</font>
+					<a href="#">ISO9001质量体系认证</a>
+				</p>
+				<p id="footer_2_3">
+					<font>2003-2018</font>
+					<font>版权所有</font>
+					<font>京公网安备110105002124号</font>
+					<font>沪ICP备09045640号-1</font>
+					<font>不良和违法信息举报专线：0316-5266032</font>
+				</p>
+			</div>
+		</div>
+	
+	<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+	<script src="http://www.jq22.com/jquery/bootstrap-3.3.4.js"></script>
+</body>
+</html>

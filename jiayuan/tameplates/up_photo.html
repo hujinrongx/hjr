@@ -1,0 +1,252 @@
+{% load static from staticfiles %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#mainbox{
+				position: absolute;
+				margin-left: 15%;
+				height: 930px;
+				width: 70%;
+				/*background-color: blueviolet;*/
+				margin-top: 30px;
+			}
+			#tubiao{
+				position: absolute;
+				float: left;
+				height: 55px;
+				width: 180px;
+				margin: 0px;
+				background-color: burlywood;
+			}
+			
+			/*上传照片区域样式*/
+			#upphoto{
+				position: absolute;
+				float: left;
+				margin-left: 210px;
+				width:710px;
+				height: 830px;
+				background-color: white;
+				box-shadow: 0px 0px 8px lightgray;
+			}
+			#upphoto_header{
+				position: absolute;
+				margin-top: 30px;
+				width: 100%;
+				height: 150px;
+				line-height: 40px;
+				text-align: center;	
+				font-family: "宋体";
+			}
+			#p4{
+				background-color: rgb(247,247,247);
+				font-size: 14px;
+				width: 80%;
+				margin-left: 10%;
+				position: absolute;
+				color: rgb(255,83,107);
+			}
+			#p3{
+				color: gray;
+			}
+			#upphoto_body1{
+				width: 400px;
+				height: 400px;
+				background-color: rgb(237,237,237);
+				position: absolute;
+				margin-top: 180px;
+				margin-left: 10%;
+				border: 1px solid lightgray;
+				float: left;
+			}
+			#upphoto_body2{
+				position: absolute;
+				float: left;
+				margin-left: 510px;
+				margin-top: 180px;
+				width: 135px;
+				height: 140px;
+				overflow: hidden;
+				border: 1px solid lightgray;
+			}
+			#upphoto_body2 img{
+				height: 140px;
+			}
+			#upphoto_body3{
+				position: absolute;
+				float: left;
+				margin-left: 510px;
+				margin-top: 340px;
+				width: 110px;
+				height: 135px;
+				border: 1px solid lightgray;
+			}
+			#upphoto_footer{
+				position: absolute;
+				margin-top: 640px;
+				margin-left: 10%;
+				width: 80%;
+				height: 30px;
+				text-align: right;
+				font-size: 12px;
+			}
+			#upphoto_footer_1{
+				height: 1px;
+				background-color: rgb(240,240,240);
+				width: 100%;	
+				position: absolute;
+				
+			}
+			#upphoto_footer_2{
+				width: 100%;	
+				position: absolute;
+				margin-top: 20px;
+				font-size: 12px;
+				color: rgb(160,160,160);
+				text-align: left;
+				font-family: "新宋体";
+				line-height: 15px;
+			}
+			/*示例图片区域样式*/
+			#shili{
+				position: absolute;
+				float: left;
+				margin-top: 70px;
+				width: 170px;
+				height: 650px;
+				background-color: rgb(247,247,247);
+				margin-left: 40px;
+				box-shadow: 0px 0px 8px lightgray;
+				/*text-align: center;*/
+				font-size: 10px;
+				color: grey;
+			}
+			.p1{
+				font-size: 12px;
+				
+				/*text-align: left;*/
+			}
+			#true,#flase{
+				text-align: center;
+			}
+			#shili_1{
+				width: 100px;
+				margin-left: 45px;
+				margin-top: 20px;
+				position: absolute;
+			}
+			
+			/*最后一行文字样式*/
+			#lastword{
+				position: absolute;
+				margin-top: 850px;
+				margin-left: 210px;
+				width:710px;
+				height: 40px;
+				text-align: center;
+			}
+			#lastword p{
+				font-size: 12px;
+				color: rgb(160,160,160);
+				font-family: "新宋体";
+				line-height: 15px;
+			}
+			
+		</style>
+	</head>
+	<body>
+
+		<img src='/static/photo/{{ image }}'>
+		<div id="mainbox">
+			
+			<!--佳缘logo-->
+			<div id="tubiao">
+				<img src="{% static 'img/jylogo.jpeg' %}"/>
+			</div>
+			
+			
+			
+			<!--示例图片区域-->
+			<div id="shili">
+				<div id="shili_1">
+					<p class="p1">示范头像</p>
+					
+					<div id="true">
+						<img src="{% static 'img/test2.jpg' %}"/>
+						<p>五官清晰</p>
+					</div>
+					<br />
+					<p class="p1">不合格头像</p>
+					
+					<div id="flase">
+						<img src="{% static 'img/test3.jpg' %}"/>
+						<p>人太小</p>
+						<img src="{% static 'img/test4.jpg' %}"/>
+						<p>侧面照</p>
+						<img src="{% static 'img/test5.jpg' %}"/>
+						<p>光线太暗</p>
+					</div>
+					
+				</div>
+			</div>
+			
+			
+			<!--上传照片区域-->
+
+
+
+			<div id="upphoto">
+				<div id="upphoto_header">
+				<p id="p3">恭喜，您已注册成为会员</p>
+				<p id="p4">90%的用户会选择有照片的用户进行联系</p>
+				</div>
+				<div id="upphoto_body">
+					<div id="upphoto_body1">
+					<!--这里写上传文件的表单-->
+                        <form action="/youyuan/upload/" method="post"
+      enctype="multipart/form-data">
+    <input type="file" name="f" value="选择文件">
+    <input type="submit" value="上传">
+        </form>
+                        <br>
+                <form>
+
+
+
+                </form>
+					</div>
+					<div id="upphoto_body2">
+						<img src="{% static 'img/tes0t.jpg' %}"/>
+					</div>
+					<div id="upphoto_body3">
+						<img src="{% static 'img/test.jpg' %}"/>
+					</div>
+				</div>
+				
+				<div id="upphoto_footer">
+					<p id="p6"> <a href="#">跳过这步</a> </p>
+					<div id="upphoto_footer_1"></div>
+					<div id="upphoto_footer_2">
+						<p>温馨小贴士</p>
+						<p>请勿上传明星或他人照片，正面、微侧的清晰照，更能增加第一印象哦！</p>
+						<p>新注册会员上传头像，10分钟内将特快审核。如果超时，你可以免费催促一次（价值2元）。</p>
+					</div>
+				</div>
+				
+				
+				
+				
+			</div>
+		
+		
+			<div id="lastword">
+				<p>中文实名：世纪佳缘 ICP证书：沪B2-20100074 Copyright © 2003-2016 版权所有</p>
+				
+			</div>
+		</div>
+		
+	</body>
+</html>

@@ -1,0 +1,818 @@
+{% load static from staticfiles %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title></title>
+		<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+		<!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+		<script src="{% static 'js/jquery.min.js' %}"></script>
+		<!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+		<script src="{% static 'js/bootstrap.min.js' %}"></script>
+		<style type="text/css">
+			body{
+				margin: 0px;
+				padding: 0px;
+				background-color: rgb(247,247,247);
+			}
+			ul{
+				list-style: none;
+			}
+			a{
+				text-decoration: none;
+				color: grey;
+			}
+			a:hover{
+				color: dodgerblue;
+			}
+			#header{
+				height: 180px;
+				width: 100%;
+				/*background-color: darkorchid;*/
+				border-bottom: 2px solid silver;
+				position: absolute;
+				margin: 0px;
+			}
+			#header_1{
+				height: 30px;
+				width: 100%;
+				margin: 0px;
+				background-color: rgb(247,247,247);
+				font-size: 14px;
+				color: gray;
+			}
+			#header_1_left{
+				/*float: left;*/
+				margin-top: 5px;
+				margin-left: 30px;
+				
+				
+			}
+			#header_1_left ul{
+				width: 500px;
+				float: left;
+			}
+			#header_1_left li {
+				float: left;
+				margin-left: 30px;
+			}
+			#header_1_right{
+				margin-top: 5px;
+				margin-left: 60%;
+				
+			}
+			#header_1_right ul{
+				width: 500px;
+				
+				float: left;
+				
+			}
+			#header_1_right li {
+				float: left;
+				margin-left: 20px;
+			}
+			
+			
+			/*头部第二条*/
+			#header_2{
+				height: 80px;
+				width: 100%;
+				position: absolute;
+				background-color: white;
+			}
+			#header_2_left{
+				float: left;
+				position: absolute;
+				margin-left: 100px;
+				
+			}
+			#p1{
+				float: left;
+				margin-top: 4px;
+			}
+			#p2{
+				float: left;
+				margin-top: 30px;
+				background-color:rgb(247,247,247);
+				border-radius: 15px;
+				margin-left: 15px;
+				width: 80px;
+				height: 26px;
+				color: gray;
+				text-align: center;
+			}
+			#header_2_right{
+				float: left;
+				margin-left: 80%;
+				width: 150px;
+				height: 200px;
+				
+			}
+			#p3{
+				height: 30px;
+				width: 180px;
+				margin-top: 30px;
+				border: 1px solid #e5e5e5;
+				border-radius: 15px;
+				word-spacing: 20px;
+				color: gray;
+				font-size: 12px;
+			}
+			#p4{
+				
+				float: left;
+				margin-top: 20px;
+				position: absolute;
+				display: none;
+				z-index: 999;
+				height: 100px;
+				width: 100px;
+				text-align: center;
+				background-color: white;
+			}
+			
+			#p5{
+				
+				margin-top: 20px;
+				float: left;
+				margin-left: 80px;
+				position: absolute;
+				display: none;
+				z-index: 999;
+				height: 100px;
+				width: 100px;
+				text-align: center;
+				background-color: white;
+			}
+			#app:hover #p4{
+				display:block;
+			}
+			#weixin:hover #p5{
+				display: block;
+			}
+			#p4 img{
+				height: 80px;
+				
+			}
+			#p5 img{
+				height: 80px;
+			}
+			#p3 font{
+				margin-top: 10px;
+			}
+			/*导航栏样式*/
+			#header_3{
+				
+				margin-top: 80px;
+				font-size: 20px;
+				height: 60px;
+				width: 100%;
+				background-color: white;
+				position: absolute;
+				
+			}
+			#header_3 ul{
+				width: 1000px;
+				margin-top: 10px;
+				margin-left: 120px;
+				
+			}
+			#header_3 li{
+				float: left;
+				margin-left: 30px;
+				
+			}
+			#header_3 a{
+				color: black;
+			}
+			#header_3 a:hover{
+				color: rgb(255,83,107);
+				text-decoration: none;
+			}
+			#header_3 li:hover  {
+				border-bottom: 2px solid rgb(255,83,107);
+			}
+			
+			/*轮播图*/
+			#body_lunbotu{
+				position: absolute;
+				margin-top: 160px;
+				width: 100%;
+				height: 340px;
+			}
+			#body_lunbotu img{
+				width: 100%;
+				height: 300px;
+			}	
+			
+			/*交友搜缘分*/
+			#body_2{
+				position: absolute;
+				width: 90%;
+				height: 650px;
+				margin-left: 5%;
+				background-color: white;
+				margin-top: 460px;
+			}
+			#body_2_1{
+				position: absolute;
+				height: 80px;
+				width: 80%;
+				
+			}
+			#body_2_1_left{
+				font-size: 26px;
+				font-weight: 900;
+				position: absolute;
+				margin-left:20px ;
+				float: left;
+				margin-top: 20px;
+				font-family: "黑体";
+			}
+			#body_2_1_center{
+				float: left;
+				margin-left: 150px;
+				font-size: 17px;
+				color: gray;
+				margin-top: 30px;
+				font-family: "黑体";
+			}
+			#body_2_1_center ul{
+				width: 600px;
+			}
+			#body_2_1_center li{
+				float: left;
+				margin-left: 20px;
+			}
+			#body_2_1_center font:hover{
+				color:rgb(255,83,107);
+				
+			}
+			/*脱单新功略*/
+			#body_3{
+				width: 90%;
+				height: 100px;
+				position: absolute;
+				margin-left: 5%;
+				margin-top: 1130px;
+			}
+			/*佳缘应用，搜索神功*/
+			#body_4{
+				width: 90%;
+				height: 270px;
+				position: absolute;
+				margin-top: 1250px;
+				margin-left: 5%;
+			}
+			/*佳缘应用*/
+			#body_4_left{
+				float: left;
+				height: 270px;
+				position: absolute;
+				background-color: white;
+				
+			}
+			#body_4_left_1{
+				height: 50px;
+				background-color: rgb(255,83,107);
+				border-radius: 5px 5px 0px 0px;
+				font-size: 24px;
+				color: white;
+				text-align: center;
+			}
+			#body_4_left_1 p{
+				margin-left: 43%;
+				margin-top: 8px;
+				position: absolute;
+			}
+			#body_4_left_2 img{
+				margin-left: 10px;
+				margin-top: 10px;
+				height: 94px;
+			}
+			#body_4_left_2 img:hover{
+				box-shadow: 0px 0px 8px gray;
+				border-radius: 5px;
+			}
+			/*搜索神功*/
+			#body_4_right{
+				float: left;
+				height: 270px;
+				margin-left: 615px;
+				position: absolute;
+				background-color: white;
+				
+			}
+			#body_4_right_1{
+				height: 50px;
+				background-color: rgb(67,178,248);
+				border-radius: 5px 5px 0px 0px;
+				font-size: 24px;
+				color: white;
+				text-align: center;
+			}
+			#body_4_right_1 p{
+				margin-left: 43%;
+				margin-top: 8px;
+				position: absolute;
+			}
+			#body_4_right_2 img{
+				margin-left: 10px;
+				margin-top: 10px;
+				height: 94px;
+				
+			}
+			#body_4_right_2 img:hover{
+				box-shadow: 0px 0px 8px gray;
+				border-radius: 5px;
+			}
+			/*懂你交友数据中心*/
+			#body_5{
+				height: 150px;
+				width: 90%;
+				position: absolute;
+				margin-left: 5%;
+				margin-top: 1540px;
+			}
+			#body_5 div{
+				float: left;
+				position: absolute;
+				border-radius: 5px;
+			}
+			#body_5_2 {
+				margin-left: 410px;
+			}
+			#body_5_3 {
+				margin-left: 820px;
+			}
+			/*轮播图2*/
+			#body_6{
+				height: 35%;
+				width: 90%;
+				position: absolute;
+				margin-left: 5%;
+				margin-top: 1710px;
+			}
+			#body_6 img{
+				width: 100%;
+			}
+			
+			/*晒幸福*/
+			#body_7{
+				height: 600px;
+				position: absolute;
+				margin-left: 5%;
+				width: 90%;
+				margin-top: 2080px;
+				background-color: white;
+			}
+			#body_7_1{
+				height: 60px;
+				position:absolute ;
+				width: 100%;
+				font-size: 26px;
+				font-weight: 900;
+				
+			}
+			#body_7_1 p{
+				text-align: center;
+				margin-top: 20px;
+			}
+			/*恋爱不将就*/
+			#body_8{
+				margin-top: 2700px;
+				position: absolute;
+				margin-left: 5%;
+				width: 90%;
+				height: 100px;
+				
+			}
+			#body_8 img{
+				width: 100%;
+			}
+			/*底部样式*/
+			#footer{
+				margin-top: 2820px;
+				width: 100%;
+				height: 150px;
+				position: absolute;
+				/*background-color: rosybrown;*/
+				/*text-align: right;*/
+				
+			}
+			/*#footer_1{
+				margin-left: 75%;
+				margin-top: 20px;
+			}
+			#footer_1 a{
+				color:  dimgrey;
+				font-size: 18px;
+				font-family: "仿宋";
+				font-weight: 800px;
+				text-decoration: none;
+			}
+			#footer_1 a:hover{
+				text-decoration: underline;
+			}*/
+			#footer_2{
+				word-spacing: 15px;
+				font-size: 11px;
+				color: dimgrey;
+				position: absolute;
+				margin-left:20%;
+				margin-top: 10px;
+				text-align: center;
+				
+			}
+			#footer_2 a{
+				text-decoration: none;
+				font-size: 11px;
+			}
+			#footer_2 a:hover{
+				color: rgb(255,83,107);
+				text-decoration: underline;
+			}
+		</style>
+		<script type="text/javascript">
+			$(function(){
+				$("#myCarousel").carousel({
+					interval:2000   /*2秒自动轮播*/
+				});
+			});
+			
+			$(function () 
+	      { $("[data-toggle='popover']").popover();
+	      });
+	      
+	      $(function(){
+				$("#myCarousel2").carousel({
+					interval:2000   /*2秒自动轮播*/
+				});
+			});
+			
+			$(function () 
+	      { $("[data-toggle='popover']").popover();
+	      });
+      
+      
+		</script>
+	</head>
+	<body>
+		<!--头部-->
+		<div id="header">
+			<div id="header_1">
+				<div id="header_1_left">
+					<ul>
+					<li>Hi,星晴</li> <!--此处星晴为引用用户名值-->
+					<li> <font style="background-color: yellow;color: saddlebrown;">s1会员</font> 金豆 <font style="color: darkorange;">50</font> </li>
+					<li> <font>佳缘ID</font> <a href="#">182326701</a> <a href="#">退出</a></li> <!--id号引用数值 -->
+					
+					</ul>
+				</div>
+				
+				<div id="header_1_right">
+					<ul>
+						<li> <a href="#"> <font> <img style="height: 20px;" src="{% static 'img/star.png' %}"/> 收藏本站</font></a> </li>
+						<li><a href="/youyuan/vip/"><font> <img style="height: 20px;" src="{% static 'img/chongzhi.png' %}"/> 充值</font></a></li>
+						<li><a href="#"><font> <img style="height: 20px;" src= "{% static 'img/tixing.png' %}"/>提醒</font></a></li>
+						<li>红娘专线&nbsp;027-51302093</li>
+					</ul>
+				</div>
+			</div>
+			<div id="header_2">
+				<div id="header_2_left">
+					<p id="p1"><img src="{% static 'img/jylogo.jpeg' %}"/></p>
+					<p id="p2">武汉市</p> <!--数据库取值-->
+				</div>
+				<div id="header_2_right">
+					<div id="p3">
+						<font id="app" style="margin-left: 20px;">
+							<font><img src="{% static 'img/phone.png' %}" style="height: 25px;"/>APP</font>
+							<div id="p4">
+								<img src="{% static 'img/app.png' %}"/>
+								<p>APP下载</p>
+							</div>
+						</font>
+						
+						<font id="weixin">
+							<font><img src="{% static 'img/weixin.png' %}"style="height: 25px;"/>微信</font>
+							<div id="p5">
+								<img  src="{% static 'img/wx.png' %}"/>
+								<p>官方公众号</p>
+							</div>
+						</font>
+						
+					</div>
+
+				</div>
+			</div>
+			<div id="header_3">
+				<ul>
+					<li style="border-bottom: 2px solid rgb(255,83,107);"> <a style="color: rgb(255,83,107);" href="#">首页</a></li>
+					<li> <a href="/youyuan/ziliao/">我的佳缘</a></li>
+					<li> <a href="#">收件箱</a></li>
+					<li> <a href="/youyuan/sousuo/">收索</a></li>
+					<li> <a href="/youyuan/s/">今日推荐</a></li>
+					<li> <a href="#">情感</a></li>
+					<li> <a href="#">活动</a></li>
+					<li> <a href="#">约会吧</a></li>
+					<li> <a href="#">佳缘金融</a></li>
+					<li> <a href="/youyuan/sai/">晒幸福</a></li>
+					
+				</ul>
+			</div>
+		</div>
+	
+	
+		<!--轮播图1-->
+		<div id="body_lunbotu">
+			<div id="box">
+				<div id="myCarousel" class="carousel slide text-center">
+				   <!-- 轮播（Carousel）指标 -->
+				   <ol class="carousel-indicators">
+				      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+				      <li data-target="#myCarousel" data-slide-to="1"></li>
+				      <li data-target="#myCarousel" data-slide-to="2"></li>
+				      <li data-target="#myCarousel" data-slide-to="3"></li>
+				      <li data-target="#myCarousel" data-slide-to="4"></li>
+				      <li data-target="#myCarousel" data-slide-to="5"></li>
+				      <li data-target="#myCarousel" data-slide-to="6"></li>
+				      <li data-target="#myCarousel" data-slide-to="7"></li>
+				   </ol>   
+				   <!-- 轮播（Carousel）项目 -->
+				   <div class="carousel-inner">
+				    	<div class="item active">
+				         <div class="sucai" alt="First slide">
+				         	<img src="{% static 'img/lunbotu11.jpg' %}"/>
+				         </div>
+				         <div class="carousel-caption"></div>
+				      </div>
+				    	<div class="item">
+				         <div class="sucai" alt="Second slide">
+				         	<img src="{% static 'img/lunbotu12.jpg' %}"/>
+				         </div>
+				         <div class="carousel-caption"></div>
+				      </div>
+				   		<div class="item">
+				         
+				        <div class="sucai" alt="Third slide">
+				         	<img src="{% static 'img/lunbotu14.png' %}"/>
+				         </div>
+				         <div class="carousel-caption"></div>
+				    	</div>
+				    	
+				    	<div class="item">
+				         <div class="sucai" alt="Second slide">
+				         	<img src="{% static 'img/lunbotu15.jpg' %}"/>
+				         </div>
+				         <div class="carousel-caption"></div>
+				      </div>
+				      
+				      <div class="item">
+				         <div class="sucai" alt="Second slide">
+				         	<img src="{% static 'img/lunbotu16.png' %}"/>
+				         </div>
+				         <div class="carousel-caption"></div>
+				      </div>
+				      
+				      <div class="item">
+				         <div class="sucai" alt="Second slide">
+				         	<img src="{% static 'img/lunbotu17.jpg' %}"/>
+				         </div>
+				         <div class="carousel-caption"></div>
+				      </div>
+				      
+				      <div class="item">
+				         <div class="sucai" alt="Second slide">
+				         	<img src="{% static 'img/lunbotu18.jpg' %}"/>
+				         </div>
+				         <div class="carousel-caption"></div>
+				      </div>
+				      
+				      <div class="item">
+				         <div class="sucai" alt="Second slide">
+				         	<img src="{% static 'img/lunbotu19.jpg' %}"/>
+				         </div>
+				         <div class="carousel-caption"></div>
+				      </div>
+					</div>
+				   <!-- 轮播（Carousel）导航 -->
+				   <a class="carousel-control left" href="#myCarousel" 
+				      data-slide="prev" style="color: white; font-size:50px; margin-top: 200px; background:none;">&lsaquo;</a>
+				   <a class="carousel-control right" href="#myCarousel" 
+				      data-slide="next" style="color: white; font-size:50px; margin-top: 200px; background:none;">&rsaquo;</a>
+				</div> 
+	    	</div>
+
+		</div>
+	
+	
+		<!--交友搜缘分-->
+		<div id="body_2">
+			<div id="body_2_1">
+				<div id="body_2_1_left">
+					<font><img style="height: 30px;" src={% static 'img/bluelove.png' %}/>&nbsp;交友搜缘分</font>
+				</div>
+				<div id="body_2_1_center">
+					<ul>
+						<li style="border-bottom: 2px solid rgb(255,83,107);"> <font style="color: rgb(255,83,107);">80后</font></li>
+						<li><font>80后</font></li>
+						<li><font>90后</font></li>
+						<li><font>爱美食</font></li>
+						<li><font>爱旅游</font></li>
+						<li><font>爱唱歌</font></li>
+					</ul>
+				</div>
+				<div id="body_2_1_right">
+					
+				</div>
+			</div>
+			<div id="body_2_2">
+				
+			</div>
+		</div>
+	
+	
+		<!--脱单新功略-->
+		<div id="body_3">
+			<img src="{% static 'img/tuodan.png' %}" style="width: 100%;"/>
+			
+		</div>
+	
+	
+		<!--佳缘应用，搜索神功-->
+		<div id="body_4">
+			<!--佳缘应用-->
+			<div id="body_4_left">
+				<div id="body_4_left_1">
+					<p>佳缘应用</p>
+				</div>
+				<div id="body_4_left_2">
+					<img src="{% static 'img/use-1.jpg' %}"/>
+					<img src="{% static 'img/use-2.jpg' %}"/>
+					<img src="{% static 'img/use-3.jpg' %}"/>
+					<br />
+					<img src="{% static 'img/use-4.jpg' %}"/>
+					<img src="{% static 'img/use-5.jpg' %}"/>
+					<img src="{% static 'img/use-6.jpg' %}"/>
+				</div>
+			</div>
+			
+				
+			<!--搜索神功-->
+			<div id="body_4_right">
+				<div id="body_4_right_1">
+					<p>佳缘应用</p>
+				</div>
+				<div id="body_4_right_2">
+					<img src="{% static 'img/use-7.jpg' %}"/>
+					<img src="{% static 'img/use-8.jpg' %}"/>
+					<img src="{% static 'img/use-9.jpg' %}"/>
+					<br />
+					<img src="{% static 'img/use-10.jpg' %}"/>
+					<img src="{% static 'img/use-11.jpg' %}"/>
+					<img src="{% static 'img/use-12.jpg' %}"/>
+				</div>
+			</div>
+
+		</div>
+		
+		
+		
+		<!--懂你交友数据中心-->
+		<div id="body_5">
+			<div id="body_5_1">
+				 <img src="{% static 'img/three-bar1.jpg' %}"/>
+			</div>
+			<div id="body_5_2">
+				<img src="{% static 'img/three-bar2.jpg' %}"/>
+			</div>
+			<div id="body_5_3">
+				<img src="{% static 'img/three-bar3.jpg' %}"/>
+			</div>
+		</div>
+	
+	
+		<!--轮播图2-->
+		<div id="body_6">
+			<div id="box2">
+				<div id="myCarousel2" class="carousel slide text-center">
+				   <!-- 轮播（Carousel）指标 -->
+				   <ol class="carousel-indicators">
+				      <li data-target="#myCarousel2" data-slide-to="0" class="active"></li>
+				      <li data-target="#myCarousel2" data-slide-to="1"></li>
+				      <li data-target="#myCarousel2" data-slide-to="2"></li>
+				      <li data-target="#myCarousel2" data-slide-to="3"></li>
+				      <li data-target="#myCarousel2" data-slide-to="4"></li>
+				      <li data-target="#myCarousel2" data-slide-to="5"></li>
+				   </ol>   
+				   <!-- 轮播（Carousel）项目 -->
+				   <div class="carousel-inner">
+				    	<div class="item active">
+				         <div class="sucai" alt="First slide">
+				         	<img src="{% static 'img/lunbotu21.jpg' %}"/>
+				         </div>
+				         <div class="carousel-caption"></div>
+				      </div>
+				    	<div class="item">
+				         <div class="sucai" alt="Second slide">
+				         	<img src="{% static 'img/lunbotu22.png' %}"/>
+				         </div>
+				         <div class="carousel-caption"></div>
+				      </div>
+				   		<div class="item">
+				         
+				        <div class="sucai" alt="Third slide">
+				         	<img src="{% static 'img/lunbotu23.jpg' %}"/>
+				         </div>
+				         <div class="carousel-caption"></div>
+				    	</div>
+				    	
+				    	<div class="item">
+				         <div class="sucai" alt="Second slide">
+				         	<img src="{% static 'img/lunbotu24.jpg' %}"/>
+				         </div>
+				         <div class="carousel-caption"></div>
+				      </div>
+				      
+				      <div class="item">
+				         <div class="sucai" alt="Second slide">
+				         	<img src="{% static 'img/lunbotu25.jpg' %}"/>
+				         </div>
+				         <div class="carousel-caption"></div>
+				      </div>
+				      
+				      <div class="item">
+				         <div class="sucai" alt="Second slide">
+				         	<img src="{% static 'img/lunbotu26.png' %}"/>
+				         </div>
+				         <div class="carousel-caption"></div>
+				      </div>
+
+					</div>
+				   <!-- 轮播（Carousel）导航 -->
+				   <a class="carousel-control left" href="#myCarousel2" 
+				      data-slide="prev" style="color: white; font-size:50px; margin-top: 200px; background:none;">&lsaquo;</a>
+				   <a class="carousel-control right" href="#myCarousel2" 
+				      data-slide="next" style="color: white; font-size:50px; margin-top: 200px; background:none;">&rsaquo;</a>
+				</div> 
+	    	</div>
+		</div>
+	
+	
+		<!--晒幸福-->
+		<div id="body_7">
+			<div id="body_7_1">
+				<p><img style="height: 40px;" src="{% static 'img/pinklove.png' %}"/>&nbsp;晒幸福</p>
+			</div>
+			<div id="body_7_2">
+				
+			</div>
+		</div>
+	
+		<!--恋爱不将就-->
+		<div id="body_8">
+			<img src="{% static 'img/jiage.jpg' %}"/>
+		</div>
+	
+		<!--底部-->
+		<div id="footer">
+			<!--<div id="footer_1">
+				<p>
+					<a href="#">我已成功征友，我要 <font style="color: rgb(255,83,107);">晒幸福</font>&gt; </a>
+				</p>
+			</div>-->
+			<div id="footer_2">
+				<p id="footer_2_1">
+					<a href="#">联系客服</a>
+					<a href="#">关于我们</a>
+					<a href="#">联系我们</a>
+					<a href="#">无线业务</a>
+					<a href="#">注册条框</a>
+					<a href="#">区块链</a>
+					<a href="#">招聘信息</a>
+					<a href="#">交友信息</a>
+					<a href="#">隐私保护</a>
+					<a href="#">帮助中心</a>
+					<a href="#">安全中心</a>
+					<a href="#">营业执照</a>
+				</p>
+				<p id="footer_2_2">
+					<font>中文名：世纪佳缘</font>
+					<font>ICP证书：沪B2-20100074</font>
+					<font>增值电信业务经营许可证：沪B2-20070313</font>
+					<a href="#">ISO9001质量体系认证</a>
+				</p>
+				<p id="footer_2_3">
+					<font>2003-2018</font>
+					<font>版权所有</font>
+					<font>京公网安备110105002124号</font>
+					<font>沪ICP备09045640号-1</font>
+					<font>不良和违法信息举报专线：0316-5266032</font>
+				</p>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,654 @@
+{% load static from staticfiles %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>基本资料_世纪佳缘交友网</title>
+		<style type="text/css">
+			body{
+				margin: 0px;
+				padding: 0px;
+				background-color: rgb(247,247,247);
+
+			}
+			ul{
+				list-style: none;
+			}
+			a{
+				text-decoration: none;
+				color: white;
+			}
+			a:hover{
+				color: red;
+			}
+			#header{
+				height: 160px;
+				width: 100%;
+				/*background-color: darkorchid;*/
+				border-bottom: 2px solid silver;
+				position: absolute;
+				margin: 0px;
+
+			}
+			#header_1{
+				height: 40px;
+				width: 100%;
+				margin: 0px;
+				background-color: rgb(64,64,64);
+				font-size: 14px;
+				color: white;
+				font-size: 5px;
+				font-family:"新宋体";
+			}
+			#header_1_left{
+				/*float: left;*/
+				margin-top: 5px;
+				margin-left: 100px;
+
+
+			}
+			#header_1_left ul{
+				width: 500px;
+				float: left;
+			}
+			#header_1_left li {
+				float: left;
+				margin-left: 30px;
+			}
+			#header_1_right{
+				margin-top: 5px;
+				margin-left: 55%;
+
+
+			}
+			#header_1_right ul{
+				width: 500px;
+
+				float: left;
+
+			}
+			#header_1_right li {
+				float: left;
+				margin-left: 20px;
+				margin-top: 0px;
+			}
+			#header_2{
+				height: 80px;
+				width: 100%;
+				position: absolute;
+				{#background-color: ;#}
+				font-size: 18px;
+				color: black;
+			}
+			#header_2_left{
+				float: left;
+				position: absolute;
+				margin-left: 200px;
+
+			}
+			#header_2 a{
+				color: #000000;
+				font-family:"微软雅黑";
+				font-size: 16px;
+			}
+			#header_2 a:hover{
+				color: red;
+			}
+			#header_2 p{
+				margin-top: 5px;
+			}
+			#header_3_left{
+				float: left;
+				position: absolute;
+				margin-left: 200px;
+				margin-top: 80px;
+			}
+			#header_4{
+				float: left;
+				margin-left: 220px;
+				position: absolute;
+				margin-top: 125px;
+				font-size: 13px;
+			}
+			#header_4 a{
+				color: dodgerblue;
+			}
+			#header_4 p{
+				float: left;
+			}
+			#header_5{
+				position: absolute;
+				margin-top: 200px;
+				margin-left: 200px;
+
+
+			}
+			#header_5{
+				border: 1px solid lightgrey;
+				border-radius: 5px;
+				position: absolute;
+				margin-top: 170px;
+				margin-left: 200px;
+				width: 180px;
+				height: 1050px;
+				{#background-color:;#}
+				color: #000000;
+				float: left;
+			}
+            #header_5 a:hover{
+                color: hotpink;
+            }
+
+			#header_5_1 a{
+				color:rgb(105,115,119);
+				font-family:"黑体";
+				font-weight: 900;
+				font-size: 15px;
+			}
+
+			#header_5_2 a{
+				color:rgb(105,115,119);
+				font-family: "黑体";
+				font-size: 13px;
+			}
+			#header_6{
+				border: 1px solid lightgrey;
+				border-radius: 5px;
+				background-color:rgb(240,240,240) ;
+				margin-top: 168px;
+				margin-left: 380px;
+				height: 44px;
+				width: 750px;
+				float: left;
+			}
+			#header_6 p{
+				color:rgb(220,65,131);
+				float: left;
+				font-size: 16px;
+				font-weight: 800;
+				font-family:"威雅软黑";
+			}
+			#header_6_1 p{
+				position: absolute;
+				margin-top:15px;
+				margin-left: 550px;
+				font-family: "微软雅黑";
+				font-weight: 600;
+				color: #000000;
+			}
+			#header_7{
+				border: 1px solid lightgrey;
+				border-radius: 5px;
+				{#background-color: ;#}
+				{#margin-top: ;#}
+				margin-left: 380px;
+				height: 1000px;
+				width: 500px;
+				float: left;
+			}
+			#header_7_1{
+				position: absolute;
+				float: left;
+				background-color: rgb(240,240,240);
+				margin-top: 20px;
+				margin-left: 20px;
+				height: 36px;
+				width: 450px;
+			}
+			#header_7_1 p{
+				font-size: 14px;
+				color:rgb(255,100,100);
+
+			}
+
+			#header_7_2{
+				height: 20px;
+			}
+			#header_7_2 p{
+				font-size: 14px;
+				color:rgb(149,149,149);
+
+			}
+			#header_7_2 a{
+				font-size: 14px;
+				color:dodgerblue;
+
+			}
+			#header_7_3{
+				height: 560px;
+
+				position: absolute;
+				float: left;
+				margin-top: 70px;
+				width: 500px;
+				color:rgb(55,55,55);
+			}
+			#header_7_3 ul{
+
+				width: 500px;
+				color:rgb(55,55,55);
+
+			}
+			#header_7_3 li{
+				font-size: 10px;
+				margin-top: 15px;
+
+			}
+			#header_7_3 a{
+				font-size: 14px;
+				color:dodgerblue;
+			}
+			.select{
+				width: 200px;
+			}
+            #header_7_3 input{
+                width: 200px;
+            }
+
+			#header_7_5{
+				float: left;
+				width: 500px;
+				position:absolute;
+				margin-top: 600px;
+				height: 30px;
+
+
+				}
+
+			#header_7_4 {
+				position: absolute;
+				margin-top: 630px;
+				float: left;
+
+				width: 500px;
+				height: 400px;
+				color:rgb(55,55,55);
+
+			}
+			#header_7_4 li{
+				margin-top: 13px;
+				font-size: 10px;
+			}
+
+
+
+
+			#header_7_5 p{
+				font-weight: 900;
+				color: black;
+
+			}
+			#header_7_4 p{
+				font-size: 14px;
+				color: rgb(116,126,150);
+				margin-left: 40px;
+
+			}
+			.text{
+				height: 20px;
+			width: 85px;
+			border-radius: 5px;
+			border: 1px solid lightgray;
+			}
+			#header_7_4 a{
+				font-size: 10px;
+				color: rgb(124,54,41);
+			}
+			#header_8{
+				position: absolute;
+				float: left;
+				margin-left:500px ;
+				{#background-color: ;#}
+				width: 250px;
+				height: 160px;
+				margin-top: -23px;
+				border: 1px solid lightgray;
+			}
+			#header_8 p{
+				margin-top: 80px;
+				margin-left: 30px;
+				font-size: 10px;
+				color: rgb(146,146,146);
+			}
+			#header_8_1{
+				position: absolute;
+				margin-left: 500px;
+
+				width: 250px;
+				height: 842px;
+				margin-top: 138px;
+				border: 1px solid lightgray;
+				/*border-bottom: none;*/
+			}
+
+			#header_8_1 li{
+				margin-top: 10px;
+				padding-left: 10px;
+				padding-right: 30px;
+				font-size: 10px;
+				color: rgb(50,50,50);
+			}
+			#middle_header_2-3{
+				position: absolute;
+				margin-left: 10px;
+				margin-top: 0px;
+				height: 100px;
+				width: 460px;
+				/*border-top: 1px  solid rgb(222,222,222);*/
+			}
+
+			#middle_header_2-3 font{
+				color: rgb(160,160,160);
+			}
+
+			#middle_header_2-3 ul{
+				height: 100px;
+			}
+
+			#middle_header_2-3 li{
+				/*color: rgb(57,57,57);
+				font-size:10px ;
+				margin-left: -30px;
+				margin-top: 5px;*/
+				font-size: 10px;
+				margin-top: 5px;
+			}
+
+			#middle_header_2-3 p{
+				font-size:10px ;
+				color: rgb(57,57,57);
+			}
+
+			#middle_header_2-3 input{
+				margin-left: -30px;
+				/*border-radius: 5px;
+				height: 30px;
+				width: 100px;
+				color: white;
+				background-color:rgb(23,156,194);
+				font-size: 12px;
+				font-family: "微软雅黑";
+				font-weight: 300;
+				border: none;*/
+
+			}
+			#middle_header_2-3-1{
+				margin-top: 50px;
+				margin-left: 10px;
+				width: 300px;
+				height: 30px;
+			}
+
+			#middle_header_2-3-1 li{
+				float: left;
+				margin-left: 50px;
+			}
+
+			#middle_header_2-3-2{
+				margin-top: -25px;
+			}
+
+			#middle_header_2-3-2 input{
+				margin-left: 20px;
+				margin-top:0px ;
+			}
+
+			#middle_header_2-3-1 input{
+				border-radius: 5px;
+				height: 35px;
+				width: 120px;
+				color: white;
+				background-color:rgb(23,156,194);
+				font-size: 15px;
+				font-family: "微软雅黑";
+				font-weight: 900;
+				border: none;
+			}
+			#middle_header_2-3-2 input{
+				border-radius: 5px;
+				height: 35px;
+				width: 120px;
+				color: rgb(122,122,122);
+				background-color:rgb(249,249,249);
+				font-size: 15px;
+				font-family: "微软雅黑";
+				font-weight: 900;
+				border:2px solid rgb(199,199,199);
+			}
+
+
+		</style>
+
+
+	</head>
+	<body>
+    <form action="/youyuan/inbasics/" method="post">
+<div id="header">
+	<div id="header_1">
+		<div id="header_1_left">
+			<ul>
+			<li>Hi,包容</li>
+			<li><a href="#"><font style="background-color:
+			yellow;color: saddlebrown;">s1会员</font> 金豆
+			<font style="color: darkorange;">50</font> </a></li>
+			<li><font>佳缘ID</font>
+			<font color="white"><a href="#">18812341234</a>
+				<a href="#">退出</a></font></li>
+			</ul>
+		</div>
+		<div id="header_1_right">
+		<ul>
+		<li><a href="#"><font><img style="height: 15px;
+			" src="{% static 'img/电话.png' %}"/>红娘专线&nbsp;027-51302093</font></a></li>
+		<li><a href="#"><font><img style="height: 15px;
+			" src="{% static 'img/星星.png' %}"/>收藏本站</font></a></li>
+		<li><a href="/youyuan/vip/"><font><img style="height: 15px;
+			" src="{% static 'img/账户充值.png' %}"/>充值</font></a></li>
+		<li><a href="#"><font><img style="height: 15px;
+			" src="{% static 'img/声音.png' %}"/>提醒</font></a></li>
+		</ul>
+		</div>
+	</div>
+	<div id="header_2">
+		<div id="header_2_left">
+			<a href="#"><p id="p1"><img src="{% static 'img/b2.jpeg' %}"/></p></a>
+		</div>
+		<div id="header_3_left">
+			<font><a href="/youyuan/main/">首页</a></font>&nbsp;&nbsp;&nbsp;
+			<font><a href="#">我的佳缘</a></font>&nbsp;&nbsp;&nbsp;
+			<font><a href="#">收件箱</a></font>&nbsp;&nbsp;&nbsp;
+			<font><a href="#">搜索</a></font>&nbsp;&nbsp;&nbsp;
+			<font><a href="#">俱乐部</a></font>&nbsp;&nbsp;&nbsp;
+			<font><a href="#">活动</a></font>&nbsp;&nbsp;&nbsp;
+			<font><a href="#">约会吧</a></font>&nbsp;&nbsp;&nbsp;
+			<font><a href="#">佳缘金融</a></font>&nbsp;&nbsp;&nbsp;
+			<font><a href="#">红娘一对一</a></font>&nbsp;&nbsp;&nbsp;
+			<font><a href="#">晒幸福</a></font>
+
+		</div>
+	</div>
+	<div id="header_4">
+		<p><a href="#">我的佳缘</a></p>
+		<p>></p>
+		<p>基本资料</p>
+	</div>
+	<div id="header_5">
+		<div id="header_5_1">
+		<ul>
+			<br /><br />
+			<li><a href="/youyuan/dubai/">内心独白</a></li><br />
+			<li><a href="/youyuan/upphoto/">我的照片</a></li><br />
+			<li><a href="#">我的地图</a></li><br />
+			<li><a href="/youyuan/user5/">详细资料</a></li>
+		</ul>
+		</div>
+		<div id="header_5_2">
+		<ul>
+			<li><a href="/youyuan/user5/">经济实力</a></li>
+			<li><a href="/youyuan/user6/">生活方式</a></li>
+			<li><a href="/youyuan/user7/">工作学习</a></li>
+			<li><a href="/youyuan/user8/">外貌体型</a></li>
+			<li><a href="/youyuan/user9/">婚姻观念</a></li>
+			<li><a href="/youyuan/user10/">兴趣爱好</a></li>
+		</ul>
+		</div>
+	</div>
+	<div id="header_6">
+		<p>&nbsp;&nbsp;基本资料</p>
+		<div id="header_6_1">
+		<font><p>资料完整度：45.5分</p></font>
+		</div>
+	</div>
+	<div id="header_7">
+		<div id="header_7_1">
+			<font><p>&nbsp;资料越完善，同等条件我们将优先推荐您哦~</p></font>
+			<div id="header_7_2">
+			</font><p>为保证资料真实有效，灰色字体信息不得随意修改，
+			<a href="#">查看修改技巧</a></p></font>
+			</div>
+		</div><br />
+		<div id="header_7_3">
+			<ul>
+				<li>昵称：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					包容&nbsp;&nbsp;&nbsp;<a href="#">修改</a>&nbsp;&nbsp;*每月可修改一次</li>
+				<li>性别：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					男*若需修改请联系客服010-57835066</li>
+				<li>出生日期：&nbsp;&nbsp;&nbsp;1990-06-10 *若需修改请联系客服010-57835066</li>
+				<li>生肖：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					马</li>
+				<li>星座：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					双子座</li>
+				<li>身高：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					182厘米&nbsp;&nbsp;&nbsp;<a href="#">修改</a>&nbsp;&nbsp;*每月可修改一次 </li>
+				<li>学历：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					本科&nbsp;&nbsp;&nbsp;<a href="#">修改</a>&nbsp;&nbsp;*每月可修改一次</li>
+				<li>婚姻情况：&nbsp;&nbsp;&nbsp;未婚&nbsp;&nbsp;&nbsp;<a href="#">修改</a>
+					&nbsp;&nbsp;*每月可修改一次</li>
+				<li>有无子女：&nbsp;&nbsp;&nbsp;<select class="select" name="chird">
+					<option>--请选择--</option>
+					<option>无小孩</option>
+					<option>有小孩归自己</option>
+					<option>有小孩归对方</option>
+				</select></li>
+				<li>所在地区：&nbsp;&nbsp;&nbsp;<select name="province" id="province">
+		<option value="请选择">请选择</option>
+	</select>
+	<select name="city" id="city">
+		<option value="请选择">请选择</option>
+	</select>
+	<select name="town" id="town">
+		<option value="请选择">请选择</option>
+	</select><script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+<script src="{% static 'js/area.js' %}"></script>
+<script src="{% static 'js/select.js' %}"></script>
+</li>
+
+				<li>血型：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<select class="select"  name="xue">
+					<option>--请选择--</option>
+					<option>A型</option>
+					<option>B型</option>
+					<option>O型</option>
+					<option>AB型</option>
+					<option>其它</option>
+					<option>保密</option>
+				</select></li>
+				<li>名族：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<select class="select" name="ethnic">
+					<option>--请选择--</option>
+					<option>汉族</option>
+					<option>藏族</option>
+					<option>朝鲜族</option>
+					<option>蒙古族</option>
+					<option>回族</option>
+					<option>满族</option>
+					<option>维吾尔族</option>
+					<option>壮族</option>
+					<option>彝族</option>
+					<option>苗族</option>
+					<option>其它名族</option>
+				</select></li>
+				<li>月薪：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;&nbsp;20000～50000元&nbsp;&nbsp;&nbsp;<a href="#">
+						修改</a>&nbsp;&nbsp;*每月可修改一次</li>
+				<li>居住情况：&nbsp;&nbsp;&nbsp;
+				<select class="select" name="house">
+					<option>--请选择--</option>
+					<option>暂未购房</option>
+					<option>需要时购置</option>
+					<option>已购房（有贷款）</option>
+					<option>已购房（无贷款）</option>
+					<option>与人合租</option>
+					<option>独自租房</option>
+					<option>与父母同住</option>
+					<option>住亲朋家</option>
+					<option>住单位房</option>
+				</select></li>
+				<li>购车情况：&nbsp;&nbsp;&nbsp;
+				<select class="select" name="car">
+					<option>--请选择--</option>
+					<option>暂未购车</option>
+					<option>已购车（经济型）</option>
+					<option>已购车（中档型）</option>
+					<option>已购车（豪华型）</option>
+					<option>单位用车</option>
+					<option>需要时购置</option>
+				</select></li>
+			</ul>
+		</div>
+		<div id="header_7_5">
+			<p>联系信息</p>
+		</div>
+			<div id="header_7_4">
+			<p>以下资料我们将为您保密，不会显示在您的个人资料页面上。</p>
+			<ul>
+				<li>真实姓名：&nbsp;&nbsp;<input class=select type="text" value="" name="lifename"></li>
+				<li>身份证号：&nbsp;&nbsp;<input class=select type="text" value="" name="shenfen"></li>
+				<li>邮箱：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<a href="#">填写邮箱地址并验证》》</a></li>
+				<li>QQ：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;<input class=select type="text" value="" name="qq"></li>
+				<li>通讯地址：&nbsp;&nbsp;<input class=select type="text" value="" name="adr"></li>
+				<li>邮政编码：&nbsp;&nbsp;<input class=select type="text" value="" name="youbian"></li>
+			</ul>
+			<div id="middle_header_2-3">
+				<div id="middle_header_2-3-1">
+					<ul>
+						<li>
+
+
+						<input type="submit" value="保存并退出"/>
+
+					</li>
+					</ul>
+				</div>
+				<div id="middle_header_2-3-2">
+					<input type="button" value="跳过此页" />
+
+				</div>
+			</div>
+
+			</div>
+		<div id="header_8">
+			<p>达到85分可得到优先推荐的资格</p>
+
+	</div>
+	<div id=header_8_1>
+		<ul>
+			<li>填写基本资料的重要性</li>
+			<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;您在注册过程中已经填写了大部分的基本资料，
+				只需要将空白内容填写完整，就可以获得20%的资料完整度。
+				完整的基本资料是会员搜索到您的重要保证，更是让异性能够初步了解您的基础。</li>
+		</ul>
+
+
+	</div>
+	</div>
+
+</div>
+
+</form>
+	</body>
+	
+
+</html>

@@ -1,0 +1,631 @@
+{% load static from staticfiles %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>内心独白_世纪佳缘交友网</title>
+		<style type="text/css">
+			body{
+				margin: 0px;
+				padding: 0px;
+				
+			}
+			
+			ul{
+				list-style: none;
+				}
+				
+			#top_left a{
+				color: white;
+				text-decoration: none;
+			}
+			
+			#top_left a:hover{
+				color: pink;
+				}
+			
+			#top{
+				float: left;
+				height: 40px;
+				width: 100%;
+				background-color: rgb(64,64,64);
+				font-size: 14px;
+				border-bottom: 0px solid silver;
+				position: absolute;
+				margin: 0px;
+			}
+			
+			#top_left{
+				float: left;
+				margin-left: 150px;
+			}
+			
+			#top_left ul{
+				float: left;
+				height: 40px;
+			}
+			
+			#top_left li{
+				float: left;
+				color: white;
+				font-size: 11px;
+				font-family: "宋体";
+				margin-left: 30px;
+			}
+			
+			#top_right{
+				position: absolute;
+				float: left;
+				margin-top: 0px;
+				margin-left: 50%;
+			}
+			
+			#top_right ul{
+				float: left;
+			}
+			
+			#top_right li{
+				float: left;
+				margin-top: -6px;
+				color: white;
+				font-size: 11px;
+				font-family: "宋体";
+				margin-left: 30px;
+
+			}
+			#top_right li img{
+				float: left;
+				margin-top: 5px;
+
+			}
+			
+			#top_right a{
+				float: left;
+				margin-top: 12px;
+				margin-left: 3px;
+				color: white;
+				line-height: 5px;
+				text-decoration: none;
+			}
+			
+			#top_right a:hover{
+				color: pink;
+			}
+			
+			#middle_top{
+				position: absolute;
+				margin-top: 40px;
+				height: 130px;
+				width: 100%;
+				border-bottom: 1px solid rgb(193,193,193);
+			}
+			
+			
+			
+			#middle_top ul{
+				float: left;
+				margin-left: 160px;
+				
+			}
+			
+			#middle_top li{
+				margin-top: 5px;
+				font-size: 18px;
+				font-family: "威雅软黑";
+				float: left;
+				margin-left: 15px;
+				
+				
+			}
+			
+			#middle_top a{
+				color:rgb(00,00,00);
+				text-decoration: none;
+			}
+			
+			#middle_top a:hover{
+				color: rgb(255,83,107);
+				border-bottom: 2px solid rgb(255,83,107);
+			}
+			
+			
+			#middle_top_1 a{
+				margin-left: 200px;
+				text-decoration: none;
+			}
+			
+			#middle{
+				position: absolute;
+				margin-top: 170px;
+				width: 100%;
+				height: 650px;
+				border: 2px solid rgb(222,222,222);
+				
+			}
+			
+			#middle_header_1{
+				position: absolute;
+				height: 50px;
+				width: 100%;
+	/*			border: 2px solid rgb(222,222,222);*/
+			}
+			
+			#middle_header_1 ul{
+				margin-left: 170px;
+				float: left;
+			}
+			
+			#middle_header_1 li{
+				float: left;
+				margin-left: 5px;
+				font-size: 10px;
+			}
+			
+			#middle_header_1 p{
+				margin-top: 0px;
+			}
+			
+			#middle_header_1-1{
+				position: absolute;
+				margin-left: 215px;
+				margin-top: 50px;
+				height: 350px;
+				width: 170px;
+				border: 1px solid rgb(222,222,222);
+				border-radius: 5px;
+			}
+			
+			#middle_header_1-1 ul{
+				margin-left: 1px;
+			}
+			
+			#middle_header_1-1 li{
+				margin-top: 5px;
+				margin-left: -35px;
+			}
+			
+			#middle_header_1-1 input{
+				margin-left:-50px;
+				border-radius: 5px;
+				height: 35px;
+				width: 160px;
+				background-color:rgb(246,246,246);
+
+				font-size: 15px;
+				font-family: "微软雅黑";
+				font-weight: 900;
+			}
+			
+			#middle_header_1-1 a{
+				color: #000000;
+				font-size: 12px;
+				text-decoration: none;
+				margin-left: 50px;
+			}
+			
+			#middle_header_1-2{
+				position: absolute;
+				margin-top: 400px;
+				margin-left: 215px;
+				border: 1px solid rgb(222,222,222);
+				border-radius: 5px;
+				height: 250px;
+				width: 170px;
+				background-color: rgb(249,249,249);
+			}
+			
+			#middle_header_1-2 input{
+				margin-left: 18px;
+				border-radius: 5px;
+				margin-top: 11px;
+				height: 35px;
+				width: 120px;
+				color: white;
+				background-color:rgb(23,156,194);
+				font-size: 15px;
+				font-family: "微软雅黑";
+				font-weight: 900;
+				border: none;
+			}
+			
+			#middle_header_2{
+				position: absolute;
+				border: 1px solid rgb(222,222,222);
+				background-color: rgb(249,249,249);
+				border-radius: 5px;
+				margin-top: 50px;
+				margin-left: 387px;
+				height: 40px;
+				width: 500px;
+			}
+			
+			#middle_header_2 p{
+				color: rgb(220,65,131);
+				margin-left: 15px;
+				font-weight: 700 ;
+				margin-top: 9px;
+				font-size: 16px;
+			}
+			
+			#middle_header_2-1{
+				position: absolute;
+				margin-top: 105px;
+				margin-left: 410px;
+				height: 30px;
+				width: 450px;
+				background-color: rgb(249,249,249);
+			}
+			
+			#middle_header_2-1 p{
+				margin-top: 10px;
+				margin-left: 10px;
+				font-size: 13px;
+				color: rgb(255,104,123);
+				font-family: "新宋体";
+			}
+			
+			#middle_header_2-2{
+				position: absolute;
+				margin-left:407px ;
+				margin-top:155px ;
+				height: 260px;
+				width:460px ;
+				border: 2px solid rgb(123,156,211);
+			}
+			
+			#middle_header_2-2 textarea{
+				height: 260px;
+				width: 460px;
+			}
+			
+			#middle_header_2-3{
+				position: absolute;
+				margin-left: 407px;
+				margin-top: 415px;
+				height: 200px;
+				width: 460px;
+				/*border: 1px solid rgb(222,222,222);*/			
+			}
+			
+			#middle_header_2-3 ul{
+				
+			}
+			
+			#middle_header_2-3 li{
+				color: rgb(57,57,57);
+				font-size:10px ;
+				margin-left: -30px;
+				margin-top: 5px;
+			}
+			
+			#middle_header_2-3 p{
+				font-size:10px ;
+				color: rgb(57,57,57);
+			}
+			
+			#middle_header_2-3 input{
+				border-radius: 5px;
+				height: 30px;
+				width: 100px;
+				color: white;
+				background-color:rgb(23,156,194);
+				font-size: 12px;
+				font-family: "微软雅黑";
+				font-weight: 300;
+				border: none;
+			}
+			
+			#middle_header_2-3-1{
+				margin-top: 50px;
+				margin-left: 10px;
+				width: 300px;
+				height: 30px;
+			}
+			
+			#middle_header_2-3-1 li{
+				float: left;
+				margin-left: 50px;
+			}
+			
+			#middle_header_2-3-2{
+				margin-top: -25px;
+			}
+			
+			#middle_header_2-3-2 input{
+				margin-left: 20px;
+				margin-top:0px ;
+			}
+			
+			#middle_header_2-3-1 input{
+				border-radius: 5px;
+				height: 35px;
+				width: 120px;
+				color: white;
+				background-color:rgb(23,156,194);
+				font-size: 15px;
+				font-family: "微软雅黑";
+				font-weight: 900;
+				border: none;
+			}
+			#middle_header_2-3-2 input{
+				border-radius: 5px;
+				height: 35px;
+				width: 120px;
+				color: rgb(122,122,122);
+				background-color:rgb(249,249,249);
+				font-size: 15px;
+				font-family: "微软雅黑";
+				font-weight: 900;
+				border:2px solid rgb(199,199,199);
+			}
+			
+			#middle_header_3{
+				position: absolute;
+				border: 1px solid rgb(222,222,222);
+				border-radius: 5px;
+				background-color:rgb(249,249,249);
+				margin-top: 50px;
+				margin-left: 889px;
+				width: 300px;
+				height: 600px;
+			}
+			#middle_header_3 p{
+				color: rgb(220,65,131);
+				margin-left: 15px;
+				font-weight: 700 ;
+				margin-top: 9px;
+				font-size: 16px;
+			}
+			
+			#middle_header_3-1{
+				position: absolute;
+				margin-top: 100px;
+				margin-left: 889px;
+				width: 300px;
+				height: 100px;
+				/*background-color: red;*/
+			}
+			
+			#middle_header_3-1 p{
+				font-size: 10px;
+				color: rgb(151,167,205);
+				margin-left: 15px;
+			}
+			
+			#middle_header_3-1 input{
+				margin-left: 30px;
+				background-color: rgb(255,178,0);
+				height: 36px;
+				width: 180px;
+				border-radius: 5px;
+				color: white
+			}
+			
+			#middle_header_3-2{
+				position: absolute;
+				margin-top:220px;
+				margin-left: 909px;
+				width: 260px;
+				height: 410px;
+				background-color:white;
+				border:1px solid rgb(240,240,240);
+			}
+			
+			#middle_header_3-2 h6{
+				margin-left: 10px;
+			}
+			
+			#middle_header_3-2 li{
+				font-size: 10px;
+				margin-top: 20px;
+				margin-left: -30px;
+				color: rgb(103,103,101);
+				
+			}
+			
+			#button{
+				position: absolute;
+				width: 100%;
+				margin-top: 655px;
+				height: 200px;
+				/*background-color: red;*/
+				
+			}
+			
+			#footer_2{
+				word-spacing: 15px;
+				font-size: 11px;
+				color: dimgrey;
+				position: absolute;
+				margin-left:20%;
+				margin-top: 10px;
+				text-align: center;
+				
+			}
+			#footer_2 a{
+				text-decoration: none;
+				font-size: 11px;
+				color: rgb(105,105,105);
+			}
+			#footer_2 a:hover{
+				color: rgb(255,83,107);
+				text-decoration: underline;
+			}
+			
+		</style>
+	</head>
+	<body>
+    <form action="/youyuan/indubai/" method="post">
+		<div id="top">
+			<div id="top_left">
+				<ul>
+					<li>Hi,包容</li>
+					<li><font style="background-color: yellow;
+						color: saddlebrown;">s1会员</font> 金豆 
+						<a href="#">50</a></li>
+					<li><font>佳缘ID</font> <a href="#">182326701</a></li>
+					<li><a href="#">退出</a></li>
+				</ul>				
+			</div>
+			<div id="top_right">
+				<ul>
+					<li><img src="{% static 'img/电话.png' %}" style="height: 18px;"/> <a href="#">红娘专线&nbsp;13621145171</a></li>
+					<li><img src="{% static 'img/星星.png' %}" style="height: 18px;" /> <a href="#">收藏本站</a></li>
+					<li><img src="{% static 'img/账户充值.png' %}" style="height: 18px; "/> <a href="/youyuan/vip">充值</a></li>
+					<li><img src="{% static 'img/声音.png' %}" style="height: 18px;" /> <a href="#">提醒</a></li>
+				</ul>				
+			</div>			
+		</div>
+		<div id="middle_top">
+			<div id="middle_top_1">
+			<a href="#"><img src="{% static 'img/bai.jpeg' %}" /> </a>
+			</div>
+			<ul>
+				<li><a href="/youyuan/main/">首页</a></li>
+				<li><a href="#" style="color: rgb(255,84,106);">我的佳缘</a></li>
+				<li><a href="#">收件箱</a></li>
+				<li><a href="#">搜索</a></li>
+				<li><a href="#">俱乐部</a></li>
+				<li><a href="#">活动</a></li>
+				<li><a href="#">约会吧</a></li>
+				<li><a href="#">佳缘金融</a></li>
+				<li><a href="#">红娘一对一</a></li>
+				<li><a href="#">晒幸福</a></li>
+			</ul>
+		</div>
+		<div id="middle">
+			<div id="middle_header_1">
+				<ul>
+					<li><img src="{% static 'img/房子.png' %}" style="height: 18px;"/> </li>
+					<li><a href="">我的佳缘</a> </li>
+					<li><p>></p> </li>
+					<li><p>基本资料</p></li>
+				</ul>				
+			</div>
+			<div id="middle_header_1-1">
+				<ul>
+					<li><a href="/youyuan/ziliao/"><input type="button" value="基本资料" /></a> </li>
+					<li><a href=""><input style="background-color: rgb(244,159,180)";
+						 type="button" value="内心独白" /> </a></li>
+					<li><a href="#"><input type="button" value="我的照片" onclick="user4"/></a> </li>
+					<li><a href="/youyuan/user5/"><input type="button" value="详细资料" /></a> </li>
+					<li><a href="/youyuan/user5/">经济实力</a> </li>
+					<li><a href="/youyuan/user6/">生活方式</a> </li>
+					<li><a href="/youyuan/user7/">工作学习</a> </li>
+					<li><a href="/youyuan/user8/">外貌体型</a> </li>
+					<li><a href="/youyuan/user9/">婚姻观念</a> </li>
+					<li><a href="/youyuan/user10/">兴趣爱好</a> </li>
+				</ul>
+			</div>
+			<div id="middle_header_1-2">
+				<input type="button" value="返回我的佳缘" />
+			</div>
+			<div id="middle_header_2">
+				<p>
+					内心独白
+				</p>
+			</div>
+			<div id="middle_header_2-1">
+				<p>
+					资料越完善，同等条件我们将优先推荐您哦~
+				</p>
+			</div>
+			<div id="middle_header_2-2">
+
+					<textarea name="neixindubai" rows="4" cols="5"></textarea>
+					<!--<input type="submit" value=""/>-->
+
+			</div>
+			<div id="middle_header_2-3">			
+				<p>限20-1000字，目前已输入5字，您还可以输入1000字&nbsp;&nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<a href="#">内心独白撰写规则和技巧</a></p>
+			
+				<div id="middle_header_2-3-1">
+					<ul>
+						<li>
+
+						
+					<input type="submit" value="保存并退出"/>
+
+					</li>
+					</ul>
+				</div>
+				<div id="middle_header_2-3-2">
+					<input type="button" value="跳过此页" />
+					
+				</div>
+			
+				<ul>
+				<li>温馨提示：</li>
+				<li>1、内心独白字数需在20-1000字之间。</li>
+				<li>2、内心独白中请勿出现QQ、MSN、电话号码以及网址、广告、色情或其他不健康的内容</li>
+				<li>3、点击保存后，在我们未审核的24小时内不能再次修改，请认真检查。</li>
+				
+				
+				
+				</ul>
+			</div>
+			<div id="middle_header_3">
+				<p>资料完整度：46分</p>
+			</div>
+			<div id="middle_header_3-1">
+				<p>
+					达到85分可得到优先推荐的资格哦~
+				</p>
+				<input type="button" value="去补充基本资料" onclick=""/>
+			</div>
+			<div id="middle_header_3-2"> 
+				<h6>
+					什么是内心独白？
+				</h6>
+				<ul>
+				<li>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;发自内心，
+					真诚真实的自我介绍能够给人留下深刻的第一印象，
+					您可以用丰富的语言描述自己的性格，生活工作情况，择友要求以及对未来的憧憬等等，
+					让异性对您有更加深刻的认识，也是您在世纪佳缘展示自我的好机会。我们主动联系一个人，
+					往往就是因为其内心独白中的一句话打动了自己！
+				</li>
+				<li>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;内心独白提交后，
+					将由世纪佳缘进行审核，通过审核后，您会获得15%的资料完整度。
+					为了维护严肃纯净的交友环境，希望您认真填写。
+				</li>
+				</ul>
+			</div>			
+			<div id="button">
+				<div id="footer_2">
+				<p id="footer_2_1">
+					<a href="#">联系客服</a>
+					<a href="#">关于我们</a>
+					<a href="#">联系我们</a>
+					<a href="#">无线业务</a>
+					<a href="#">注册条框</a>
+					<a href="#">区块链</a>
+					<a href="#">招聘信息</a>
+					<a href="#">交友信息</a>
+					<a href="#">隐私保护</a>
+					<a href="#">帮助中心</a>
+					<a href="#">安全中心</a>
+					<a href="#">营业执照</a>
+				</p>
+				<p id="footer_2_2">
+					<font>中文名：世纪佳缘</font>
+					<font>ICP证书：沪B2-20100074</font>
+					<font>增值电信业务经营许可证：沪B2-20070313</font>
+					<a href="#">ISO9001质量体系认证</a>
+				</p>
+				<p id="footer_2_3">
+					<font>2003-2018</font>
+					<font>版权所有</font>
+					<font>京公网安备110105002124号</font>
+					<font>沪ICP备09045640号-1</font>
+					<font>不良和违法信息举报专线：0316-5266032</font>
+				</p>
+			</div>
+				
+			</div>
+		</div></form>
+	</body>
+</html>

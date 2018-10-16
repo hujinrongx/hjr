@@ -1,0 +1,344 @@
+{% load static from staticfiles %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+
+    	<script src="{% static 'js/jquery-1.11.1.min.js' %}"></script>
+    	
+		<style type="text/css">
+			body{
+				margin: 0px;
+				background-color: rgb(246,246,246);
+			}
+			
+			.a{
+				height: 100%;
+				width: 100%;
+				
+			}
+			
+			.a1{
+				position: absolute;
+				margin-top: 2%;
+				margin-left: 20%;
+			}
+				
+			.a2{
+				position: absolute;
+				margin-left: 30%;
+				margin-top: 2%;
+						
+			}
+			/*输入框*/
+			.input{
+			height: 30px;
+			width: 270px;
+			border-radius: 5px;
+			border: 1px solid lightgray;
+			}
+			/*下拉框*/
+			.input1{
+			height: 30px;
+			width: 85px;
+			border-radius: 5px;
+			border: 1px solid lightgray;
+			}
+			/*立即注册*/
+			#button{
+			height: 50px;
+			width: 200px;
+			border-radius: 5px;
+			background-color: rgb(21,178,223);
+			color: white;
+			letter-spacing: 10px;
+			text-align: center;
+			border: none;
+			font-size: 20px;
+			font-family: "宋体";}
+
+			.r-h1{
+				font-family: "新宋体";
+			}
+
+		</style>
+
+
+	</head>
+	<body>
+    <form action="/youyuan/zhuce/" method="post">
+		<div class="a">
+			<div>
+				<!--<img src="img/b2.jpeg"/>-->
+				<div class="a2" style="background-color:white;">
+					<table width="700" height="900">
+						<tr>
+							<td align="center" colspan="3" height="8%" style="font-size: 30px;">
+								<p class="r-h1" style="color:#f3316b;" >青春不常在，抓紧谈恋爱</p>
+							</td>
+						</tr>
+						<tr height="5%">
+							<td  colspan="3" align="center"  bgcolor=ghostwhite>
+								<p style="color:#f3316b;" >花点时间填写真实信息，我们会让结果更和您的心意！</p>
+							</td>
+						</tr>
+						<tr>
+							<td align="center" width="30%">性别</td>
+							<td width="40%">
+							<input type="radio" name="sex" value="男">男 <img src="{% static 'img/男1.png' %}"/>
+							<input type="radio" name="nv" value="女">女<img src="{% static 'img/女1.png' %}"/>
+							</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td align="center">生日</td>
+							<td>
+
+								<div id="date">
+									<select name="year" id="year" class="input1">
+										<option value="">选择年份</option>
+									</select>
+									<select name="month" id="month" class="input1">
+										<option value="">选择月份</option>
+									</select>
+									<select name="day" id="days" class="input1">
+										<option value="">选择日期</option>
+									</select>
+								</div>
+
+							</td>
+						</tr>
+						<tr>
+							<td align="center">常住地</td>
+							<td>
+								<select name="province" id="province" class="input1">
+									<option value="请选择">请选择</option>
+								</select>
+								<select name="city" id="city" class="input1">
+									<option value="请选择">请选择</option>
+								</select>
+								<select name="town" id="town" class="input1">
+									<option value="请选择">请选择</option>
+								</select>
+								<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+								<script src="{% static 'js/area.js' %}"></script>
+								<script src="{% static 'js/select.js' %}"></script>
+								</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td align="center">婚姻状况</td>
+							<td style="word-spacing: 30px;">
+								<input type="radio" name="marriage" value="未婚">未婚
+								<input type="radio" name="marriage" value="离异">离异
+								<input type="radio" name="marriage" value="丧偶">丧偶
+							</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td align="center">身高</td>
+							<td>
+								<select class="input" name="tall">
+								<option value="120厘米-125厘米">120厘米-125厘米</option>
+								<option value="125厘米-130厘米">125厘米-130厘米</option>
+								<option value="130厘米-135厘米">130厘米-135厘米</option>
+								<option value="135厘米-140厘米">135厘米-140厘米</option>
+								<option value="140厘米-145厘米">140厘米-145厘米</option>
+								<option value="145厘米-150厘米">145厘米-150厘米</option>
+								<option value="150厘米-155厘米">150厘米-155厘米</option>
+								<option value="155厘米-160厘米">155厘米-160厘米</option>
+								<option value="160厘米-165厘米">160厘米-165厘米</option>
+								<option value="165厘米-170厘米">165厘米-170厘米</option>
+								<option value="170厘米-175厘米">170厘米-175厘米</option>
+								<option value="175厘米-180厘米">175厘米-180厘米</option>
+								<option value="180厘米-185厘米">180厘米-185厘米</option>
+								<option value="185厘米-190厘米">185厘米-190厘米</option>
+								<option value="190厘米-195厘米">190厘米-195厘米</option>
+								<option value="195厘米-200厘米">195厘米-200厘米</option>
+								<option value="200厘米-205厘米">200厘米-205厘米</option>
+								<option value="205厘米-210厘米">205厘米-210厘米</option>
+								<option value="210厘米-215厘米">210厘米-215厘米</option>
+								<option value="215厘米-220厘米">215厘米-220厘米</option>
+								<option value="220厘米-225厘米">220厘米-225厘米</option>
+								<option value="225厘米-230厘米">225厘米-230厘米</option>
+							</select>
+							</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td align="center">学历</td>
+							<td>
+								<select class="input" name="xueli">
+									<option>高中中专及以下</option>
+									<option>大专</option>
+									<option>本科</option>
+									<option>双学士</option>
+									<option>硕士</option>
+									<option>博士</option>
+								</select>
+							</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td align="center">月薪</td>
+							<td>
+								<select class="input" name="salary">
+									<option>2000元以下</option>
+									<option>2000元-5000元</option>
+									<option>5000元-10000元</option>
+									<option>10000元-20000元</option>
+									<option>20000元-50000元</option>
+									<option>50000元以上</option>
+								</select>
+							</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td align="center">手机号</td>
+							<td>
+								<input class="input" type="phone"
+									name="phone" placeholder="请输入手机号" value="">
+							</td>
+							<td>
+
+							</td>
+						</tr>
+						<tr>
+							<td align="center">验证码</td>
+							<td>
+								<input class="input" type="code"
+									name="code" placeholder="请输入验证码" value="">
+							</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td align="center">创建密码</td>
+							<td>
+								<input class="input" type="password"
+									name="password" placeholder="请输入密码" value="">
+							</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td align="center">昵称</td>
+							<td>
+								<input class="input" type="name"
+									name="name" placeholder="请输入昵称" value="">
+							</td>
+							<td>
+
+							</td>
+						</tr>
+						<tr>
+							<td align="center">自我介绍</td>
+							<td>
+							<input type="checkbox" value="爱旅游" name="a"/>爱旅游
+							<input type="checkbox" value="爱健身" name="b"/>爱健身
+							<input type="checkbox" value="爱听歌" name="c"/>爱听歌
+							<input type="checkbox" value="爱游戏" name="d"/>爱游戏
+							<input type="checkbox" value="爱美食" name="e"/>爱美食
+							<input type="checkbox" value="爱工作" name="f"/>爱工作
+							<input type="checkbox" value="爱摄影" name="g"/>爱摄影
+							</td>
+									<td></td>
+						</tr>
+						<tr>
+					<td align="center" colspan="3">
+
+                            <input type="submit" value="立即注册">
+
+					</td>
+				</tr>
+
+					</table>
+
+				</div>
+			</div>
+		</div></form>
+	</body>
+
+<script type="text/javascript">
+
+
+$.fn.selectDate = function(){
+			var minYear = 1900
+			var maxYear = (new Date).getFullYear()
+			var yearSel = document.getElementById('year')
+			var monthSel = document.getElementById('month')
+			var daySel = document.getElementById('days')
+
+			for(var y = maxYear;y >= minYear;y--){
+				var yearOpt = document.createElement('option')
+				yearOpt.value = y
+				yearOpt.innerHTML = y+'年'
+				yearSel.appendChild(yearOpt)
+			}
+
+			$("#year").click(function(event){
+				if(!$("#year option:selected").val()) return;
+				removeOption(monthSel)
+				addOption(12,'月',monthSel)
+				removeOption(daySel)
+			})
+
+			$("#month").click(function(){
+				removeOption(daySel)
+				var year = $("#year option:selected").val()
+				var month = $("#month option:selected").val()
+				if(month==1 || month==3 || month==5 || month==7 || month==8 || month==10 || month==12){
+					addOption(31,'日',daySel)
+				}else if(month==4 || month==6 || month==9 || month==11){
+					addOption(30,'日',daySel)
+				}else if(month==2){
+					if((year%4 == 0 && year%100 != 0 ) || (year%400 == 0)){
+						addOption(29,'日',daySel)
+					}else{
+						addOption(28,'日',daySel)
+					}
+				}
+			})
+
+			function addOption(num,unit,parent){
+				//num：选项个数
+				//unit：单位（年/月/日）
+				//parent：父对象
+				for(var index=1;index <= num;index++){
+					var opt =document.createElement('option')
+					$(opt).attr('value',index)
+					if(index<10){index = '0'+index}
+					$(opt).html(index+unit)
+					$(parent).append(opt)
+				}
+			}
+
+			function removeOption(parent){
+				//parent：父对象
+				var options = $(parent).find('option')
+				for(var index = 1;index < options.length;index++){
+					parent.removeChild(options[index])
+				}
+			}
+		}
+
+
+
+	$(function(){
+		console.log(2222)
+		$("#date").selectDate()
+
+		$("#days").focusout(function(){
+			var year = $("#year option:selected").html()
+			var month = $("#month option:selected").html()
+			var day = $("#days option:selected").html()
+			console.log(year+month+day)
+		})
+		console.log(1111)
+
+	})
+
+
+	
+</script>		
+	
+</html>

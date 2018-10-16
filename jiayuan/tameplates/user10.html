@@ -1,0 +1,1075 @@
+{% load static from staticfiles %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>兴趣爱好_世纪佳缘交友网</title>
+		<style type="text/css">
+			body{
+				margin: 0px;
+				padding: 0px;
+				
+			}
+			
+			ul{
+				list-style: none;
+				}
+				
+			#top_left a{
+				color: white;
+				text-decoration: none;
+			}
+			
+			#top_left a:hover{
+				color: pink;
+				}
+			
+			#top{
+				float: left;
+				height: 40px;
+				width: 100%;
+				background-color: rgb(64,64,64);
+				font-size: 14px;
+				border-bottom: 0px solid silver;
+				position: absolute;
+				margin: 0px;
+			}
+			
+			#top_left{
+				float: left;
+				margin-left: 150px;
+			}
+			
+			#top_left ul{
+				float: left;
+				height: 40px;
+			}
+			
+			#top_left li{
+				float: left;
+				color: white;
+				font-size: 11px;
+				font-family: "宋体";
+				margin-left: 30px;
+			}
+			
+			#top_right{
+				position: absolute;
+				float: left;
+				margin-top: 0px;
+				margin-left: 50%;
+			}
+			
+			#top_right ul{
+				float: left;
+			}
+			
+			#top_right li{
+				float: left;
+				margin-top: -6px;
+				color: white;
+				font-size: 11px;
+				font-family: "宋体";
+				margin-left: 30px;
+
+			}
+			#top_right li img{
+				float: left;
+				margin-top: 5px;
+
+			}
+			
+			#top_right a{
+				float: left;
+				margin-top: 12px;
+				margin-left: 3px;
+				color: white;
+				line-height: 5px;
+				text-decoration: none;
+			}
+			
+			#top_right a:hover{
+				color: pink;
+			}
+			
+			#middle_top{
+				position: absolute;
+				margin-top: 40px;
+				height: 130px;
+				width: 100%;
+				border-bottom: 1px solid rgb(193,193,193);
+			}
+			
+			
+			
+			#middle_top ul{
+				float: left;
+				margin-left: 160px;
+				
+			}
+			
+			#middle_top li{
+				margin-top: 5px;
+				font-size: 18px;
+				font-family: "威雅软黑";
+				float: left;
+				margin-left: 15px;
+				
+				
+			}
+			
+			#middle_top a{
+				color:rgb(00,00,00);
+				text-decoration: none;
+			}
+			
+			#middle_top a:hover{
+				color: rgb(255,83,107);
+				border-bottom: 2px solid rgb(255,83,107);
+			}
+			
+			
+			#middle_top_1 a{
+				margin-left: 200px;
+				text-decoration: none;
+			}
+			
+			#middle{
+				position: absolute;
+				margin-top: 170px;
+				width: 100%;
+				height: 1600px;
+				border: 2px solid rgb(222,222,222);
+				
+			}
+			
+			#middle_header_1{
+				position: absolute;
+				height: 50px;
+				width: 100%;
+	/*			border: 2px solid rgb(222,222,222);*/
+			}
+			
+			#middle_header_1 ul{
+				margin-left: 170px;
+				float: left;
+			}
+			
+			#middle_header_1 li{
+				float: left;
+				margin-left: 5px;
+				font-size: 10px;
+			}
+			
+			#middle_header_1 p{
+				margin-top: 0px;
+			}
+			
+			#middle_header_1-1{
+				position: absolute;
+				margin-left: 215px;
+				margin-top: 50px;
+				height: 350px;
+				width: 170px;
+				border: 1px solid rgb(222,222,222);
+				border-radius: 5px;
+			}
+			
+			#middle_header_1-1 ul{
+				margin-left: 1px;
+			}
+			
+			#middle_header_1-1 li{
+				margin-top: 5px;
+				margin-left: -35px;
+			}
+			
+			#middle_header_1-1 input{
+				margin-left:-50px;
+				border-radius: 5px;
+				height: 35px;
+				width: 160px;
+				background-color:rgb(246,246,246);
+
+				font-size: 15px;
+				font-family: "微软雅黑";
+				font-weight: 900;
+			}
+			
+			#middle_header_1-1 a{
+				color: #000000;
+				font-size: 12px;
+				text-decoration: none;
+				margin-left: 50px;
+			}
+			
+			#middle_header_1-2{
+				position: absolute;
+				margin-top: 400px;
+				margin-left: 215px;
+				border: 1px solid rgb(222,222,222);
+				border-radius: 5px;
+				height: 1200px;
+				width: 170px;
+				background-color: rgb(249,249,249);
+			}
+			
+			#middle_header_1-2 input{
+				margin-left: 18px;
+				border-radius: 5px;
+				margin-top: 11px;
+				height: 35px;
+				width: 120px;
+				color: white;
+				background-color:rgb(23,156,194);
+				font-size: 15px;
+				font-family: "微软雅黑";
+				font-weight: 900;
+				border: none;
+			}
+			
+			#middle_header_0_2{
+				position: absolute;
+				height: 1550px;
+				width: 500px;
+				margin-top: 50px;
+				margin-left: 387px;
+				border: 1px solid rgb(222,222,222);
+				/*background-color: rgb(249,249,249);*/
+				border-radius: 5px;
+			}
+			
+			#middle_header_2{
+				position: absolute;
+				border: 1px solid rgb(222,222,222);
+				background-color: rgb(249,249,249);
+				border-radius: 5px;
+				margin-top: 0px;
+				margin-left: 0px;
+				height: 40px;
+				width: 500px;
+			}
+			
+			#middle_header_2 p{
+				color: rgb(220,65,131);
+				margin-left: 15px;
+				font-weight: 700;
+				margin-top: 9px;
+				font-size: 16px;
+				font-weight: 900;
+			}
+			
+			#middle_header_2-1{
+				position: absolute;
+				margin-top: 60px;
+				margin-left: 20px;
+				height: 30px;
+				width: 450px;
+				background-color: rgb(249,249,249);
+			}
+			
+		
+			
+			#middle_header_2-1 p{
+				margin-top: 10px;
+				margin-left: 10px;
+				font-size: 13px;
+				color: rgb(255,104,123);
+				font-family: "新宋体";
+			}
+			
+			#middle_header_2-2{
+				position: absolute;
+				margin-left:10px ;
+				margin-top:105px ;
+				height: 260px;
+				width:460px ;
+				/*border: 2px solid rgb(123,156,211);*/
+			}
+			
+			/*#middle_header_2-2 p{
+				font-family: "宋体";
+				font-size: 15px;
+				font-weight: 900;
+				margin-left: 20px;*/
+
+			
+			#middle_header_2-2-1{
+				margin-top: 0px;
+			}
+			
+			#middle_header_2-2-1 ul{
+				
+			}
+			
+			#middle_header_2-2-1 table{
+				font-size: 10px;
+				color: rgb(102,102,102);
+				margin-left: -20px;
+			}
+			
+			#middle_header_2-2-1 li{
+				float: left;
+				margin-left: 20px;
+				font-size: 10px;
+				color: rgb(102,102,102);
+			}
+			
+			#middle_header_2-2-1 p{
+				font-size: 15px;
+				font-weight: 900;
+				
+			}
+
+			
+			
+			#middle_header_2-3{
+				position: absolute;
+				margin-left: 10px;
+				margin-top: 1430px;
+				height: 100px;
+				width: 460px;
+				/*border-top: 1px  solid rgb(222,222,222);*/			
+			}
+			
+			#middle_header_2-3 font{
+				color: rgb(160,160,160);
+			}
+			
+			#middle_header_2-3 ul{
+				height: 100px;
+			}
+			
+			#middle_header_2-3 li{
+				/*color: rgb(57,57,57);
+				font-size:10px ;
+				margin-left: -30px;
+				margin-top: 5px;*/
+				font-size: 10px;
+				margin-top: 5px;
+			}
+			
+			#middle_header_2-3 p{
+				font-size:10px ;
+				color: rgb(57,57,57);
+			}
+			
+			#middle_header_2-3 input{
+				margin-left: -30px;
+				/*border-radius: 5px;
+				height: 30px;
+				width: 100px;
+				color: white;
+				background-color:rgb(23,156,194);
+				font-size: 12px;
+				font-family: "微软雅黑";
+				font-weight: 300;
+				border: none;*/
+				
+			}
+			#middle_header_2-3-1{
+				margin-top: 50px;
+				margin-left: 10px;
+				width: 300px;
+				height: 30px;
+			}
+			
+			#middle_header_2-3-1 li{
+				float: left;
+				margin-left: 50px;
+			}
+			
+			#middle_header_2-3-2{
+				margin-top: -25px;
+			}
+			
+			#middle_header_2-3-2 input{
+				margin-left: 20px;
+				margin-top:0px ;
+			}
+			
+			#middle_header_2-3-1 input{
+				border-radius: 5px;
+				height: 35px;
+				width: 120px;
+				color: white;
+				background-color:rgb(23,156,194);
+				font-size: 15px;
+				font-family: "微软雅黑";
+				font-weight: 900;
+				border: none;
+			}
+			#middle_header_2-3-2 input{
+				border-radius: 5px;
+				height: 35px;
+				width: 120px;
+				color: rgb(122,122,122);
+				background-color:rgb(249,249,249);
+				font-size: 15px;
+				font-family: "微软雅黑";
+				font-weight: 900;
+				border:2px solid rgb(199,199,199);
+			}
+			
+			#middle_header_3{
+				position: absolute;
+				border: 1px solid rgb(222,222,222);
+				border-radius: 5px;
+				background-color:rgb(249,249,249);
+				margin-top: 50px;
+				margin-left: 889px;
+				width: 300px;
+				height: 1550px;
+			}
+			#middle_header_3 p{
+				color: rgb(220,65,131);
+				margin-left: 15px;
+				font-weight: 700 ;
+				margin-top: 9px;
+				font-size: 16px;
+			}
+			
+			#middle_header_3-1{
+				position: absolute;
+				margin-top: 100px;
+				margin-left: 889px;
+				width: 300px;
+				height: 100px;
+				/*background-color: red;*/
+			}
+			
+			#middle_header_3-1 p{
+				font-size: 10px;
+				color: rgb(151,167,205);
+				margin-left: 15px;
+			}
+			
+			#middle_header_3-1 input{
+				margin-left: 30px;
+				background-color: rgb(255,178,0);
+				height: 36px;
+				width: 180px;
+				border-radius: 5px;
+				color: white
+			}
+			
+			#middle_header_3-2{
+				position: absolute;
+				margin-top:220px;
+				margin-left: 909px;
+				width: 260px;
+				height: 410px;
+				background-color:white;
+				border:1px solid rgb(240,240,240);
+			}
+			
+			#middle_header_3-2 h6{
+				margin-left: 10px;
+			}
+			
+			#middle_header_3-2 li{
+				font-size: 10px;
+				margin-top: 20px;
+				margin-left: -30px;
+				color: rgb(103,103,101);
+				
+			}
+			
+			#button{
+				position: absolute;
+				width: 100%;
+				margin-top: 1555px;
+				height: 200px;
+				/*background-color: red;*/
+				
+			}
+			
+			#footer_2{
+				word-spacing: 15px;
+				font-size: 11px;
+				color: dimgrey;
+				position: absolute;
+				margin-left:20%;
+				margin-top: 60px;
+				text-align: center;
+				
+			}
+			#footer_2 a{
+				text-decoration: none;
+				font-size: 11px;
+				color: rgb(105,105,105);
+			}
+			#footer_2 a:hover{
+				color: rgb(255,83,107);
+				text-decoration: underline;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<form action="/youyuan/inuser10/" method="post">
+		<div id="top">
+			<div id="top_left">
+				<ul>
+					<li>Hi,包容</li>
+					<li><font style="background-color: yellow;
+						color: saddlebrown;">s1会员</font> 金豆 
+						<a href="#">50</a></li>
+					<li><font>佳缘ID</font> <a href="#">182326701</a></li>
+					<li><a href="#">退出</a></li>
+				</ul>				
+			</div>
+			<div id="top_right">
+				<ul>
+					<li><img src="{% static 'img/电话.png' %}" style="height: 18px;"/> <a href="#">红娘专线&nbsp;13621145171</a></li>
+					<li><img src="{% static 'img/星星.png' %}" style="height: 18px;" /> <a href="#">收藏本站</a></li>
+					<li><img src="{% static 'img/账户充值.png' %}" style="height: 18px; "/>
+                        <a href="/youyuan/vip/">充值</a></li>
+					<li><img src="{% static 'img/声音.png' %}" style="height: 18px;" /> <a href="#">提醒</a></li>
+				</ul>				
+			</div>			
+		</div>
+		<div id="middle_top">
+			<div id="middle_top_1">
+			<a href="#"><img src="{% static 'img/bai.jpeg' %}" /> </a>
+			</div>
+			<ul>
+				<li><a href="/youyuan/main/">首页</a></li>
+				<li><a href="#" style="color: rgb(255,84,106);">我的佳缘</a></li>
+				<li><a href="#">收件箱</a></li>
+				<li><a href="#">搜索</a></li>
+				<li><a href="#">俱乐部</a></li>
+				<li><a href="#">活动</a></li>
+				<li><a href="#">约会吧</a></li>
+				<li><a href="#">佳缘金融</a></li>
+				<li><a href="#">红娘一对一</a></li>
+				<li><a href="#">晒幸福</a></li>
+			</ul>
+		</div>
+		<div id="middle">
+			<div id="middle_header_1">
+				<ul>
+					<li><img src="{% static 'img/房子.png' %}" style="height: 18px;"/> </li>
+					<li><a href="">我的佳缘</a> </li>
+					<li><p>></p> </li>
+					<li><p>基本资料</p></li>
+				</ul>				
+			</div>
+			<div id="middle_header_1-1">
+				<ul>
+					<li><a href="/youyuan/ziliao/"><input type="button" value="基本资料" /></a> </li>
+					<li><a href="/youyuan/dubai/"><input type="button" value="内心独白" /></a> </li>
+					<li><a href="#"><input type="button" value="我的照片" /></a> </li>
+					<li><a href="/youyuan/user5/"><input type="button" value="详细资料" /></a> </li>
+					<li><a href="/youyuan/user5/">经济实力</a> </li>
+					<li><a href="/youyuan/user6/">生活方式</a> </li>
+					<li><a href="/youyuan/user7/">工作学习</a> </li>
+					<li><a href="/youyuan/user8/">外貌体型</a> </li>
+					<li><a href="/youyuan/user9/">婚姻观念</a> </li>
+					<li><a href="/youyuan/user10/" style="color: hotpink;" >兴趣爱好</a> </li>
+				</ul>
+			</div>
+			<div id="middle_header_1-2">
+				<input type="button" value="返回我的佳缘" />
+			</div>
+			<div id="middle_header_0_2">
+			<div id="middle_header_2">
+				<p>
+					兴趣爱好
+				</p>
+			</div>
+			<div id="middle_header_2-1">
+				<p>
+					资料越完善，同等条件我们将优先推荐您哦~
+				</p>
+			</div>
+			<div id="middle_header_2-2">
+				<div id="middle_header_2-2-1">
+									
+	<p style="color: rgb(113,231,198);">喜欢的体育运动：</p>
+	<ul>
+		<table>
+		<tr><li><td><label for="sports_1"><input onclick="check_count(this, 5)" type=
+			"checkbox" name="sports[]" id="sports_1" value="1"/>&nbsp;足球</label></td>
+			<td><label for="sports_2"><input onclick="check_count(this, 5)" type=
+				"checkbox" name="sports[]" id="sports_2" value="2"/>&nbsp;篮球</label></td>
+			<td><label for="sports_3"><input onclick="check_count(this, 5)" type=
+				"checkbox" name="sports[]" id="sports_3" value="3"/>&nbsp;排球</label></td>
+			<td><label for="sports_4"><input onclick="check_count(this, 5)" type=
+				"checkbox" name="sports[]" id="sports_4" value="4"/>&nbsp;网球</label></td></li></tr>
+		<tr><li><td><label for="sports_5"><input onclick="check_count(this, 5)" type=
+			"checkbox" name="sports[]" id="sports_5" value="5"/>&nbsp;羽毛球</label></td>
+			<td><label for="sports_6"><input onclick="check_count(this, 5)" type=
+				"checkbox" name="sports[]" id="sports_6" value="6"/>&nbsp;乒乓球</label></td>
+			<td><label for="sports_7"><input onclick="check_count(this, 5)" type=
+				"checkbox" name="sports[]" id="sports_7" value="7"/>&nbsp;壁球</label></td>
+			<td><label for="sports_8"><input onclick="check_count(this, 5)" type=
+				"checkbox" name="sports[]" id="sports_8" value="8"/>&nbsp;保龄球</label></td></li></tr>
+		<tr><li><td><label for="sports_9"><input onclick="check_count(this, 5)" type=
+			"checkbox" name="sports[]" id="sports_9" value="9"/>&nbsp;手球</label></td>
+			<td><label for="sports_10"><input onclick="check_count(this, 5)" type=
+				"checkbox" name="sports[]" id="sports_10" value="10"/>&nbsp;橄榄球</label></td>
+			<td><label for="sports_11"><input onclick="check_count(this, 5)" type=
+				"checkbox" name="sports[]" id="sports_11" value="11"/>&nbsp;棒球</label></td>
+			<td><label for="sports_12"><input onclick="check_count(this, 5)" type=
+				"checkbox" name="sports[]" id="sports_12" value="12"/>&nbsp;高尔夫</label></td></li></tr>
+		<tr><li><td><label for="sports_13"><input onclick="check_count(this, 5)" type=
+			"checkbox" name="sports[]" id="sports_13" value="13"/>&nbsp;健身</label></td>
+			<td><label for="sports_14"><input onclick="check_count(this, 5)" type=
+				"checkbox" name="sports[]" id="sports_14" value="14"/>&nbsp;跑步</label></td>
+			<td><label for="sports_15"><input onclick="check_count(this, 5)" type=
+			"checkbox" name="sports[]" id="sports_15" value="15"/>&nbsp;自行车</label></td>
+			<td><label for="sports_16"><input onclick="check_count(this, 5)" type=
+			"checkbox" name="sports[]" id="sports_16" value="16"/>&nbsp;摩托车</label></td></li></tr>
+		<tr><li><td><label for="sports_17"><input onclick="check_count(this, 5)" type=
+			"checkbox" name="sports[]" id="sports_17" value="17"/>&nbsp;汽车</label></td>
+			<td><label for="sports_18"><input onclick="check_count(this, 5)" type=
+				"checkbox" name="sports[]" id="sports_18" value="18"/>&nbsp;舞蹈</label></td>
+			<td><label for="sports_19"><input onclick="check_count(this, 5)" type=
+				"checkbox" name="sports[]" id="sports_19" value="19"/>&nbsp;体操</label></td>
+			<td><label for="sports_20"><input onclick="check_count(this, 5)" type=
+				"checkbox" name="sports[]" id="sports_20" value="20"/>&nbsp;跆拳道</label></td></li></tr>
+		<tr><li><td><label for="sports_21"><input onclick="check_count(this, 5)" type=
+			"checkbox" name="sports[]" id="sports_21" value="21"/>&nbsp;柔道</label></td>
+			<td><label for="sports_22"><input onclick="check_count(this, 5)" type=
+				"checkbox" name="sports[]" id="sports_22" value="22"/>&nbsp;空手道</label></td>
+			<td><label for="sports_23"><input onclick="check_count(this, 5)" type=
+				"checkbox" name="sports[]" id="sports_23" value="23"/>&nbsp;游泳</label></td>
+			<td><label for="sports_24"><input onclick="check_count(this, 5)" type=
+				"checkbox" name="sports[]" id="sports_24" value="24"/>&nbsp;潜水</label></td></li></tr>
+		<tr><li><td><label for="sports_25"><input onclick="check_count(this, 5)" type=
+			"checkbox" name="sports[]" id="sports_25" value="25"/>&nbsp;水上运动</label></td>
+			<td><label for="sports_26"><input onclick="check_count(this, 5)" type=
+				"checkbox" name="sports[]" id="sports_26" value="26"/>&nbsp;航海</label></td>
+			<td><label for="sports_27"><input onclick="check_count(this, 5)" type=
+				"checkbox" name="sports[]" id="sports_27" value="27"/>&nbsp;滑雪/滑冰</label></td>
+			<td><label for="sports_28"><input onclick="check_count(this, 5)" type=
+				"checkbox" name="sports[]" id="sports_28" value="28"/>&nbsp;拳击</label></td></li></tr>
+		<tr><li><td><label for="sports_29"><input onclick="check_count(this, 5)" type=
+			"checkbox" name="sports[]" id="sports_29" value="29"/>&nbsp;钓鱼</label></td>
+			<td><label for="sports_32"><input onclick="check_count(this, 5)" type=
+			"checkbox" name="sports[]" id="sports_32" value="32"/>&nbsp;瑜珈</label></td>
+			<td><label for="sports_33"><input onclick="check_count(this, 5)" type=
+			"checkbox" name="sports[]" id="sports_33" value="33"/>&nbsp;武术</label></td>
+			<td><label for="sports_30"><input onclick="check_count(this, 5)" type=
+				"checkbox" name="sports[]" id="sports_30" value="30"/>&nbsp;其它</label></td></li></tr>
+		<tr><li><td><label for="sports_31"><input onclick="check_count(this, 5)" type=
+			"checkbox" name="sports[]" id="sports_31" value="31"/>&nbsp;不喜欢运动</label></td></li></tr>
+		</table>
+	</ul>							
+	<p style="color: rgb(255,198,99);">喜欢的食物：</p>
+	<ul>
+		<table>						
+		<tr><td><li><label for="food_1"><input onclick="check_count(this, 5)" type=
+			"checkbox" name="food[]" id="food_1" value="1"/>&nbsp;中国菜</label></li></td>
+		<td><li><label for="food_2"><input onclick="check_count(this, 5)" type=
+			"checkbox" name="food[]" id="food_2" value="2"/>&nbsp;印度菜</label></li></td>
+		<td><li><label for="food_3"><input onclick="check_count(this, 5)" type=
+			"checkbox" name="food[]" id="food_3" value="3"/>&nbsp;泰国菜</label></li></td>
+		<td><li><label for="food_4"><input onclick="check_count(this, 5)" type=
+			"checkbox" name="food[]" id="food_4" value="4"/>&nbsp;法国菜</label></li></td></tr>
+		<tr><td><li><label for="food_5"><input onclick="check_count(this, 5)" type=
+			"checkbox" name="food[]" id="food_5" value="5"/>&nbsp;意大利菜</label></li></td>
+		<td><li><label for="food_6"><input onclick="check_count(this, 5)" type=
+			"checkbox" name="food[]" id="food_6" value="6"/>&nbsp;俄罗斯菜</label></li></td>
+		<td><li><label for="food_7"><input onclick="check_count(this, 5)" type=
+			"checkbox" name="food[]" id="food_7" value="7"/>&nbsp;日本菜</label></li></td>
+		<td><li><label for="food_8"><input onclick="check_count(this, 5)" type=
+			"checkbox" name="food[]" id="food_8" value="8"/>&nbsp;烧烤</label></li></td></tr>
+		<tr><td><li><label for="food_9"><input onclick="check_count(this, 5)" type=
+			"checkbox" name="food[]" id="food_9" value="9"/>&nbsp;健康食品</label></li></td>
+		<td><li><label for="food_10"><input onclick="check_count(this, 5)" type=
+			"checkbox" name="food[]" id="food_10" value="10"/>&nbsp;素食</label></li></td>
+		<td><li><label for="food_11"><input onclick="check_count(this, 5)" type=
+			"checkbox" name="food[]" id="food_11" value="11"/>&nbsp;快餐</label></li></td>
+		<td><li><label for="food_12"><input onclick="check_count(this, 5)" type=
+			"checkbox" name="food[]" id="food_12" value="12"/>&nbsp;巧克力和甜点</label></li></td></tr>
+		<tr><td><li><label for="food_13"><input onclick="check_count(this, 5)" type=
+			"checkbox" name="food[]" id="food_13" value="13"/>&nbsp;其他</label></li></td>
+		<td><li><label for="food_14"><input onclick="check_count(this, 5)" type=
+			"checkbox" name="food[]" id="food_14" value="14"/>&nbsp;无特别爱好</label></li></td></tr>
+		</table>
+	</ul>	
+	<p style="color: rgb(119,216,145);">喜欢的书籍：</p>
+	<ul>
+		<table>						
+		<tr><td><li><label for="book_1"><input onclick="check_count(this, 5)" type=
+			"checkbox" name="book[]" id="book_1" value="1"/>&nbsp;校园青春</label></li></td>
+		<td><li><label for="book_2"><input onclick="check_count(this, 5)" type=
+			"checkbox" name="book[]" id="book_2" value="2"/>&nbsp;文学</label></li></td>
+		<td><li><label for="book_3"><input onclick="check_count(this, 5)" type=
+			"checkbox" name="book[]" id="book_3" value="3"/>&nbsp;艺术与摄影</label></li></td>
+		<td><li><label for="book_4"><input onclick="check_count(this, 5)" type=
+			"checkbox" name="book[]" id="book_4" value="4"/>&nbsp;励志与成功</label></li></td></tr>
+		<tr><td><li><label for="book_5"><input onclick="check_count(this, 5)" type=
+			"checkbox" name="book[]" id="book_5" value="5"/>&nbsp;动漫与幽默</label></li></td>
+		<td><li><label for="book_6"><input onclick="check_count(this, 5)" type=
+			"checkbox" name="book[]" id="book_6" value="6"/>&nbsp;政治与军事</label></li></td>
+		<td><li><label for="book_7"><input onclick="check_count(this, 5)" type=
+			"checkbox" name="book[]" id="book_7" value="7"/>&nbsp;哲学与宗教</label></li></td>
+		<td><li><label for="book_8"><input onclick="check_count(this, 5)" type=
+			"checkbox" name="book[]" id="book_8" value="8"/>&nbsp;历史传记</label></li></td></tr>
+		<tr><td><li><label for="book_9"><input onclick="check_count(this, 5)" type=
+			"checkbox" name="book[]" id="book_9" value="9"/>&nbsp;运动健身</label></li></td>
+		<td><li><label for="book_10"><input onclick="check_count(this, 5)" type=
+			"checkbox" name="book[]" id="book_10" value="10"/>&nbsp;健康与养生</label></li></td>
+		<td><li><label for="book_11"><input onclick="check_count(this, 5)" type=
+			"checkbox" name="book[]" id="book_11" value="11"/>&nbsp;烹饪与饮食</label></li></td>
+		<td><li><label for="book_12"><input onclick="check_count(this, 5)" type=
+			"checkbox" name="book[]" id="book_12" value="12"/>&nbsp;旅游</label></li></td></tr>
+		<tr><td><li><label for="book_13"><input onclick="check_count(this, 5)" type=
+		"checkbox" name="book[]" id="book_13" value="13"/>&nbsp;投资理财</label></li></td>
+		<td><li><label for="book_14"><input onclick="check_count(this, 5)" type=
+		"checkbox" name="book[]" id="book_14" value="14"/>&nbsp;婚恋与家庭</label></li></td>
+		<td><li><label for="book_15"><input onclick="check_count(this, 5)" type=
+			"checkbox" name="book[]" id="book_15" value="15"/>&nbsp;期刊杂志</label></li></td>
+		<td><li><label for="book_16"><input onclick="check_count(this, 5)" type=
+			"checkbox" name="book[]" id="book_16" value="16"/>&nbsp;娱乐时尚</label></li></td></tr>
+		<tr><td><li><label for="book_17"><input onclick="check_count(this, 5)" type=
+			"checkbox" name="book[]" id="book_17" value="17"/>&nbsp;人文社科</label></li></td>
+		<td><li><label for="book_18"><input onclick="check_count(this, 5)" type=
+			"checkbox" name="book[]" id="book_18" value="18"/>&nbsp;自然科学</label></li></td>
+		<td><li><label for="book_19"><input onclick="check_count(this, 5)" type=
+			"checkbox" name="book[]" id="book_19" value="19"/>&nbsp;收藏与鉴赏</label></li></td>
+		<td><li><label for="book_20"><input onclick="check_count(this, 5)" type=
+			"checkbox" name="book[]" id="book_20" value="20"/>&nbsp;其他</label></li></td></tr>
+		<tr><td><li><label for="book_21"><input onclick="check_count(this, 5)" type=
+			"checkbox" name="book[]" id="book_21" value="21"/>&nbsp;什么都看</label></li></td></tr>		
+		</table>
+	</ul>		
+	<p style="color: rgb(138,160,243);">喜欢的电影：</p>
+	<ul>
+		<table>						
+		<tr><td><li><label for="influential_movie_1"><input onclick="check_count(this, 5)" type=
+			"checkbox" name="influential_movie[]" id="influential_movie_1" value="1"/>&nbsp;爱情</label></li></td>
+		<td><li><label for="influential_movie_2"><input onclick="check_count(this, 5)" type=
+			"checkbox" name="influential_movie[]" id="influential_movie_2" value="2"/>&nbsp;喜剧</label></li></td>
+		<td><li><label for="influential_movie_3"><input onclick="check_count(this, 5)" type=
+			"checkbox" name="influential_movie[]" id="influential_movie_3" value="3"/>&nbsp;动作冒险</label></li></td>
+		<td><li><label for="influential_movie_4"><input onclick="check_count(this, 5)" type=
+			"checkbox" name="influential_movie[]" id="influential_movie_4" value="4"/>&nbsp;古装武侠</label></li></td></tr>
+		<tr><td><li><label for="influential_movie_5"><input onclick="check_count(this, 5)" type=
+			"checkbox" name="influential_movie[]" id="influential_movie_5" value="5"/>&nbsp;科幻魔幻</label></li></td>
+		<td><li><label for="influential_movie_6"><input onclick="check_count(this, 5)" type=
+			"checkbox" name="influential_movie[]" id="influential_movie_6" value="6"/>&nbsp;悬疑推理</label></li></td>
+		<td><li><label for="influential_movie_7"><input onclick="check_count(this, 5)" type=
+			"checkbox" name="influential_movie[]" id="influential_movie_7" value="7"/>&nbsp;惊悚恐怖</label></li></td>
+		<td><li><label for="influential_movie_8"><input onclick="check_count(this, 5)" type=
+			"checkbox" name="influential_movie[]" id="influential_movie_8" value="8"/>&nbsp;动画</label></li></td></tr>
+		<tr><td><li><label for="influential_movie_9"><input onclick="check_count(this, 5)" type=
+			"checkbox" name="influential_movie[]" id="influential_movie_9" value="9"/>&nbsp;战争</label></li></td>
+		<td><li><label for="influential_movie_10"><input onclick="check_count(this, 5)" type=
+			"checkbox" name="influential_movie[]" id="influential_movie_10" value="10"/>&nbsp;音乐歌舞</label></li></td>
+		<td><li><label for="influential_movie_11"><input onclick="check_count(this, 5)" type=
+			"checkbox" name="influential_movie[]" id="influential_movie_11" value="11"/>&nbsp;纪录片</label></li></td>
+		<td><li><label for="influential_movie_12"><input onclick="check_count(this, 5)" type=
+			"checkbox" name="influential_movie[]" id="influential_movie_12" value="12"/>&nbsp;剧情</label></li></td></tr>
+		<tr><td><li><label for="influential_movie_13"><input onclick="check_count(this, 5)" type=
+			"checkbox" name="influential_movie[]" id="influential_movie_13" value="13"/>&nbsp;西部</label></li></td>
+		<td><li><label for="influential_movie_14"><input onclick="check_count(this, 5)" type=
+			"checkbox" name="influential_movie[]" id="influential_movie_14" value="14"/>&nbsp;历史传记</label></li></td>
+		<td><li><label for="influential_movie_15"><input onclick="check_count(this, 5)" type=
+			"checkbox" name="influential_movie[]" id="influential_movie_15" value="15"/>&nbsp;其他</label></li></td>
+		<td><li><label for="influential_movie_16"><input onclick="check_count(this, 5)" type=
+			"checkbox" name="influential_movie[]" id="influential_movie_16" value="16"/>&nbsp;什么都看</label></li></td></tr>
+
+		</table>
+	</ul>
+
+	<p style="color: rgb(81,158,230);">关注的节目：</p>
+	<ul>
+		<table>
+			
+			<tr><td><li><label for="attention_1"><input 
+			onclick="check_count(this, 5)" type="checkbox" 
+			name="attention[]" id="attention_1" value="1"/>&nbsp;政治事件</label></li></td>
+								<td><li><label for="attention_2"><input 
+			onclick="check_count(this, 5)" type="checkbox" 
+			name="attention[]" id="attention_2" value="2"/>&nbsp;娱乐八卦</label></li></td>
+								<td><li><label for="attention_3"><input 
+			onclick="check_count(this, 5)" type="checkbox" 
+			name="attention[]" id="attention_3" value="3"/>&nbsp;体育赛事</label></li></td>
+								<td><li><label for="attention_4"><input 
+			onclick="check_count(this, 5)" type="checkbox" 
+			name="attention[]" id="attention_4" value="4"/>&nbsp;理财投资</label></li></td></tr>
+								<tr><td><li><label for="attention_5"><input 
+			onclick="check_count(this, 5)" type="checkbox" 
+			name="attention[]" id="attention_5" value="5"/>&nbsp;相声曲艺</label></li></td>
+								<td><li><label for="attention_6"><input 
+			onclick="check_count(this, 5)" type="checkbox" 
+			name="attention[]" id="attention_6" value="6"/>&nbsp;海选活动</label></li></td>
+								<td><li><label for="attention_7"><input 
+			onclick="check_count(this, 5)" type="checkbox" 
+			name="attention[]" id="attention_7" value="7"/>&nbsp;畅销书</label></li></td>
+								<td><li><label for="attention_8"><input 
+			onclick="check_count(this, 5)" type="checkbox" 
+			name="attention[]" id="attention_8" value="8"/>&nbsp;影视热片</label></li></td></tr>
+							<tr>	<td><li><label for="attention_9"><input 
+			onclick="check_count(this, 5)" type="checkbox" 
+			name="attention[]" id="attention_9" value="9"/>&nbsp;休闲生活</label></li></td>
+								<td><li><label for="attention_10"><input 
+			onclick="check_count(this, 5)" type="checkbox" 
+			name="attention[]" id="attention_10" value="10"/>&nbsp;行业发展</label></li></td>
+								<td><li><label for="attention_11"><input 
+			onclick="check_count(this, 5)" type="checkbox" 
+			name="attention[]" id="attention_11" value="11"/>&nbsp;其他</label></li></td>
+								<td><li><label for="attention_12"><input 
+			onclick="check_count(this, 5)" type="checkbox" 
+			name="attention[]" id="attention_12" value="12"/>&nbsp;暂无</label></li>	</td></tr>								
+		</table>
+	</ul>
+	
+	<p style="color: rgb(237,135,123);">娱乐休闲：</p>
+	<ul>
+		<table>
+			<tr><td><li><label for="space_1"><input 
+			onclick="check_count(this, 5)" type="checkbox" 
+			name="space[]" id="space_1" value="1"/>&nbsp;饭店</label></li></td>
+								<td><li><label for="space_2"><input 
+			onclick="check_count(this, 5)" type="checkbox" 
+			name="space[]" id="space_2" value="2"/>&nbsp;商场</label></li></td>
+								<td><li><label for="space_3"><input 
+			onclick="check_count(this, 5)" type="checkbox" 
+			name="space[]" id="space_3" value="3"/>&nbsp;剧院</label></li></td>
+								<td><li><label for="space_4"><input 
+			onclick="check_count(this, 5)" type="checkbox" 
+			name="space[]" id="space_4" value="4"/>&nbsp;酒吧</label></li></td></tr>
+								<tr><td><li><label for="space_5"><input 
+			onclick="check_count(this, 5)" type="checkbox" 
+			name="space[]" id="space_5" value="5"/>&nbsp;电影院</label></li></td>
+								<td><li><label for="space_6"><input 
+			onclick="check_count(this, 5)" type="checkbox" 
+			name="space[]" id="space_6" value="6"/>&nbsp;音乐会</label></li></td>
+								<td><li><label for="space_7"><input 
+			onclick="check_count(this, 5)" type="checkbox" 
+			name="space[]" id="space_7" value="7"/>&nbsp;迪斯科</label></li></td>
+								<td><li><label for="space_8"><input 
+			onclick="check_count(this, 5)" type="checkbox" 
+			name="space[]" id="space_8" value="8"/>&nbsp;网吧</label></li></td></tr>
+								<tr><td><li><label for="space_9"><input 
+			onclick="check_count(this, 5)" type="checkbox" 
+			name="space[]" id="space_9" value="9"/>&nbsp;温泉</label></li></td>
+								<td><li><label for="space_10"><input 
+			onclick="check_count(this, 5)" type="checkbox" 
+			name="space[]" id="space_10" value="10"/>&nbsp;图书馆/书店</label></li></td>
+								<td><li><label for="space_11"><input 
+			onclick="check_count(this, 5)" type="checkbox" 
+			name="space[]" id="space_11" value="11"/>&nbsp;咖啡厅</label></li></td>
+								<td><li><label for="space_12"><input 
+			onclick="check_count(this, 5)" type="checkbox" 
+			name="space[]" id="space_12" value="12"/>&nbsp;游乐场</label></li></td></tr>
+								<tr><td><li><label for="space_13"><input 
+			onclick="check_count(this, 5)" type="checkbox" 
+			name="space[]" id="space_13" value="13"/>&nbsp;卡拉OK</label></li></td>
+								<td><li><label for="space_14"><input 
+			onclick="check_count(this, 5)" type="checkbox" 
+			name="space[]" id="space_14" value="14"/>&nbsp;体育馆</label></li></td>
+								<td><li><label for="space_15"><input 
+			onclick="check_count(this, 5)" type="checkbox" 
+			name="space[]" id="space_15" value="15"/>&nbsp;逛街</label></li></td>
+								<td><li><label for="space_16"><input 
+			onclick="check_count(this, 5)" type="checkbox" 
+			name="space[]" id="space_16" value="16"/>&nbsp;在自己或朋友家里</label></li></td></tr>
+								<tr><td><li><label for="space_17"><input 
+			onclick="check_count(this, 5)" type="checkbox" 
+			name="space[]" id="space_17" value="17"/>&nbsp;其它</label></li></td>
+								<td><li><label for="space_18"><input 
+			onclick="check_count(this, 5)" type="checkbox" 
+			name="space[]" id="space_18" value="18"/>&nbsp;不想说</label></li></td>	</tr>		
+		</table>
+	</ul>
+		
+	<p style="color: rgb(254,181,188);">业余爱好：</p>
+	<ul>
+		<table>
+			<tr><td><li><label for="interest_1"><input 
+			onclick="check_count(this, 5)" type="checkbox" 
+			name="interest[]" id="interest_1" value="1"/>&nbsp;网络</label></li></td>
+								<td><li><label for="interest_2"><input 
+			onclick="check_count(this, 5)" type="checkbox" 
+			name="interest[]" id="interest_2" value="2"/>&nbsp;汽车</label></li></td>
+								<td><li><label for="interest_3"><input 
+			onclick="check_count(this, 5)" type="checkbox" 
+			name="interest[]" id="interest_3" value="3"/>&nbsp;动物</label></li></td>
+								<td><li><label for="interest_4"><input 
+			onclick="check_count(this, 5)" type="checkbox" 
+			name="interest[]" id="interest_4" value="4"/>&nbsp;摄影</label></li></td></tr>
+								<tr><td><li><label for="interest_5"><input 
+			onclick="check_count(this, 5)" type="checkbox" 
+			name="interest[]" id="interest_5" value="5"/>&nbsp;影视</label></li></td>
+								<td><li><label for="interest_6"><input 
+			onclick="check_count(this, 5)" type="checkbox" 
+			name="interest[]" id="interest_6" value="6"/>&nbsp;音乐</label></li></td>
+								<td><li><label for="interest_7"><input 
+			onclick="check_count(this, 5)" type="checkbox" 
+			name="interest[]" id="interest_7" value="7"/>&nbsp;写作</label></li></td>
+								<td><li><label for="interest_8"><input 
+			onclick="check_count(this, 5)" type="checkbox" 
+			name="interest[]" id="interest_8" value="8"/>&nbsp;购物</label></li></td></tr>
+								<tr><td><li><label for="interest_9"><input 
+			onclick="check_count(this, 5)" type="checkbox" 
+			name="interest[]" id="interest_9" value="9"/>&nbsp;手工艺</label></li></td>
+								<td><li><label for="interest_10"><input 
+			onclick="check_count(this, 5)" type="checkbox" 
+			name="interest[]" id="interest_10" value="10"/>&nbsp;园艺</label></li></td>
+								<td><li><label for="interest_11"><input 
+			onclick="check_count(this, 5)" type="checkbox" 
+			name="interest[]" id="interest_11" value="11"/>&nbsp;舞蹈</label></li></td>
+								<td><li><label for="interest_12"><input 
+			onclick="check_count(this, 5)" type="checkbox" 
+			name="interest[]" id="interest_12" value="12"/>&nbsp;展览</label></li></td></tr>
+								<tr><td><li><label for="interest_13"><input 
+			onclick="check_count(this, 5)" type="checkbox" 
+			name="interest[]" id="interest_13" value="13"/>&nbsp;烹饪</label></li></td>
+								<td><li><label for="interest_14"><input 
+			onclick="check_count(this, 5)" type="checkbox" 
+			name="interest[]" id="interest_14" value="14"/>&nbsp;读书</label></li></td>
+								<td><li><label for="interest_15"><input 
+			onclick="check_count(this, 5)" type="checkbox" 
+			name="interest[]" id="interest_15" value="15"/>&nbsp;绘画</label></li></td>
+								<td><li><label for="interest_16"><input 
+			onclick="check_count(this, 5)" type="checkbox" 
+			name="interest[]" id="interest_16" value="16"/>&nbsp;计算机</label></li></td></tr>
+								<tr><td><li><label for="interest_17"><input 
+			onclick="check_count(this, 5)" type="checkbox" 
+			name="interest[]" id="interest_17" value="17"/>&nbsp;体育运动</label></li></td>
+								<td><li><label for="interest_18"><input 
+			onclick="check_count(this, 5)" type="checkbox" 
+			name="interest[]" id="interest_18" value="18"/>&nbsp;旅游</label></li></td>
+								<td><li><label for="interest_19"><input 
+			onclick="check_count(this, 5)" type="checkbox" 
+			name="interest[]" id="interest_19" value="19"/>&nbsp;电子游戏</label></li></td>
+								<td><li><label for="interest_20"><input 
+			onclick="check_count(this, 5)" type="checkbox" 
+			name="interest[]" id="interest_20" value="20"/>&nbsp;其它</label></li></td>	</tr>		
+		</table>
+	</ul>
+
+	<p style="color: rgb(64,209,204);">喜欢的旅游去处：</p>
+	<ul>
+		<table>
+			<tr><td><li><label for="travel_1"><input 
+			onclick="check_count(this, 5)" type="checkbox" 
+			name="travel[]" id="travel_1" value="1"/>&nbsp;惬意海岛</label></li></td>
+								<td><li><label for="travel_2"><input 
+			onclick="check_count(this, 5)" type="checkbox" 
+			name="travel[]" id="travel_2" value="2"/>&nbsp;名山古刹</label></li></td>
+								<td><li><label for="travel_3"><input 
+			onclick="check_count(this, 5)" type="checkbox" 
+			name="travel[]" id="travel_3" value="3"/>&nbsp;繁华都市</label></li></td>
+								<td><li><label for="travel_4"><input 
+			onclick="check_count(this, 5)" type="checkbox" 
+			name="travel[]" id="travel_4" value="4"/>&nbsp;风情名城</label></li></td></tr>
+								<tr><td><li><label for="travel_5"><input 
+			onclick="check_count(this, 5)" type="checkbox" 
+			name="travel[]" id="travel_5" value="5"/>&nbsp;广袤森林</label></li></td>
+								<td><li><label for="travel_6"><input 
+			onclick="check_count(this, 5)" type="checkbox" 
+			name="travel[]" id="travel_6" value="6"/>&nbsp; 高原雪域</label></li></td>
+								<td><li><label for="travel_7"><input 
+			onclick="check_count(this, 5)" type="checkbox" 
+			name="travel[]" id="travel_7" value="7"/>&nbsp;秀美山水</label></li></td>
+								<td><li><label for="travel_8"><input 
+			onclick="check_count(this, 5)" type="checkbox" 
+			name="travel[]" id="travel_8" value="8"/>&nbsp;历史遗迹</label></li></td></tr>
+								<tr><td><li><label for="travel_9"><input 
+			onclick="check_count(this, 5)" type="checkbox" 
+			name="travel[]" id="travel_9" value="9"/>&nbsp;江河大川</label></li></td>
+								<td><li><label for="travel_10"><input 
+			onclick="check_count(this, 5)" type="checkbox" 
+			name="travel[]" id="travel_10" value="10"/>&nbsp;峻秀峡谷</label></li></td>
+								<td><li><label for="travel_11"><input 
+			onclick="check_count(this, 5)" type="checkbox" 
+			name="travel[]" id="travel_11" value="11"/>&nbsp;小桥流水人家</label></li></td>
+								<td><li><label for="travel_12"><input 
+			onclick="check_count(this, 5)" type="checkbox" 
+			name="travel[]" id="travel_12" value="12"/>&nbsp;其他选择</label></li></td></tr>
+								<tr><td><li><label for="travel_13"><input 
+			onclick="check_count(this, 5)" type="checkbox" 
+			name="travel[]" id="travel_13" value="13"/>&nbsp;还没想好</label></li>	</td>		</tr>
+		</table>
+	</ul>			
+				</div>
+				<div id="middle_header_2-2-2">
+				</div>	
+			</div>
+			<div id="middle_header_2-3">			
+				<div id="middle_header_2-3-1">
+					<ul>
+						<li>
+
+						
+						<input type="submit" value="保存并退出"/>
+
+					</li>
+					</ul>
+				</div>
+				<div id="middle_header_2-3-2">
+					<input type="button" value="跳过此页" />
+					
+				</div>
+			</div>
+			</div>
+			<div id="middle_header_3">
+				<p>资料完整度：46分</p>
+			</div>
+			<div id="middle_header_3-1">
+				<p>
+					达到85分可得到优先推荐的资格哦~
+				</p>
+				<input type="button" value="去补充基本资料" onclick=""/>
+			</div>
+			<div id="middle_header_3-2"> 
+				<h6>
+					详细资料有什么用？
+				</h6>
+				<ul>
+				<li>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					为了让您的个人信息更加丰富饱满，您可以进一步从经济实力、生活方式、工作学习、外貌体型、婚姻观念、
+					兴趣爱好6个方面全方位的展示自己。或许雄厚的经济实力，类似的工作学习经历，养眼的外貌体型，
+					合拍的婚姻观念，相同的兴趣爱好，就是您和对方相识相知的契机。
+				</li>
+				<!--<li>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					头像照是您在世纪佳缘上最常被其他异性看到的头像照片，90%的会员在搜索时会选择有头像照的会员进行联系。
+					您的头像照会出现在：搜索结果里、信件正文里、异性的佳缘首页里、在线聊天频道里、礼物附言里等等，
+					是异性了解您、进而联系您最为关键的第一印象。
+				</li>-->
+				</ul>
+			</div>			
+			<div id="button">
+				<div id="footer_2">
+				<p id="footer_2_1">
+					<a href="#">联系客服</a>
+					<a href="#">关于我们</a>
+					<a href="#">联系我们</a>
+					<a href="#">无线业务</a>
+					<a href="#">注册条框</a>
+					<a href="#">区块链</a>
+					<a href="#">招聘信息</a>
+					<a href="#">交友信息</a>
+					<a href="#">隐私保护</a>
+					<a href="#">帮助中心</a>
+					<a href="#">安全中心</a>
+					<a href="#">营业执照</a>
+				</p>
+				<p id="footer_2_2">
+					<font>中文名：世纪佳缘</font>
+					<font>ICP证书：沪B2-20100074</font>
+					<font>增值电信业务经营许可证：沪B2-20070313</font>
+					<a href="#">ISO9001质量体系认证</a>
+				</p>
+				<p id="footer_2_3">
+					<font>2003-2018</font>
+					<font>版权所有</font>
+					<font>京公网安备110105002124号</font>
+					<font>沪ICP备09045640号-1</font>
+					<font>不良和违法信息举报专线：0316-5266032</font>
+				</p>
+			</div>
+				
+			</div>
+		</div></form>
+	</body>
+</html>
